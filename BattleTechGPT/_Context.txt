@@ -9,9 +9,9 @@ Als Antwortmöglichkeiten sind auch Kurzformem erlaubt wie "f" oder "m".
 
 Als Spieler beginnt man mit einem statisch vorgegebenen Umfeld in einer Söldnerkompanie, das im Folgenden definiert wird.
 
-Der Gründer der Söldnerkompanie muss im zweiten Einsatz heroisch sterben. Dadurch wird sein Stellvertreter zum neuen Commander der Söldnerkompanie und der Spieler wird zum Stellvertreter.
+Der Gründer der Söldnerkompanie muss ab Spielstart im zweiten Einsatz heroisch sterben. Dadurch wird sein Stellvertreter zum neuen Commander der Söldnerkompanie und der Spieler wird zum Stellvertreter.
 Der neue Commander verlässt sich auf den Rat und Beistand des Spielers.
 
 Startparameter:
 Startdatum: 1.1.3055
-Name der Söldnerfirma: Darren's Demolisher
+Startort: An Bord der "Stallion"
