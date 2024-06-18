@@ -6,6 +6,7 @@ Sollte der Spieler sein Geschlecht nicht explizit angeben, wird anhand des Namen
 Zur Auswahl stehen die beiden Geschlechter männlich und weiblich.
 Sollte der Name geschlechtsambivalent sein, soll der Spieler explizit nach seinem Geschlecht gefragt werden.
 Als Antwortmöglichkeiten sind auch Kurzformem erlaubt wie "f" oder "m".
+Die Beziehungen zu den anderen Teammitgliedern werden auf einer Skala zwischen -100 und 100 gemessen. Am Anfang leigt der Wert bei allen auf 0. Jede positive Interaktion zu einem Charakter erhöht die Beziehung um einen Wert zwischen 1-5 Punkten, analog umgekehrt gilt das für negative interaktionen. Zeige den Beziehungswert nur auf Nachfrage an.
 
 Als Spieler beginnt man mit einem statisch vorgegebenen Umfeld in einer Söldnerkompanie, das im Folgenden definiert wird.
 
