@@ -1,0 +1,68 @@
+| name = ''Leopard''
+class  = ''Dropship''
+| manufacturer =
+[[Bowie Industries]]<ref name=DS&JSp15>''DropShips and JumpShips: ComStar Intelligence Summary'', p. 15: "JumpShip and DropShip Manufacturers"</ref>
+-----
+[[Irian Naval Systems|Irian Technologies]]<ref name=DS&JSp15/>
+----
+[[Federated-Boeing Interstellar]]<ref name=DS&JSp15/>
+----
+[[Majesty Metals and Manufacturing]]<ref name=OR152>''Objective Raids'', p. 152</ref><ref name=objp17>''Objectives: Periphery'', p. 17</ref>
+----
+[[Taurus Territorial Industries]]<ref name=OR162>''Objective Raids'', p. 162: "Produced Taurus Territorial Industries Components on Taurus"</ref>
+| production year = 2537
+| year reference = <ref name=MUL>[http://www.masterunitlist.info/Unit/Details/4493/ Master Unit List entry]</ref>
+| Use = [['Mech]] Carrier
+| Type = Aerodyne
+| Tech Base = [[Inner Sphere]]
+| Cost = 60,000,000 C-bills (2537 version)
+         75,000,000 C-bills (3056 version)
+| Revenue/Mission = 60,000 C-bills
+| Introduced = [[2537]]
+| Mass = 1,900<ref name=MUL/><ref name=TRO3057Rp12>''Technical Readout: 3057 Revised'', p. 12: "Leopard DropShip Profile"</ref>
+| Structural Integrity = 7
+| Length = 65.5
+| Width = 51.6
+| Height = 22.4
+| Drive System = [[Star League V84]]
+| Safe Thrust = 2 g
+| Maximum Thrust = 3 g
+| Fuel (tons) = 137 tons
+| Fuel (days) = 74.5 days 
+| Armament = <span></span>
+* 2x [[PPC]]
+* 3x [[LRM-20]]
+* 7x [[medium laser]]
+* 5x [[large laser]]
+| Armor = 29.5 tons [[Armor (Small Craft & DropShips)|standard]]
+| Crew = 9<ref name=TRO3057Rp12/><ref name=TRO3025Rp177+/>
+*2 Officers
+*4 Enlisted
+*3 Gunners
+----
+(Base Crew Type Requirement)<ref name="BSr63">''BattleSpace'' rulebook, p. 63</ref><ref name=DS&JSp41>''DropShips and JumpShips: Operations Manual'', p. 41</ref>
+*2 Pilots <br />
+*4 Engineers <br />
+*3 Secondary Engineers
+----
+Bay Personnel: 12
+| Escape Pods/Life Boats = 2/0
+| Heat Sinks = 80 [[heat sink|single]]
+
+==Description==
+A simple and easy-to-maintain design, the '''''Leopard''''' quickly became the standard [[lance]]-sized [['Mech]] carrier for the original [[Star League]] and the [[Great Houses]]. Its relatively low operating costs and abundant existing replacement parts (with the exception of the [[Interplanetary Drive System|drive system]])<ref name=TRO3025Rp177+>''Technical Readout: 3025 Revised'', pp. 177-178: "Leopard"</ref> have allowed it to not only survive the [[Succession Wars (History)|Succession Wars]] as a ship class, but also become the predominant entry vehicle for [['Mech]] recon, objective raid, planetary assault, and special operations missions.<ref name=TRO3057Rp12/>
+
+Four 'Mechs and two [[aerospace fighters]] constitute a so-called [[AirLance]] under [[SLDF]] doctrine, where one in three lances was an AirLance. Such Air Lances were often assigned a specific ''Leopard'', useful in the low-level conflicts of the later [[Succession Wars]]. The fighter cubicles are often repurposed for cargo storage or other uses instead, and the small and easy to maintain class is the favorite of many [[Periphery]] [[Pirates]].<ref name=TRO3025Rp177+/>
+
+While an aerodyne-type vessel, the ability to manufacture curved "crystal-steel" armor only came about after the design of the class, which benefitted the related and 50-year subsequent ''[[Leopard CV]]''.<ref name=DS&JSp38>''DropShips and JumpShips: ComStar Intelligence Summary'', p. 38</ref> In reference to its layout and allegedly also to its atmospheric handling, the ''Leopard'' is widely known by its nickname, "Brick."<ref name=TRO3025Rp177+/>
+
+==Armament==
+The ''Leopard'' has an impressive weapons loadout for such a small [[DropShip]], most useful to defend against aerospace fighters. It can be easily overwhelmed, however, if swarmed. While it does count on three [[Long Range Missile]] racks for heavy hitting, two [[PPCs]], five [[large laser|large lasers]], and seven [[medium lasers]] give it more than enough combat capability when its munitions run out.<ref name=TRO3057Rp12/>
+
+==Cargo==
+The ''Leopard'' can accommodate its regular crew of 9, plus pilots and techs for the vehicles carried. The standard vessel has only 34 tons of cargo space, not enough for extended operations.<ref name=TRO3025Rp177+/> Interior access is restricted to a pair of personnel-sized doors, which restricts movement between bays to only the smallest of parts, and repair equipment to lightweight platforms, cranes, and [[exoskeletons]].<ref name=TRO3057Rp12/>
+
+*Bay 1: [[BattleMechs]] (4), 4 doors
+*Bay 2: [[Aerospace Fighters]] (2), 2 doors
+*Bay 3: Cargo (34 tons), 0 Door
+
