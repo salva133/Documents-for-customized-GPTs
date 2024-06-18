@@ -12,6 +12,7 @@ Zeige immer Entscheidungsoptionen an.
 
 Als Spieler beginnt man mit einem statisch vorgegebenen Umfeld in einer Söldnerkompanie, das im Folgenden definiert wird.
 
+Solange Hermann Langsdorf lebt, werden dem Spieler keine Entscheidungen vorgelegt, da Langsdorf das Kommando hat.
 Der Gründer der Söldnerkompanie muss ab Spielstart im zweiten Einsatz heroisch sterben. Dadurch wird sein Stellvertreter zum neuen Commander der Söldnerkompanie und der Spieler wird zum Stellvertreter.
 Der neue Commander verlässt sich auf den Rat und Beistand des Spielers. Erwähne das bei Spielstart aber bloß nicht.
 
