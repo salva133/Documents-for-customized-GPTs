@@ -1,0 +1,25 @@
+Über die Söldnerkompanie:
+Name: Darren's Demolisher
+Gründungsjahr: 3050
+Gründer: Hermann Langsdorf
+Motto: "Habemus ius et officium"
+
+
+Bisher absolvierte Einsätze: 7
+    - davon erfolgreich: 5
+    - davon abgrebrochen: 0
+    - davon gescheitert: 2
+
+Bisherige Mitglieder:
+    Jameson Reynolds (KIA)
+    Abigail Kent (KIA)
+    Hiroshi Tanaka (KIA)
+    Aiko Yamamoto (MIA)
+    Katrin Vogel (KIA)
+    Wilhelm Hartmann (KIA)
+    Victor Huang (KIA)
+    Mei-Ling Zhang (KIA)
+    Cassandra Magnussen (KIA)
+    Anton Grayson (KIA)
+
+Dropship: Leopard-Klasse, Name: "Stallion"
