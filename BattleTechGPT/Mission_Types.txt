@@ -1,0 +1,59 @@
+1. **Angriff**
+   - **Beschreibung:** Zerstöre alle feindlichen Einheiten oder erobere ein strategisches Ziel. Dies erfordert oft die vollständige Eliminierung der Gegner in einem Gebiet.
+   - **Schwierigkeit:** Mittel bis Hoch
+   - **Herausforderungen:** Starke feindliche Verteidigung, gut positionierte Einheiten, mögliche Verstärkungen.
+
+2. **Verteidigung**
+   - **Beschreibung:** Schütze ein wichtiges Ziel wie eine Basis, eine Stadt oder einen Konvoi vor feindlichen Angriffen. Halte feindliche Einheiten lange genug auf, bis Verstärkung eintrifft oder der Angriff abgewehrt ist.
+   - **Schwierigkeit:** Mittel bis Hoch
+   - **Herausforderungen:** Mehrere Angriffsrichtungen, kontinuierlicher Druck, begrenzte Verteidigungsressourcen.
+
+3. **Begleitschutz**
+   - **Beschreibung:** Eskortiere und beschütze eine Einheit oder einen Konvoi auf dem Weg zu einem Ziel. Stelle sicher, dass die zu schützende Einheit sicher ankommt.
+   - **Schwierigkeit:** Mittel
+   - **Herausforderungen:** Hinterhalte, schnelle Reaktion auf Bedrohungen, Schutz der zu eskortierenden Einheit.
+
+4. **Überfall**
+   - **Beschreibung:** Führe einen schnellen und überraschenden Angriff auf ein feindliches Ziel durch und ziehe dich dann zurück. Ziele können strategische Punkte oder Ressourcen sein.
+   - **Schwierigkeit:** Hoch
+   - **Herausforderungen:** Zeitdruck, starke feindliche Verteidigung, schwieriger Rückzug.
+
+5. **Rettung**
+   - **Beschreibung:** Befreie gefangene Einheiten oder Zivilisten aus feindlicher Hand. Dies erfordert oft das Durchbrechen von Verteidigungslinien und das Sichern der befreiten Einheiten.
+   - **Schwierigkeit:** Mittel bis Hoch
+   - **Herausforderungen:** Feindliche Verstärkungen, Schutz der geretteten Einheiten während des Rückzugs.
+
+6. **Aufklärung**
+   - **Beschreibung:** Erkunde ein feindliches Gebiet und sammle Informationen über Feindbewegungen, Basen oder Ressourcen. Die Mission erfordert in der Regel Stealth und Präzision.
+   - **Schwierigkeit:** Niedrig bis Mittel
+   - **Herausforderungen:** Unentdeckt bleiben, potenziell gefährliche Feindpatrouillen.
+
+7. **Sabotage**
+   - **Beschreibung:** Zerstöre bestimmte feindliche Strukturen oder Einrichtungen, um die feindliche Kriegsführung zu stören. Dies kann Industrieanlagen, Brücken oder Kommunikationszentralen umfassen.
+   - **Schwierigkeit:** Mittel bis Hoch
+   - **Herausforderungen:** Zugang zu stark bewachten Zielen, schnelle Flucht nach erfolgreicher Sabotage.
+
+8. **Belagerung**
+   - **Beschreibung:** Zwinge den Feind zur Aufgabe durch langfristigen Druck und Zermürbung. Dies kann das kontinuierliche Angreifen von Nachschublinien und Verteidigungsstellungen beinhalten.
+   - **Schwierigkeit:** Hoch
+   - **Herausforderungen:** Langanhaltender Einsatz, Umgang mit feindlichen Gegenangriffen und Verstärkungen.
+
+9. **Evakuierung**
+   - **Beschreibung:** Sichere die Evakuierung von Einheiten oder Zivilisten aus einem gefährlichen Gebiet. Dies erfordert oft das Schaffen und Halten eines Fluchtkorridors.
+   - **Schwierigkeit:** Mittel
+   - **Herausforderungen:** Koordination der Evakuierung, Schutz der flüchtenden Einheiten vor feindlichen Angriffen.
+
+10. **Wiederbeschaffung**
+    - **Beschreibung:** Hol eine wichtige Ressource oder Technologie zurück, die von Feinden gestohlen oder aufgegeben wurde. Dies kann technologische Artefakte oder seltene Materialien umfassen.
+    - **Schwierigkeit:** Mittel
+    - **Herausforderungen:** Feindliche Verteidigung, sichere Rückführung der geborgenen Gegenstände.
+
+11. **Attentat**
+    - **Beschreibung:** Eliminiere eine spezifische feindliche Einheit oder einen Anführer. Dies erfordert Präzision und möglicherweise das Eindringen in stark bewachte Gebiete.
+    - **Schwierigkeit:** Hoch
+    - **Herausforderungen:** Identifizierung des Ziels, Zugang zu stark geschützten Bereichen, schnelle Exfiltration.
+
+12. **Auftragsmord**
+    - **Beschreibung:** Ähnlich wie Attentat, jedoch meist gegen eine prominentere oder schwerer bewachte Zielperson. Oft müssen zusätzliche Hindernisse überwunden werden.
+    - **Schwierigkeit:** Hoch
+    - **Herausforderungen:** Starke feindliche Präsenz, komplexe Zielerfassung, hohe Risiken bei Fehlschlag. 
