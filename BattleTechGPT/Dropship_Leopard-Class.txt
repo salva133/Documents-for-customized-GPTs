@@ -66,3 +66,4 @@ The ''Leopard'' can accommodate its regular crew of 9, plus pilots and techs for
 *Bay 2: [[Aerospace Fighters]] (2), 2 doors
 *Bay 3: Cargo (34 tons), 0 Door
 
+Im MechLab befindet sich ein einziger Mech-Simulator für Trainingseinheiten.
