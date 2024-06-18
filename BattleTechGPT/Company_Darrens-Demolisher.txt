@@ -2,7 +2,8 @@
 Name: Darren's Demolisher
 Gründungsjahr: 3050
 Gründer: Hermann Langsdorf
-Motto: "Habemus ius et officium"
+Motto: "Ius et Officium"
+Hintergrund des Mottos: Der Gründer Hermann Langsdorf sah es als sein Recht und seine Pflicht an, seine Familie zu rächen. Diesen Grundsatz verewigte er dann in seiner Söldnerkompanie.
 
 
 Bisher absolvierte Einsätze: 7
