@@ -1,0 +1,34 @@
+|name=''Black Python''
+|manufacturer=[[New Kent Armorworks]]
+|production year=3051
+|year reference=<ref>''[http://www.masterunitlist.info/Unit/Details/3432/ MUL online date for the ''{{PAGENAME}}'']''</ref>
+|model=Prime
+|cost= 18,837,000 C-bills
+|Tech Base=Clan
+|mech type=BattleMech
+|mass=75
+|chassis=[[Viper Endo Steel BP 2]]
+|armor= [[Armorweave NK 62 Ferro-Fibrous]]
+|engine=[[New Kent Model VII 375 XL]]
+|comsys=Unknown
+|T&T=Unknown
+|heat sinks=13 [[Double Heat Sink]]s
+|speed=86
+|jumpjets=[[Pryzhok]]
+|armament=
+*2x [[Large Pulse Laser]]s
+*2x [[Medium Pulse Laser]]s
+*4x [[Small Pulse Laser]]s
+*2x [[Machine Gun]]s
+
+==Description==
+The '''''Black Python''''', which was [[Inner Sphere Designation for Clan BattleMechs|designated]] the '''''Viper''''' by [[Inner Sphere]] forces, is similar in many ways to the ''[[Warhammer]]'' and ''[[Marauder]]'' [[BattleMech]]s. Though it is faster than those heavies, it has a similar weapons loadout with comparable damage, albeit with much more accurate damage potential. In order to achieve this, this expensive second-line 'Mech avails itself of all weight saving technologies that were at the disposal of the [[Clans]], including an [[XL engine]], [[Endo Steel]] frame, and eleven tons of [[ferro-fibrous]] armor. In addition to its speed, the ''Black Python'' mounts five [[jump jet]]s that propel it up to 150 meters at a time.<ref name=TRO3055p126-127>''Technical Readout: 3055'', pp. 126–127: "Viper OmniMech Profile"</ref><ref name=TRO3055Rp110-111>''Technical Readout: 3055 Revised'', pp. 110–111: "Viper OmniMech Profile"</ref>
+
+In the thirty-second century, the [[Raven Alliance]] restarted production of the ''Black Python'', renaming it the '''''White Raven'''''. The ''White Raven'' was one of the first production BattleMechs to use [[Ferro-Lamellor]] armor.<ref>''Recognition Guide: ilClan, vol. 12'', p. 10</ref>
+
+==Weapons and Equipment==
+The paired [[Large Pulse Laser|Large]] and Lambda [[Medium Pulse Laser]]s provide highly accurate firepower at ranges that are possible to close in on thanks to the 'Mech's speed. Four Chi Series [[Small Pulse Laser]]s and two Series XIb [[Machine Gun]]s provide more firepower at close range while also able to annihilate unarmored [[infantry]] that stray too close. All of the lasers are made even more accurate by the inclusion of a [[Targeting Computer]]. Thirteen [[double heat sink]]s keep heat levels in check.<ref name=TRO3055p126-127/><ref name=TRO3055Rp110-111/>
+
+== Design Quirks ==
+The ''Black Python'' has the following [[Design Quirk]]:<ref>[[BattleMech Manual]], p. 95 Design Quirk Table - Black Python (Viper) Entry.</ref>
+* [[Improved Targeting: Short]]
