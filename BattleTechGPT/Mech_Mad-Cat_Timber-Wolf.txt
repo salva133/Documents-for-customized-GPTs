@@ -1,0 +1,52 @@
+|name=''Timber Wolf''
+|manufacturer=
+[[Kallon Weapon Industries]]<ref name=RGiCv5p12>''Recognition Guide: ilClan, vol. 5'', p. 12: "Timber Wolf (Mad Cat)"</ref>
+----
+[[Wolf Clan Site 1]]<ref name=TRCIp60f>''Technical Readout: Clan Invasion'', pp. 60–61: "Mad Cat"</ref> <!-- reprinted from TRO:3050U -->
+----
+[[Wolf Clan Site #2]]<ref name=TRCIp60f />
+----
+[[WC Site 3]]
+----
+[[WC Site 7]]<ref name=O:C>''Objectives: The Clans'', p. 31</ref>
+| production year=2945
+|year reference=<ref>''[http://www.masterunitlist.info/Unit/Details/1985/ MUL online date for the ''{{PAGENAME}}'']''</ref><ref name=TRO3050Up136f>''Technical Readout: 3050 Upgrade'', pp. 136–137: "Mad Cat OmniMech Profile"</ref>
+|model=Prime<ref name=TRCIp60f />
+|class=Heavy
+|Tech Base=Clan
+|mech type=OmniMech
+|feet=2
+|cost= 24,233,124 C-bills
+|mass=75
+|chassis=[[Type W3 Endo-Steel]] <!-- <ref name=TRCIp60f /> -->
+|armor= [[Composite A-2 Ferro-Fibrous]] <!-- <ref name=TRCIp60f /> -->
+|engine= [[Starfire 375 XL]] <!-- <ref name=TRCIp60f /> -->
+|comsys= [[Khan Series (Type 2c)]] <!-- <ref name=TRCIp60f /> -->
+|T&T= [[Series III OPT]] <!-- <ref name=TRCIp60f /> -->
+|heat sinks= 15 [[Double Heat Sink|double]] <!-- <ref name=TRCIp60f /> -->
+|speed=86 <!-- <ref name=TRCIp60f /> -->
+|pod space= 28 Tons
+|armament=
+Primary Configuration <!-- <ref name=TRCIp60f /> -->
+* 2x [[ER Large Laser]]
+* 2x [[ER Medium Laser]]
+* 1x [[Medium Pulse Laser]]
+* 2x [[LRM-20]]
+* 2x [[Machine Gun]]
+
+==Description==
+The '''''Timber Wolf''''' is a fast, heavy [[OmniMech]]. A signature design of the [[Clans]]' military might, it was arguably the first Clan [[OmniMech]] encountered by [[Inner Sphere]] forces (as opposed to [[periphery]] forces) on [[The Rock]] in [[3049]] by [[Phelan Kell]].<ref name=TRO3050Up136f/><ref name=TRO3050>''Technical Readout: 3050'', pp. 34–35: "Mad Cat OmniMech Profile"</ref><ref name=TRO3050R>''Technical Readout: 3050 Revised'', pp. 32–33: "Mad Cat OmniMech Profile"</ref>
+
+Vaguely resembling a cross between the MAD (''[[Marauder]]'') and CAT (''[[Catapult]]'') series, the ''Timber Wolf'' was tagged with the Inner Sphere [[Inner Sphere Designation for Clan BattleMechs|reporting name]] '''''Mad Cat''''' on first contact. (The targeting computer on [[Phelan Kell]]'s ''Wolfhound'' switched between MAD and CAT when trying to identify it; upon analyzing the data recording from Kell's 'Mech, [[Precentor Martial of ComStar|Precentor Martial]] [[Anastasius Focht]] later officially designated it "''Mad Cat''".<ref name=TRO3050Up136f/><ref name=TRO3050/><ref name=TRO3050R/>
+
+The ''Timber Wolf'' is vastly more powerful than either the 3025-era ''Marauder'' or ''Catapult'', and features approximately as much firepower as both of those mechs combined. It uses its speed and firepower to engage an enemy at the range of its choosing. When first encountered by Inner Sphere forces the idea that a heavy 'Mech could move so swiftly while being as heavily armed and armored as the ''Timber Wolf'' was inconceivable. With its twelve tons of [[ferro-fibrous]] armor and an arsenal that rivaled most [[:Category:Assault BattleMechs|assault 'Mechs]] of the era, it was completely alien to Inner Sphere military planners, commanders, and even the Precentor Martial of [[ComStar]].
+First introduced in [[2945]], the ''Timber Wolf'' was designed by [[Clan Wolf]] as a second generation [[OmniMech]] along with the ''[[Gargoyle]]'' and the ''[[Naga (OmniMech)|Naga]]'' to replace the aging ''[[Woodsman]]''. While the ''Gargoyle'' may have been a very capable, fast assault OmniMech, and the ''Naga'' may have been an excellent fire-support OmniMech, Clan Wolf (and indeed every other Clan) instantly realized the value of the ''Timber Wolf''; thus, production rights to the ''Timber Wolf'' were jealously (and successfully) defended. Only through trade, gifts and battlefield salvage has the ''Timber Wolf'' entered the armies of other Clans. Until the [[Clan Invasion|invasion]] of the Inner Sphere, production of the ''Timber Wolf'' has been limited to a single facility on [[Strana Mechty]].<ref name=TRO3050Up136f/><ref name=TRO3050/><ref name=TRO3050R/>
+
+==Weapons and Equipment==
+The default configuration of the ''Timber Wolf'' features a well-blended mix of energy and missile weaponry; primarily extended-range lasers and long range missile racks that give the ''Timber Wolf'' considerable firepower at medium and long range. A pair of [[LRM-20]] racks supplemented by two [[Extended Range Large Laser]]s make up the bulk of the ''Timber Wolf''<nowiki>'</nowiki>s firepower. The ''Timber Wolf'' also has an array of lighter, shorter ranged weaponry for use once the [['Mech]] draws closer to its prey: two [[ER Medium Laser]]s and a [[Medium Pulse Laser]]. Finally, it has two [[Machine Guns]] for point defense against infantry. Even on the modern battlefield the primary configuration of the ''Timber Wolf'' is a force to be reckoned with.<ref name=TRO3050Up136f/><ref name=TRO3050/><ref name=TRO3050R/>
+
+== Design Quirks ==
+The ''Mad Cat (Timber Wolf)'' has the following [[Design Quirks]]:<ref>''BattleMech Manual'', p. 93: Design Quirk Table - Mad Cat (Timber Wolf) Entry.</ref>
+* [[Improved Targeting|Improved Targeting (Medium)]]
+* [[Weak Head Armor|Weak Head Armor (1)]]
+
