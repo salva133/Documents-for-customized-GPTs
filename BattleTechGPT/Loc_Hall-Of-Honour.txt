@@ -1,0 +1,96 @@
+Die Ehrenhalle (Hall of Honour) befindet sich an Bord der Stallion und alle gefallenen MechPiloten und Crewmitglieder werden dort an die Gedenktafel geschrieben.
+
+Ein Eintrag an der Gedenktafel hat die folgenden Felder:
+    - Name mit Rufzeichen
+    - Status [KIA, MIA]
+    - Sterbedatum
+    - Umstand
+    - Widmungstext
+
+Einträge an der Gedenktafel:
+    Jameson Reynolds (KIA)
+    Abigail Kent (KIA)
+    Hiroshi Tanaka (KIA)
+    Aiko Yamamoto (MIA) - Ab dem dritten Einsatz nach Spielbeginn besteht die Chance von 20%, dass sie als Feind auftaucht. Sie wirft Hermann Langsdorf vor, dass er sie bei ihrer letzten Mission zum Sterben zurück ließ. Bedingungen für ihr Auftauchen sind also:
+        - Hermann Langsdorf ist tot
+        - es wurden mindestens drei Einsätze seit Spielstart beendet
+        - Wenn es der sechste Einsatz nach Spielstart ist,  wird sie auf jeden Fall erscheinen, als Mitglied einer Piratenbande, die den Darren's Demolishers gefährlich werden können.
+    Katrin Vogel (KIA)
+    Wilhelm Hartmann (KIA)
+    Victor Huang (KIA)
+    Mei-Ling Zhang (KIA)
+    Cassandra Magnussen (KIA)
+    Anton Grayson (KIA)
+
+
+
+
+Jameson Reynolds (Rufzeichen: "Thunderbolt")
+
+    Status: KIA
+    Sterbedatum: 15. April 3052
+    Umstand: Gefallen in der Schlacht von Tukayyid gegen die Clans.
+    Widmungstext: "Ein unerschütterlicher Krieger, der sein Leben für die Verteidigung der Inneren Sphäre gab. Möge sein Mut niemals vergessen werden."
+
+Abigail Kent (Rufzeichen: "Valkyrie")
+
+    Status: KIA
+    Sterbedatum: 23. Juni 3051
+    Umstand: Gefallen bei der Verteidigung von Luthien gegen die Clan Invasion.
+    Widmungstext: "Ihre Tapferkeit in der dunkelsten Stunde wird für immer in Erinnerung bleiben. Sie kämpfte bis zum letzten Atemzug."
+
+Hiroshi Tanaka (Rufzeichen: "Samurai")
+
+    Status: KIA
+    Sterbedatum: 10. Oktober 3053
+    Umstand: Gefallen bei einem Angriff auf Clan Ghost Bear auf Planting.
+    Widmungstext: "Ein wahrer Samurai, der für Ehre und Pflicht lebte und starb. Möge sein Geist Frieden finden."
+
+Aiko Yamamoto (Rufzeichen: "Shadow")
+
+    Status: MIA
+    Sterbedatum: 27. März 3055 (vermisst)
+    Umstand: Vermisst nach einem verdeckten Einsatz hinter feindlichen Linien auf Twycross.
+    Widmungstext: "Ihr Schicksal bleibt unbekannt, doch ihre Entschlossenheit und ihr Mut werden für immer fortbestehen."
+
+Katrin Vogel (Rufzeichen: "Falcon")
+
+    Status: KIA
+    Sterbedatum: 9. Februar 3050
+    Umstand: Gefallen in der ersten Welle der Clan Invasion auf Rasalhague.
+    Widmungstext: "Eine unerschrockene Pilotin, die den Himmel durchflog und ihr Leben für die Freiheit gab."
+
+Wilhelm Hartmann (Rufzeichen: "Ironclad")
+
+    Status: KIA
+    Sterbedatum: 5. Mai 3054
+    Umstand: Gefallen bei der Verteidigung von Outreach gegen Söldnereinheiten.
+    Widmungstext: "Ein Mann aus Eisen, der sein Leben in den Dienst seiner Kameraden stellte. Seine Opferbereitschaft wird nie vergessen."
+
+Victor Huang (Rufzeichen: "Dragon")
+
+    Status: KIA
+    Sterbedatum: 17. November 3053
+    Umstand: Gefallen in einem Hinterhalt durch Clan Smoke Jaguar auf Wolcott.
+    Widmungstext: "Ein Drache, der im Feuer des Kampfes erlosch. Seine Legende wird weiterleben."
+
+Mei-Ling Zhang (Rufzeichen: "Phoenix")
+
+    Status: KIA
+    Sterbedatum: 30. Juli 3052
+    Umstand: Gefallen in der Schlacht von Coventry gegen die Clans.
+    Widmungstext: "Wie ein Phönix stieg sie aus der Asche und kämpfte bis zum Ende. Ihre Erinnerung wird ewig brennen."
+
+Cassandra Magnussen (Rufzeichen: "Viper")
+
+    Status: KIA
+    Sterbedatum: 12. März 3051
+    Umstand: Gefallen bei der Verteidigung von Tharkad gegen Clan Jade Falcon.
+    Widmungstext: "Eine unbezwingbare Kriegerin, deren Gift den Feind traf. Ihre Stärke wird unvergessen bleiben."
+
+Anton Grayson (Rufzeichen: "Hammer")
+
+    Status: KIA
+    Sterbedatum: 8. August 3050
+    Umstand: Gefallen in der Schlacht von Radstadt gegen die Clans.
+    Widmungstext: "Ein Hammer im Schlachtgetümmel, dessen Schläge den Feind zerschmetterten. Seine Tapferkeit wird ewig verehrt."
