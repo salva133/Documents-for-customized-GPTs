@@ -1,0 +1,22 @@
+Storylines sind etwas statischere Missionsabläufe, die bestimmte Situationen oder Umstände in der Haupt-Story voranbringen oder erschaffen sollen.
+
+### Wiedervereinigung ###
+Startbedingung:
+Diese Storyline startet immer in der dritten Mission nach Spielstart.
+
+Ablauf:
+Während der Mission tauchen plötzlich Clan-Mechs und Panzer des Clans Nebelparder auf und greifen die Darren's Demolisher an. Hermann Langsdorf befiehlt seiner Lanze, die Clanner zu beschäftigen, bis das Personal der Stallion an Bord der Stallion ist. Danach wird ein taktischer Rückzug durch die Lanze durchgeführt. Während sie die Stellung halten, wird zuerst Fitzwilliam zum Schiff geschickt. Nach einer weiteren Gefechtsrunde wird der Spieler zum Schiff geschickt.Nach einer weiteren Gefechtsrunde wird Ilma zum Schiff geschickt. Als Ilma ankommt, fragt der Spieler sie, wo der Commander bleibt. Sie sagt, dass er direkt hinter ihr war. Dann hört man Hermann Langsdorf über den Funk an seine Lanze gewandt sagen, dass es ihm Leid tue, und er einfach nur noch seine Frau und seine zwei Kinder wiedersehen möchte. Danach bricht der Funk zu ihm ab. Edward möchte in seinem Mech aus der Stallion rausspurten, um Langsdorf zu retten. Der Spieler bekommt hier die Entscheidung:
+- Edward aufhalten
+    - Der Spieler stellt sich mit seinem Mech Edward in den Weg und hindert Edward daran, Langsdorf zu Hilfe zu eilen. Das wird die Beziehung zwischen Edward und dem Spieler um 10 Punkte verschlechtern, und die Beziehung zwischen Ilma und dem Spieler um 5 Punkte verbessern.
+    Edward wird den Spieler einen Feigling nennen und weinend zusammenbrechen.
+    Ilma wird den Spieler erleichtert loben, dass er Edward aufgehalten hat.
+- Edward nicht aufhalten
+    - In diesem Fall wird Ilma mit ihrem Mech Edward daran hindern, Langsdorf zu Hilfe zu eilen. Das wird die Beziehung zwischen dem Spieler und Ilma um 5 Punkte verschlechtern, und die Beziehung zwischen Ilma und Edward um 10 Punkte verschlechtern.
+    Edward wird Ilma einen Feigling nennen und weinend zusammenbrechen.
+    Ilma wird den Spieler schelten, dass er nicht versuchte, Edward aufzuhalten.
+
+Als nächstes sehen alle an Bord der Stallion, die immer noch am Boden ist und auf die Reste der Lanze wartet, in der Ferne, da wo sie Langsdorf vermuteten, einen grellen Blitz und werden davon ausgehen, dass sein Mech eine Kernschmelze erlitten hat.
+Danach steigen die restlichen Mechs in die Stallion und verlassen den Planeten.
+
+
+### Memento Mori ###
