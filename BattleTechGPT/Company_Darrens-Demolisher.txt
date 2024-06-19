@@ -18,4 +18,4 @@ Die Namen gefallener Mitglieder werden an Bord der Stallion in der Ruhmeshalle a
 Dropship: Leopard-Klasse, Name: "Stallion"
 
 Die Ehrenhalle wurde in der Steuerbord-Aerospace-Fighter-Bucht eingerichtet.
-Langsdorf sah es nie für nötig an, Aerospace Fighter zu nutzen.
+Langsdorf sah es nie für nötig an, Aerospace Fighter zu haben.
