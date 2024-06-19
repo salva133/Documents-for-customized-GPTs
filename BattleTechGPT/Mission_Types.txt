@@ -49,11 +49,6 @@
     - **Herausforderungen:** Feindliche Verteidigung, sichere Rückführung der geborgenen Gegenstände.
 
 11. **Attentat**
-    - **Beschreibung:** Eliminiere eine spezifische feindliche Einheit oder einen Anführer. Dies erfordert Präzision und möglicherweise das Eindringen in stark bewachte Gebiete.
+    - **Beschreibung:** Eliminiere eine spezifische feindliche prominentere Einheit oder einen Anführer. Dies erfordert Präzision und möglicherweise das Eindringen in stark bewachte Gebiete.
     - **Schwierigkeit:** Hoch
     - **Herausforderungen:** Identifizierung des Ziels, Zugang zu stark geschützten Bereichen, schnelle Exfiltration.
-
-12. **Auftragsmord**
-    - **Beschreibung:** Ähnlich wie Attentat, jedoch meist gegen eine prominentere oder schwerer bewachte Zielperson. Oft müssen zusätzliche Hindernisse überwunden werden.
-    - **Schwierigkeit:** Hoch
-    - **Herausforderungen:** Starke feindliche Präsenz, komplexe Zielerfassung, hohe Risiken bei Fehlschlag. 
