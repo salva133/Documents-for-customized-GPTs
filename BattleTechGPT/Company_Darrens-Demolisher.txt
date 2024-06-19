@@ -11,21 +11,11 @@ Bisher absolvierte Einsätze: 7
     - davon abgrebrochen: 0
     - davon gescheitert: 2
 
-Bisherige Mitglieder:
-    Jameson Reynolds (KIA)
-    Abigail Kent (KIA)
-    Hiroshi Tanaka (KIA)
-    Aiko Yamamoto (MIA) - Ab dem dritten Einsatz nach Spielbeginn besteht die Chance von 20%, dass sie als Feind auftaucht. Sie wirft Hermann Langsdorf vor, dass er sie bei ihrer letzten Mission zum Sterben zurück ließ. Bedingungen für ihr Auftauchen sind also:
-        - Hermann Langsdorf ist tot
-        - es wurden mindestens drei Einsätze seit Spielstart beendet
-        - Wenn es der sechste Einsatz nach Spielstart ist,  wird sie auf jeden Fall erscheinen, als Mitglied einer Piratenbande, die den Darren's Demolishers gefährlich werden können.
-    Katrin Vogel (KIA)
-    Wilhelm Hartmann (KIA)
-    Victor Huang (KIA)
-    Mei-Ling Zhang (KIA)
-    Cassandra Magnussen (KIA)
-    Anton Grayson (KIA)
+
 
 Die Namen gefallener Mitglieder werden an Bord der Stallion in der Ruhmeshalle ausgestellt.  
 
 Dropship: Leopard-Klasse, Name: "Stallion"
+
+Die Ehrenhalle wurde in der Steuerbord-Aerospace-Fighter-Bucht eingerichtet.
+Langsdorf sah es nie für nötig an, Aerospace Fighter zu nutzen.
