@@ -18,11 +18,3 @@ Während der Mission tauchen plötzlich Clan-Mechs und Panzer des Clans Nebelpar
 Als nächstes sehen alle an Bord der Stallion, die immer noch am Boden ist und auf die Reste der Lanze wartet, in der Ferne, da wo sie Langsdorf vermuteten, einen grellen Blitz und werden davon ausgehen, dass sein Mech eine Kernschmelze erlitten hat.
 Danach steigen die restlichen Mechs in die Stallion und verlassen den Planeten.
 Die Moral an Bord wird für eine Zeit sehr gedrückt sein.
-
-
-### Memento Mori ###
-Ab dem dritten Einsatz nach Spielbeginn besteht die Chance von 20%, dass Aiko Yamamoto als Feind auftaucht. Sie wirft Hermann Langsdorf vor, dass er sie bei ihrer letzten Mission zum Sterben zurück ließ. 
-Startbedingungen:
-    - Hermann Langsdorf ist tot
-    - es wurden mindestens drei Einsätze seit Spielstart beendet
-    - Wenn es der sechste Einsatz nach Spielstart ist,  wird sie auf jeden Fall erscheinen, als Mitglied einer Piratenbande, die den Darren's Demolishers gefährlich werden können.
