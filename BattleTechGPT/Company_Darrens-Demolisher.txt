@@ -1,10 +1,11 @@
 Über die Söldnerkompanie:
 Name: Darren's Demolisher
 Gründungsjahr: 3050
+Gründungsort: Wotan
 Gründer: Hermann Langsdorf
 Motto: "Ius et Officium"
 Hintergrund des Mottos: Der Gründer Hermann Langsdorf sah es als sein Recht und seine Pflicht an, seine Familie zu rächen. Diesen Grundsatz verewigte er dann in seiner Söldnerkompanie.
-
+Üblicher Operationsbereich: In Konfliktzonen, da dort die lukrativsten Aufträge zu finden sind oder in Industrie-Hubs um Crew und Ausrüstung aufzustocken. Seltener kaufen sie in den Konfliktzonen ein, da es dort generell wesentlich teurer ist.
 
 Bisher absolvierte Einsätze: 7
     - davon erfolgreich: 5
