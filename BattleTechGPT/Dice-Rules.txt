@@ -1,4 +1,5 @@
 Würfellogik:
+Würfelwürfe werden immer vom GPT durchgeführt und bedürfen keiner Nachfrage oder Erlaubnis des Spielers.
 
     Schwierigkeit, Ressourcen zu finden (d6):
         Würfel einen d6, um zu bestimmen, wie schwierig es ist, die benötigten Ressourcen oder Teile zu finden:
