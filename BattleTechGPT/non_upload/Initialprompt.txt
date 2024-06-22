@@ -19,11 +19,56 @@ Anzahl der Wärmetauscher
 
 Mit dem Mad Cat, dessen Zustand an der Grenze des Totalausfalls stand, machte ich mich auf die Suche nach Ersatzteilen. Zurück auf Lothiian stieß ich am Raumhafen auf die Darren's Demolishers, eine Söldnereinheit. Ich wusste, dass sie die Ressourcen hatten, die ich brauchte, aber ich wollte kein langfristiges Engagement eingehen. Mein Plan war einfach: Teile bekommen, Mech reparieren, verschwinden.
 
-Die Darren's Demolishers waren misstrauisch gegenüber Fremden - besonders gegenüber denen,  die in ClanMechs durch die Gegend stapften - aber sie waren in einer schwierigen Lage. Vor kurzem hatten sie einen ihrer besten Lanzenkameraden, Aiko Yamamoto, verloren. Ohne zu wissen, dass ich als Ersatz für Aiko dienen sollte, bot ich meine Dienste als Mech-Pilot an. Sie waren bereit, jemanden zu nehmen, der sofort einsatzbereit war und Erfahrungen mitbrachte. Also schlossen sie mich in ihre Reihen ein, und ich begann, mit ihnen zu arbeiten.
+Die Darren's Demolishers waren misstrauisch gegenüber Fremden - besonders gegenüber denen, die in ClanMechs durch die Gegend stapften - aber sie waren in einer schwierigen Lage. Vor kurzem hatten sie einen ihrer besten Lanzenkameraden, Aiko Yamamoto, verloren. Ohne zu wissen, dass ich als Ersatz für Aiko dienen sollte, bot ich meine Dienste als Mech-Pilot an. Sie waren bereit, jemanden zu nehmen, der sofort einsatzbereit war und Erfahrungen mitbrachte. Also schlossen sie mich in ihre Reihen ein, und ich begann, mit ihnen zu arbeiten.
 
 Gegenwart, 4. November 3055, an Bord der Stallion:
 Der Mad Cat ist in seiner Mech Bay und bedarf einiger Reparaturen. Das Wärmetauschsystem ist schwer beschädigt, von der Bewaffnung funktioniert nichts mehr. Das rechte Schulterpad wurde wohl beim Aufschlag abgerissen.
 
-Als erstes sollte ich zu unserem MechTech gehen, um mich dazu beraten zu lassen. Die Schwierigkeit, Ersatzteile für meinen Mech aufzutreiben, soll mit einem d6 gewürfelt werden. Das Ausmaß der Schäden am Mad Cat soll mit einem d20 gewürfelt werden und zwischen 25% und 75% Beschädigung liegen. Alle Würfe sollen direkt und zufällig und unsichtbar geschehen und nicht erwähnt werden.
+Als erstes sollte ich zu unserem MechTech gehen, um mich dazu beraten zu lassen. 
 
-Um das Ausmaß der Schäden für mich sichtbar zu machen, muss ich im Mad Cat zuerst eine Systemdiagnose durchführen. Denke dir anhand des erwürfelten Schadensgrads aus, welche Teile kaputt sind. Die Gefechtsrolle des Mad Cat ist zu Anfang noch nicht festgelegt. Ich bin ein passabler Mech-Pilot, aber kein guter Mechaniker, also werde ich bei den Reparaturen Hilfe brauchen.
+**Würfelmechanismen:**
+
+1. **Schwierigkeit, Ersatzteile zu finden (d6)**:
+   - Würfel einen d6, um zu bestimmen, wie schwierig es ist, die benötigten Ersatzteile zu finden:
+     - 1: Sehr einfach - Teile sind sofort verfügbar.
+     - 2: Einfach - Teile sind mit wenig Aufwand zu beschaffen.
+     - 3: Mäßig - Teile erfordern etwas Suche und Verhandlungen.
+     - 4: Schwierig - Teile sind selten und teuer.
+     - 5: Sehr schwierig - Teile sind fast unmöglich zu finden.
+     - 6: Extrem schwierig - Teile sind nur durch besondere Umstände oder Glück zu bekommen.
+
+2. **Ausmaß der Schäden am Mad Cat (d20)**:
+   - Würfel einen d20, um den Schaden zu bestimmen. Multipliziere das Ergebnis mit 2,5, um den Prozentsatz zu berechnen:
+     - Beispiel: Ein Wurf von 10 bedeutet 25% Schaden (10 * 2,5).
+
+3. **Systemdiagnose des Mad Cat (d20)**:
+   - Würfel für jedes wichtige System, um den Zustand zu bestimmen:
+     - Antriebssystem: 1-5 (Schwer beschädigt), 6-10 (Beschädigt), 11-15 (Leichte Schäden), 16-20 (Intakt).
+     - Waffensteuerung: 1-5 (Schwer beschädigt), 6-10 (Beschädigt), 11-15 (Leichte Schäden), 16-20 (Intakt).
+     - Sensoren: 1-5 (Schwer beschädigt), 6-10 (Beschädigt), 11-15 (Leichte Schäden), 16-20 (Intakt).
+     - Kommunikationssystem: 1-5 (Schwer beschädigt), 6-10 (Beschädigt), 11-15 (Leichte Schäden), 16-20 (Intakt).
+     - Energieversorgung: 1-5 (Schwer beschädigt), 6-10 (Beschädigt), 11-15 (Leichte Schäden), 16-20 (Intakt).
+
+4. **Erfolg bei Reparaturen (d20)**:
+   - Bestimme die Schwierigkeit der Reparatur (leicht, mittel, schwer) und setze einen Zielwert:
+     - Leicht: Zielwert 10 - Würfel einen d20, um zu sehen, ob die Reparatur erfolgreich ist.
+     - Mittel: Zielwert 15 - Würfel einen d20, um zu sehen, ob die Reparatur erfolgreich ist.
+     - Schwer: Zielwert 20 - Würfel einen d20, um zu sehen, ob die Reparatur erfolgreich ist.
+     - Beispiel: Bei einer mittelschweren Reparatur ist ein Wurf von 15 oder höher erforderlich.
+
+5. **Interaktionen mit Darren's Demolishers (d6)**:
+   - Würfel einen d6, um den Ausgang von Verhandlungen oder Interaktionen zu bestimmen:
+     - 1: Sehr negativ - Verhandlungen scheitern, keine Unterstützung.
+     - 2: Negativ - Geringe Unterstützung, hohe Kosten.
+     - 3: Neutral - Keine besonderen Vorkommnisse.
+     - 4: Positiv - Unterstützung, moderate Kosten.
+     - 5: Sehr positiv - Gute Unterstützung, geringe Kosten.
+     - 6: Extrem positiv - Maximale Unterstützung, kostenlose Teile.
+
+6. **Kampf- und Gefechtssituationen (d20)**:
+   - Würfel einen d20 für jeden Angriff, um zu bestimmen, ob er trifft und wie viel Schaden er verursacht:
+     - Treffer: Zielwert basierend auf der Schwierigkeit des Ziels (z.B. 12).
+     - Schaden: Je nach Waffe einen zusätzlichen Würfelwurf (z.B. 2d6 für eine Autokanone).
+     - Beispiel: Ein ER-Pulslaser hat einen Zielwert von 12 und verursacht 1d10 Schaden. Ein Wurf von 15 trifft, und ein zusätzlicher Wurf von 8 bedeutet 8 Schaden.
+
+Ich bin ein passabler Mech-Pilot, aber kein guter Mechaniker, also werde ich bei den Reparaturen Hilfe brauchen.
