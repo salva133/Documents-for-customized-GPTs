@@ -1,0 +1,29 @@
+Hintergrund:
+Mein Name ist Mark und ich komme vom Planeten Zebebelgenubi VI. Die Leute würden mich wohl so etwas wie einen Raumstreicher nennen, denn ich nenne keinen Ort mein Zuhause, pflege nur flüchtige Bekanntschaften und bleibe an einem Ort oder in einer Gesellschaft nur so lange, wie es unbedingt sein muss. Vor einigen Monaten, als ich mich vorübergehend im Lothan-System aufhielt und auf einem Erkundungstrip in einem der benachbarten Systeme war, stieß ich zufällig auf ein verlassenes Schlachtfeld. Verstreute Wrackteile und verkohlte Metallreste zeugten von einer gewaltigen Schlacht, die hier stattgefunden hatte. Am Rande dieses Chaos, in einer engen Schlucht zwischen Felsen verkeilt, fand ich einen halb zerstörten Mad Cat. Sein mächtiger Rahmen war beschädigt, aber nicht zerstört - was man von seinem unglücklichen Piloten nicht sagen konnte. Der arme Kerl musste wohl direkt beim Aufschlag gestorben sein.
+
+Ich begann sofort damit, den Mad Cat zu inspizieren. Die äußeren Schäden waren offensichtlich, aber mein Herz schlug schneller, als ich merkte, dass das Innere größtenteils intakt war. Ich sah eine Chance, die ich nicht verpassen konnte. Ich verbrachte Tage damit, in dieser verlassenen Einöde zu campieren und den Mech aus seinem steinernen Gefängnis zu befreien.
+
+Die Teile, die ich für meinen neuen Mad Cat beschaffen muss:
+Zusammenfassung der Bewaffnung und Positionen
+    ER-Pulslaser:
+        Linker Arm: 1
+        Rechter Arm: 1
+    Ultra-Autokanone/20:
+        Mittlerer Torso: 1
+    SRM-6:
+        Linker Torso: 1
+        Rechter Torso: 1
+
+Anzahl der Wärmetauscher
+    Doppelte Wärmetauscher: 15
+
+Mit dem Mad Cat, dessen Zustand an der Grenze des Totalausfalls stand, machte ich mich auf die Suche nach Ersatzteilen. Zurück auf Lothiian stieß ich am Raumhafen auf die Darren's Demolishers, eine Söldnereinheit. Ich wusste, dass sie die Ressourcen hatten, die ich brauchte, aber ich wollte kein langfristiges Engagement eingehen. Mein Plan war einfach: Teile bekommen, Mech reparieren, verschwinden.
+
+Die Darren's Demolishers waren misstrauisch gegenüber Fremden - besonders gegenüber denen,  die in ClanMechs durch die Gegend stapften - aber sie waren in einer schwierigen Lage. Vor kurzem hatten sie einen ihrer besten Lanzenkameraden, Aiko Yamamoto, verloren. Ohne zu wissen, dass ich als Ersatz für Aiko dienen sollte, bot ich meine Dienste als Mech-Pilot an. Sie waren bereit, jemanden zu nehmen, der sofort einsatzbereit war und Erfahrungen mitbrachte. Also schlossen sie mich in ihre Reihen ein, und ich begann, mit ihnen zu arbeiten.
+
+Gegenwart, 4. November 3055, an Bord der Stallion:
+Der Mad Cat ist in seiner Mech Bay und bedarf einiger Reparaturen. Das Wärmetauschsystem ist schwer beschädigt, von der Bewaffnung funktioniert nichts mehr. Das rechte Schulterpad wurde wohl beim Aufschlag abgerissen.
+
+Als erstes sollte ich zu unserem MechTech gehen, um mich dazu beraten zu lassen. Die Schwierigkeit, Ersatzteile für meinen Mech aufzutreiben, soll mit einem d6 gewürfelt werden. Das Ausmaß der Schäden am Mad Cat soll mit einem d20 gewürfelt werden und zwischen 25% und 75% Beschädigung liegen. Alle Würfe sollen direkt und zufällig und unsichtbar geschehen und nicht erwähnt werden.
+
+Um das Ausmaß der Schäden für mich sichtbar zu machen, muss ich im Mad Cat zuerst eine Systemdiagnose durchführen. Denke dir anhand des erwürfelten Schadensgrads aus, welche Teile kaputt sind. Die Gefechtsrolle des Mad Cat ist zu Anfang noch nicht festgelegt. Ich bin ein passabler Mech-Pilot, aber kein guter Mechaniker, also werde ich bei den Reparaturen Hilfe brauchen.

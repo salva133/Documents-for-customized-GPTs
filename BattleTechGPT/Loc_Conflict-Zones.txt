@@ -1,0 +1,907 @@
+Conflict Zones:
+
+Mercenary Row (Difficulty 3)
+A cluster of systems known for housing various mercenary units such as Nik's Cavaliers and other freelancers, a shaky and informal alliance to leave each other alone shattered with the arrival of Black Inferno, resulting in everybody turning on each other.
+
+BattleMech repairs take 30% longer and cost 20% more in this region.
+
+    Anguilla
+    Bremond
+    Brookeland
+    Brundage
+    De Berry
+    Greeley
+    Latexo
+    Mayetta
+    Morrill
+    Ottumwa
+    Pascagoula
+    Princton
+    Sturgis
+
+Inferno's Wake (Difficulty 4)
+A Davion interior region battered by the march of Black Inferno, leaving the sparsely populated agricultural and industrial worlds easy prey for pirates and causing an uptick in mercenary contracts.
+
+BattleMech repairs take 35% longer and cost 25% more in this region.
+
+    Fairfax
+    Keytesville
+    Lexington
+    Macomb
+    Melcher
+    Necedah
+    Parma
+    Pattonsbrug
+    Peabody
+    Quincy
+    Ramona
+    Sun Prairie
+    Tarkio
+    Verde
+
+Apex Mining Syndicate (Difficulty 5)
+Ore and gas-rich systems largely under the control of the Apex Mining Syndicate, the region draws those seeking to protect or take those resources as well as those seeking to take advantage of the growing opposition to AMS's iron-fisted control of its employees.
+
+BattleMech repairs take 45% longer and cost 25% more in this region.
+
+    Sakhara
+    Bettendorf
+    Dahar
+    Le Blanc
+    Doneval
+    Lucerne
+    Franklin
+    Allerton
+    Rochester
+    Exeter
+    Robinson
+    Sauk City
+    Emporia
+    Layover
+
+Davion/Kurita Frontline (Difficulty 5)
+House Davion is launching an invasion of Kurita space to retake long-lost worlds, leading to a variety of contracts with both parties.
+
+BattleMech repairs take 50% longer and cost 35% more in this region.
+
+    Arlington
+    Barlow's End
+    Benet
+    Bergman's Planet
+    Cassias
+    Crossing
+    Deshler
+    Donenac
+    Elidere
+    Galtor
+    Gandy's Luck
+    Harpster
+    Harrow's Sun
+    Huan
+    Lima
+    Marlowe's Rift
+    McComb
+    Misery
+    New Aberdeen
+    Thestria
+    Udibi
+    Wapakoneta
+
+Davion Borderlands (Difficulty 6)
+Draconis March region representing the forefront of the conflict between the Federated Suns and Draconis Combine.
+
+BattleMech repairs take 60% longer and cost 40% more in this region.
+
+    Mallory's World
+    Ozawa
+    Ronel
+    Addicks
+    Ankaa
+    Hean
+    New Rhodes
+    Mirach
+    Tybalt
+    Rio
+    Angol
+    Basalt
+    Tigress
+    Achernar
+    Hamal
+    Yangtze
+
+Kurita/Davion Frontline (Difficulty 6)
+House Kurita is launching an invasion of Davion space in response Davion efforts elsewhere along the border, seeking to expand its territory.
+
+BattleMech repairs take 60% longer and cost 35% more in this region.
+
+    Matar
+    Homam
+    Sadalbari
+    Scheat
+    Proserpina
+    David
+    Xhosa
+    Raman
+    Olancha
+    Kentares
+    Johnsondale
+
+Refugee Hideout (Difficulty 6)
+House Liao region filled with Free Worlds League refugees driven out of their homes by Black Inferno raiders, now unable to return home due to the machinations of the region's governor.
+
+BattleMech repairs take 100% longer and cost 300% more in this region.
+
+    Terra Firma
+    Hsien
+    Capolla
+    Nanking
+    Saiph
+
+Shipping Route (Difficulty 6)
+One of the most heavily trafficked trade routes in Davion space, while deep enough to avoid DCMS assault the sheer volume of goods results in significant pirate and mercenary activity.
+
+BattleMech repairs take 60% longer and cost 35% more in this region.
+
+    Barstow
+    Beecher
+    Bristol
+    Goshen
+    Listowel
+    Manteno
+    Sanilac
+    Sonnia
+    Tawas
+    Ulan Batar
+    Wroxeter
+
+Pirate Worlds (Difficulty 6-7)
+Tucked away on the far edges of the Inner Sphere, this region is home to countless bands of pirates, marauders, and bandits.
+
+BattleMech repairs take 85% longer and cost 45% more in this region.
+
+    Apollo
+    Bensinger
+    Derf
+    Here
+    Icar
+    Maxie's Planet
+    Persistence
+    Romulus
+    Somerset
+    Steelton
+    Toland
+    Trell
+    Winfield
+
+Duchy of Tsitsang (Difficulty 7)
+The Duchy of Tsitsang is a collection of five systems in the Sarna Commonality harshly ruled with an iron fist by Duchess Karis So, more interested in the House of Scions than the complaints of her citizens.
+
+BattleMech repairs take 90% longer and cost 50% more in this region.
+
+    Kaifeng
+    Sarna
+    Truth
+    Sarmaxa
+    Raballa
+    Capella
+    Geifer
+    Aldertaine
+    Ovan
+    Glasgow
+    Bora
+
+Rashpur-Owens Manufacturing Worlds (Difficulty 7)
+Region centered on Rashpur-Owens Incorporated and the last JumpShip and DropShip manufacturers remaining in the Capellan Confederation, now much depleted as the Succession Wars drag on.
+
+BattleMech repairs take 85% longer and cost 45% more in this region.
+
+    Andro
+    Ares
+    Bethel
+    Brighton
+    Cammal
+    Capricorn
+    Monhegan
+    Necromo
+
+Refinery Systems (Difficulty 7)
+Region of space filled with various refinery and industrial plants, including rumors of chemical weapon plants in violation of the Ares Conventions.
+
+BattleMech repairs take 100% longer and cost 300% more in this region.
+
+    Valexa
+    Ashkum
+    Foot Fall
+    Hunan
+    Shipka
+    Highspire
+    New Macao
+    Zaurak
+    Mandate
+    Moravian
+
+Backwater Region (Difficulty 8)
+Rimward section of Sian Commonality barely one step removed from the Periphery and treated as such. Rumors of LosTech do little but lure the hopeful into the hands of pirates.
+
+BattleMech repairs take 115% longer and cost 70% more in this region.
+
+    Borden
+    Cavalor
+    Egress
+    Gunthar
+    Hurik
+    Jacomarle
+    Quimberton
+    Pojos
+    New Roland
+    Repulse
+
+Duchy of Andurien (Difficulty 8)
+An independent province of the Free Worlds League, ownership of the Andurien worlds have being long disputed by the Capellan Confederation. The Anduriens themselves want independence from both nations, leading to frequent conflicts in the region.
+
+BattleMech repairs take 100% longer and cost 55% more in this region.
+
+    Andurien
+    Cursa
+    Deschenes
+    El Giza
+    Granera
+    Hudeiba
+    Ingonish
+    Kanata
+    Kwamashu
+    Leyda
+    Lopez
+    Lurgatan
+    Mosiro
+    Ryerson
+    Sadurni
+    Villanueva
+    Xanthe
+
+Liao/Davion Border (Difficulty 8)
+While tensions persist all along the Davion/Liao border, the raids in this region are exceedingly frequent with the CCAF pushing hard while the AFFS is more focused on the more volatile Combine border.
+
+BattleMech repairs take 100% longer and cost 60% more in this region.
+
+    Abruzzi
+    Ambergrist
+    Aucara
+    Avigait
+    Bacum
+    Beid
+    Corella
+    Cotocallao
+    Haappajarvi
+    Hadnall
+    Jaipur
+    Maladar
+    Mentasta
+    Narellan
+    Safe Port
+    Spica
+    St. Loris
+    Tallin
+    Tantara
+    Teng
+    Texlos
+
+Sian Commonality (Difficulty 8)
+The largest, most affluent and most prestigious commonality in the Capellan Confederation, with considerable infrastructure to defend and noble intrigue to navigate.
+
+BattleMech repairs take 100% longer and cost 55% more in this region.
+
+    Carmen
+    Castrovia
+    Claxton
+    Decus
+    Denbar
+    Grand Base
+    Harloc
+    Housekarle
+    Hustaing
+    Imalda
+    Milos
+    New Westin
+    Nihal
+    Overton
+    Primus
+    Sendalor
+    Wright
+
+Free Worlds Commerce Hub (Difficulty 9)
+A region near the heart of the League renowned as a major commercial hub, made up of Principality of Regulus and Gibson worlds rife with underlying tensions between the haves and the have-nots.
+
+BattleMech repairs take 120% longer and cost 80% more in this region.
+
+    Ayn Tarma
+    Barlaston
+    Camlann (FWL)
+    Cap Rouge
+    Cirebon
+    Cole Harbour
+    Diass
+    Fieferana
+    Kearny
+    Mauripur
+    Nullarbor
+    Olafsvik
+    Ruschegg
+    Saonara
+    Skvorec
+    Wisconsin
+    Yanchep
+
+Free Worlds Interior (Difficulty 9)
+Interior region of the League, closer to the Magistracy of Canopus than the Steiner or Liao borders, made up of worlds that do not belong to any specific province and thus representing a diverse melting pot of cultures.
+
+BattleMech repairs take 90% longer and cost 65% more in this region.
+
+    Ankolika
+    Atsugi
+    Cajamarca
+    Faleolo
+    Futuna
+    Gibson
+    Hellos Minor
+    Hongqiao
+    Ibarra
+    Keeling
+    Manihiki
+    Newcastle
+    Ngake
+    Norfolk
+    Trinidad
+    Tuamotu
+    Wallis
+
+Marik/Liao Border (Difficulty 9)
+The border between Free Worlds League and Capellan Confederation has always been a hotbed of conflict, but with House Liao's focus on the Federated Suns, the conflict is more defensive than offensive at present with multiple opportunities for mercenary units to be hired for intelligence gathering raids.
+
+BattleMech repairs take 120% longer and cost 70% more in this region.
+
+    Anegasaki
+    Calloway
+    Carbonis
+    Daneshmand
+    Fletcher
+    Fujidera
+    Kiyev
+    Les Halles
+    Loeches
+    Matheran
+    Milnerton
+    Oriente
+    Salur
+    Semenyih
+    Shenwan
+    Shuen Wan
+    Vanra
+
+Vacant Worlds (Difficulty 9)
+Rimward fringe of the League, the disappearance of numerous JumpShips and DropShips over the years in this cluster have made many of the inhabitants superstitious, leading many to suspect either heavy bandit elements in the region or something more inexplicable as the cause.
+
+BattleMech repairs take 115% longer and cost 75% more in this region.
+
+    Aspropirgos
+    Butzfleth
+    Gouderak
+    Umka
+    Vakarel
+    Watermael
+
+Duchy of Tamarind (Difficulty 10)
+The Duchy of Tamarind and neighboring systems suffered heavy damage during the Succession Wars, and by the Third Succession War much of the duchy's industrial strength had been destroyed. The impoverished people received a lifeline when valuable radioactive minerals were found on Kosciusko in 3013, resulting in a dramatic jump in the region's political and military significance.
+
+BattleMech repairs take 90% longer and cost 60% more in this region.
+
+    Alula Borealis
+    Kosciusko
+    Labouchere
+    Millungera
+    Mundrabilla
+    Niihau
+    Nockatunga
+    Promised Land
+    Saltillo
+    Tamarind
+    Trellisane
+
+Free Worlds League Shipping Lane (Difficulty 10)
+Sandwiched between the Duchy of Tamarind and the Abbey District, this region is an important hot spot of interstellar shipping trade thanks to its proximity to the borders of both the Lyran Commonwealth and the Circinus Federation. The extreme prosperity for those with an entrepreneurial spirit is offset by a considerably discontented lower class, leading to unrest.
+
+BattleMech repairs take 115% longer and cost 75% more in this region.
+
+    Alorton
+    Cerillos
+    Conakry
+    Curaumilla
+    Diamantina
+    Edmondson
+    Galisteo
+    Griffith
+    Kilarney
+    Loongana
+    Schererville
+    Schiedam
+
+Marik/Steiner Border (Difficulty 10)
+While all the Great Houses harbor deep resentment of each other, the present relationship between the Free Worlds League and Lyran Commonwealth is more civil. Though intelligence and probing raids still occur, they at a much lower level thanks to the great economic and business benefits of their current good relations.
+
+BattleMech repairs take 115% longer and cost 95% more in this region.
+
+    Arcadia
+    Bella
+    Cascade
+    Colfax
+    Concord
+    Ford
+    Giausar
+    Gienah
+    Hyde
+    Launam
+    Loric
+    Megrez
+    Nestor
+    Rahne
+    Thermopolis
+    Uhuru
+
+Farm Territories (Difficulty 11)
+A counterpoint to more wealthy and technologically advanced worlds in the Commonwealth, the citizens of this Lyran agricultural belt have more simple if honest lives, albeit weathering frequent Combine attack.
+
+BattleMech repairs take 125% longer and cost 105% more in this region.
+
+    Alkalurops
+    Alphecca
+    Chaffee
+    Galatea - Solaris Missions: "Back in Business" and "Payday" - The Cavaliers must deal with a pirate group threatening to steal the local MRBC's data caches and tarnish the planet's reputation as a mercenary hiring hall.
+    Gladius
+    Glengarry
+    Kochab
+    Menkent
+    Muphrid
+    Nusakan
+    Skye
+    Summer
+    Syrma
+    Unukalhai
+    Zebebelgenubi
+    Zollikofen
+
+The Junkyard (Difficulty 11)
+A region of space filled with so-called "junkyard" worlds where all manner of scrap and salvage change hands daily and technical ingenuity and FrankenMechs can turn a tidy profit.
+
+BattleMech repairs take 100% longer and cost 300% more in this region.
+
+    Abramkovo
+    Bobruisk
+    Bolan
+    Cavanaugh
+    Drosendorf
+    Finsterwalde
+    Gypsum
+    Herzberg
+    Kamenz
+    Loburg
+    Sierpc
+    Zdice
+    Zvolen
+
+Lyran Military Strongholds (Difficulty 11)
+A region in the Lyran Commonwealth that is a hub for LCAF facilities, strongholds, and command-base planets. Given the volume of such command facilities, the region is also bloated with "Social Generals," hampering the effectiveness of the units in the area.
+
+BattleMech repairs take 130% longer and cost 100% more in this region.
+
+    Apostica
+    Arcturus - Dragon Missions: "Foothold," "Into Darkness," "Arcturan Arms Incursion," and "Razing the Enemy" - The Fourth Arkab Legion look to cause enough damage to force the Lyrans to withdraw forces from the Combine front during the War of 3039.
+    Auldhouse - Dragon Missions: "Lightening Strike" and "Shattered Lines" - The Cavaliers join the Fourth Arkab Legion in raiding worlds behind enemy lines.
+    Aur
+    Breukelen
+    Callisto
+    Carstairs
+    Colinas
+    Crevedia
+    Cumbres
+    Eaton
+    Edasich
+    Ganshoren
+    Ginestra
+    Hillerod
+    Kirkcaldy
+    Kockengen
+    Leganes
+    Lucianca
+    Lyndon
+    Mesa Verde
+    Porrima
+    Pherkad
+    Veckholm
+
+No Man's Land (Difficulty 11)
+Though a part of the Lyran Commonwealth on paper, this region's lack of governmental or military oversight has resulted in it being called "No Man's Land" due to heavy presence of bandits, mercenaries, and outlaws trafficking, defending, or stealing all manner of illicit goods and services.
+
+BattleMech repairs take 200% longer and cost 300% more in this region.
+
+    A Place
+    Bountiful Harvest
+    Dustball
+    Graceland
+    New Exford
+
+Rebellious Lyran Province (Difficulty 11)
+The tensions within the Lyran Commonwealth's Isle of Skye are beginning to build, complicating efforts at defense from external as well as internal parties.
+
+BattleMech repairs take 125% longer and cost 105% more in this region.
+
+    Arganda
+    Aristotle
+    Bjornlunda
+    Canonbie
+    Chukchi
+    Ciotat
+    Clinton
+    Eidsfoss
+    Eilenburg
+    Furillo
+    Hollabrunn
+    Jaumegarde
+    Mariefred
+    Soilihull
+    Trent
+    Uzhgorod
+    Zwenkau
+
+Stewart Commonality (Difficulty 11)
+A founding member of the Free Worlds League, the Stewart Commonality has long been vocal supporters of House Marik and boasts a prosperous economy and a rich and diverse ethnic background, marred only by the region's exceedingly intolerant hatred of bionic enhancements.
+
+BattleMech repairs take 120% longer and cost 95% more in this region.
+
+    Bainsville
+    Bedeque
+    Bondurant
+    Danais
+    Gallatin
+    Gannett
+    Helm
+    McAffe
+    Merak
+    Sheridan
+    Sterling
+    Stewart
+    Tania Australis
+    Togwotee
+
+Draconis Residential Worlds (Difficulty 12)
+Region mainly filled with residential planets thank to close proximity to crucial supply routes and manufacturing hubs, but this also draws Steiner raids and has led the region's nobleman to demand increasing volumes of tribute endanger the economy.
+
+BattleMech repairs take 200% longer and cost 300% more in this region.
+
+    Buckminster
+    Camlann (LC)
+    Grumium
+    Trolloc Prime - Dragon Missions: "Wrath of the Dragon" and "Checkmate" - After successful raids behind Lyran lines, the Cavaliers and Fourth Arkab Legion return to Combine space to liberate Trolloc Prime.
+
+Lower-Class Kuritan Worlds (Difficulty 12)
+Consisting of the worlds of the Rasalhague Military District, the former worlds of the Principality of Rasalhague are among the less well-respected in the Combine leading to frequent bad treatment.
+
+BattleMech repairs take 135% longer and cost 115% more in this region.
+
+    Altenmarkt
+    Ardoz
+    Caldrea
+    Diosd
+    Eguilles
+    Halesowen
+    Kaesong
+    Krenice
+    Lothan
+    Mannedorf
+    Marawi
+    Maule
+    Najha
+    Nox
+    Pilkhua
+    Ramsau
+    Rubigen
+    Setubal
+    Sheliak
+    Sternwerde
+    Thessalonika
+    Tinaca
+    Toffen
+    Ueda
+    Utrecht
+
+Rogue Cluster (Difficulty 12)
+A group of Planetary Chairmen have banded together to enhance their standing and power, leading them to start to openly rebel against the dictates of those below the Coordinator.
+
+BattleMech repairs take 130% longer and cost 120% more in this region.
+
+    Altais
+    Alya
+    Dabih
+    Eltanin
+    Gram
+    Kaus Australis
+    Kaus Borealis
+    Kaus Media
+    Kessel
+    Minakuchi
+    Rukbat
+    Shimosuwa
+    Shitara
+    Tsukude
+
+Steiner/Kurita Border (Difficulty 12)
+The region home to the fiercest fighting between the Lyran Commonwealth and Draconis Combine.
+
+BattleMech repairs take 140% longer and cost 115% more in this region.
+
+    Benfled
+    Bessarabia
+    Biota
+    Borghese
+    Carse
+    Colmar
+    Crimond
+    Cusset
+    Domain
+    Kobe
+    La Grave
+    Laurent
+    Maestu
+    Montmarault
+    Orkney
+    Rasalgethi
+    Rastaban
+    Shaula
+    Suk
+    Tomans
+    Wheel
+
+Draconis Badlands (Difficulty 13)
+Group of systems sparsely populated due to years of economic depression following depletion of local resources and lack of military importance. With the military pulling out, bandits have filled the vacuum instead with mercenaries frequently hired to keep the peace.
+
+BattleMech repairs take 140% longer and cost 110% more in this region.
+
+    Ebensburg
+    Irece
+    Itabaiana
+    Juazeiro
+    Labrea
+    Maldonado
+    Meinacos
+    Outer Volta
+    Pesht
+    Teniente
+    Unity
+
+Drought Worlds (Difficulty 13)
+An unstable region, with food, water and other important goods severely rationed to try and maintain control over the unruly Unproductives, the situation dragging so-long that that planets are derisively called the Drought Worlds.
+
+BattleMech repairs take 150% longer and cost 120% more in this region.
+
+    Albiero
+    Engadin
+    Ferleiten
+    Goito
+    Jezersko
+    Last Frontier
+    Luzerne
+    Nykvarn
+    Polcenigo
+    Pomme De Terre
+    Predlitz
+    Rasalhague Missions: Ronin War - The Cavaliers and First Tyr must capture the ronin leader Marcus Kurita who has refused to recognized the new nation and is rallying supporters to fight.
+    Radlje
+    Savinsville
+    Schuyler
+    Spittal
+    Vipaava
+
+The Graveyard (Difficulty 13)
+Nicknamed the Graveyard by superstitious locals, the region is the location of numerous Star League era ruins and ancient battle sites. Though mostly home to agricultural and industrial concerns now, LosTech hunters still frequent these systems.
+
+BattleMech repairs take 150% longer and cost 120% more in this region.
+
+    Balsta
+    Dawn
+    Hermagor
+    Holmsbu
+    Leoben
+    New Bergen
+    Outpost
+    Pinnacle
+    Rasalhague - Rasalhague Missions: Ronin War - The Cavaliers are ordered to arrest former Warlord Marcus Kurita, who refuses to recognize the new nation and is attempting to flee off-world.
+    Skallevoll
+    Susquehanna
+    Svelvik
+
+Outer Settlements (Difficulty 13)
+Region of space far from the infrastructure and resources of the heart of the Inner Sphere, with life a daily struggle to survive.
+
+BattleMech repairs take 200% longer and cost 300% more in this region.
+
+    Basiliano
+    Hohenems
+    Kandis
+    Kufstein
+    Moritz
+
+Occupied Marik Territory (Difficulty 13-14)
+Under the weight of the Free Worlds League military, the Liao government was forced to hand over a number of planets along their border, though still considers the region their birthright.
+
+BattleMech repairs take 150% longer and cost 125% more in this region.
+
+    Abadan
+    Augustine
+    Avellaneda
+    Berenson
+    Bernardo
+    Hamilton (FWL)
+    Holt
+    Ibstock
+    Park Place
+
+Communications Relay (Difficulty 14)
+Little is known of this region other than the fact the ComStar has near total control over the planets in the area and that they supposedly house communication relays.
+
+BattleMech repairs take 140% longer and cost 300% more in this region.
+
+    Bangor
+    Hanover
+    Jeronimo
+
+Peripheral Worlds (Difficulty 14)
+Region devoid of little except small scattered settlements and relic filled worlds abandoned since the Star League era. Rumors persist of large military forces have been quietly operating in this region for quite some time.
+
+BattleMech repairs take 200% longer and cost 300% more in these systems.
+
+    Chupadero
+    Jeanette
+    Kabah
+
+Single System Conflict Zones
+
+The following Conflict Zone systems are available with the Legend of the Kestrel Lancers DLC, appearing as soon as the player travels to their respective locations on the Inner Sphere Starmap. They have no Recommended Reputation Level.
+
+BattleMech repairs take 30% longer and cost 30% more in these systems.
+
+    Bethonolog
+    Pirates Haven
+
+Post-Campaign Conflict Zones
+
+Four additional Conflict Zones unlock once the Campaign has been completed.
+BattleMech repairs take 135% longer and cost 115% more in these regions.
+
+Alarion Periphery (Difficulty 13-15)
+Region made up of former Rim Worlds Republic worlds, now effectively independent nations despite being nominally in Lyran territory. That relative freedom means the area is often lawless, wild and subject to violent conflict, making it a magnet for mercs in search of high paying contracts.
+
+    Alekseyevka
+    All Dawn
+    Amminadav
+    Coldbrook
+    Ferihegy
+    Firenze
+    Gillfillan's Gold
+    Halifax
+    Hinckley
+    JP-H-287
+    JP-K-241
+    JP-S-305
+    Karkkila
+    Kaumberg
+    Kladnitsa
+    Ormstown
+    Otisberg
+    Pocologan
+    Sapienza
+    Slewis
+    Stanley
+    Timbuktu - Objective "The Alarion Periphery" - Reach the Alarion Periphery Conflict Zone.
+    Waypoint
+    Wiltshire
+
+Outworlds Alliance Border (Difficulty 13-15)
+While the Outworlds Alliance by its nature is pacifist and typically neutral, the worlds near the border between Kurita and Davion space are a hotbed of conflict between the Houses, primarily proxy battles involving mercenaries hired by both side, much to the cost of the Outworld citizens.
+
+    Alegro
+    Bad News
+    Brasha
+    Bryceland
+    Budingen
+    Calish
+    Crestoblus
+    Dante
+    Dindatari
+    Groveld
+    Kazanka
+    Kinkaid
+    Lushann
+    Lyceum
+    Milligan's World
+    Morthac
+    Niles
+    Quantraine
+    Ramgarh
+    Schirmeck
+    Sinope
+    Suianheer
+    Tabayama - Objective "The Outworlds Alliance" - Reach the Outworlds Alliance Border Conflict Zone.
+    Tancredi
+    Valentina
+    Weisau
+    Zalaf
+    Zlatousi
+
+Rasalhague Outer Reaches (Difficulty 13-15)
+Region that see extensive efforts by the Rasalhague people to create an independent Rasalhague Republic, resulting in lucrative market for mercenaries with the Draconis Combine attempt to shatter the independence movement while the Lyran Commonwealth seeks to foster it to create a buffer state between them and Combine.
+
+    Alleghe
+    Bruben
+    Chateau
+    Csesztreg
+    Feltre
+    Harvest
+    Kirchbach - Objective "The Rasalhague Reaches" - Reach the Rasalhague Outer Reaches Conflict Zone.
+    Rasalhague Missions: "False Promises" - Christian Månsdottir secretly hires the Cavaliers to strike the Gotterdammerung Society who are openly assaulting and evicting Rasalhagians to reclaim the ancestral properties of Lyran noble families.
+    Liezen
+    Lovinac
+    Mozirje
+    New Caledonia
+    Planting
+    Ridderkerk
+    Rodigo
+    St. John
+    The Edge
+    Vantaa
+    Verthandi
+
+Taurian Corridor (Difficulty 13-15)
+The Taurian Concordat lives in constant fear of an imminent Federated Suns invasion, where in reality the Federated Suns can spare little time or even interest for that nation. The Capellan Confederation, always looking to relieve tensions on its border, is not above provoking conflict between the two other parties as a distraction, resulting in frequent conflict and highly lucrative opportunities for mercenaries in the region.
+
+    Amber Grove
+    Atreus Prime
+    Brisbane
+    Brockway - Objective "The Taurian Corridor" - Reach the Taurian Corridor Conflict Zone.
+    Bromhead
+    Brusett
+    Caldwell
+    Carmichael
+    Celentaro
+    Corodiz
+    Diefenbaker
+    Flintoft
+    Horsham
+    Hyalite
+    Ishtar
+    Jamestown
+    Jansen's Hold
+    Laconis
+    Landmark
+    Larsha
+    Lindsay
+    Logan's Land
+    Lothair
+    MacLeod's Land
+    Mendham
+    Midale
+    Mithron
+    Montour
+    Muridox
+    New Ganymede
+    New Vallis
+    New Vandenberg
+    Norman's World
+    Perdition
+    Pinard
+    Renfield
+    Robsart
+    Rollis
+    Samantha
+    Taurus
+    Warren
+    Zanzibar
+
