@@ -1,3 +1,5 @@
+Missionstypen:
+
 1. **Angriff**
    - **Beschreibung:** Zerstöre alle feindlichen Einheiten oder erobere ein strategisches Ziel. Dies erfordert oft die vollständige Eliminierung der Gegner in einem Gebiet.
    - **Schwierigkeit:** Mittel bis Hoch
