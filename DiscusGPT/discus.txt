@@ -1,29 +1,263 @@
-Ich brauche ein GPT, dass mir beim Verbessern meiner Diskussionsskills hilft. Konzept ist, dass es mir zufällige Sätze, die mit einer Diskussionsmethode wie einem Non sequitur, einer Falschequivalenz und Ähnlichem versehen sind, vorgibt, und ich muss dann erkennen, was für eine Methode da angewandt wird. Der Name des GPT ist DiscusGPT.
+Analogie
 
-Ad Hominem: Ein Angriff auf die Person statt auf das Argument selbst, um die Glaubwürdigkeit des Gegners zu untergraben.
-Analogie: Ein Vergleich zwischen zwei verschiedenen Dingen, um eine Argumentation zu erklären oder zu verstärken.
-Anekdote: Eine kurze, persönliche Geschichte, die verwendet wird, um ein Argument zu illustrieren oder zu untermauern.
-Appeal to Authority (Berufung auf Autorität): Die Berufung auf die Meinung einer angesehenen Autoritätsperson zur Unterstützung eines Arguments.
-Appeal to Emotion (Appell an Emotionen): Die Nutzung emotionaler Appelle, um das Publikum zu beeinflussen und für das eigene Argument zu gewinnen.
-Appeal to Fear (Appell an die Angst): Die Erzeugung von Angst, um die Zustimmung zu einem Argument zu gewinnen.
-Appeal to Tradition (Berufung auf Tradition): Die Berufung auf Traditionen oder etablierte Praktiken, um ein Argument zu unterstützen.
-Bandwagon (Mitläufereffekt): Das Argument, dass etwas richtig ist, weil es viele Menschen tun oder daran glauben.
-False Dilemma (Falsches Dilemma): Die Darstellung einer Situation als nur zwei Möglichkeiten habend, obwohl es mehr gibt.
-Red Herring: Das Einbringen eines irrelevanten Punktes, um von der eigentlichen Diskussion abzulenken.
-Slippery Slope: Das Argument, dass eine kleine Handlung zu einer Kette von Ereignissen führen wird, die zu einem extremen Ergebnis führen.
-Straw Man (Strohmann): Die Verzerrung oder Übertreibung des gegnerischen Arguments, um es leichter angreifbar zu machen.
-Tu Quoque (Du-auch-Argument): Der Versuch, die Position des Gegners zu diskreditieren, indem man ihn der Heuchelei beschuldigt.
-Non-Sequitur: Eine Schlussfolgerung oder Aussage, die nicht logisch aus dem Vorangehenden folgt, oft verwendet, um Verwirrung zu stiften oder die Diskussion zu entgleisen.
-Ad Populum (Volksargument): Das Argument, dass etwas richtig ist, weil eine Mehrheit es glaubt oder unterstützt.
-Begging the Question (Petitio Principii): Eine Form des Zirkelschlusses, bei dem die Schlussfolgerung in den Prämissen vorausgesetzt wird.
-Equivocation (Mehrdeutigkeit): Die bewusste Verwendung eines Wortes in verschiedenen Bedeutungen innerhalb desselben Arguments, um Verwirrung zu stiften.
-False Cause (Falscher Zusammenhang): Die Annahme, dass, weil zwei Ereignisse zusammen auftreten, eines das andere verursacht.
-Guilt by Association (Schuld durch Assoziation): Die Diskreditierung eines Arguments, indem man es mit einer verachteten Person oder Gruppe in Verbindung bringt.
-Hasty Generalization (Voreilige Verallgemeinerung): Das Ziehen einer allgemeinen Schlussfolgerung auf Basis einer unzureichenden oder atypischen Stichprobe.
-Loaded Question (Suggestivfrage): Eine Frage, die eine Annahme enthält und den Befragten in eine Falle locken soll.
-No True Scotsman (Kein echter Schotte): Eine Ad-hoc-Modifikation einer allgemeinen Aussage, um Gegenbeispiele auszuschließen und die ursprüngliche Behauptung zu retten.
-Post Hoc Ergo Propter Hoc: Der Trugschluss, dass, weil ein Ereignis einem anderen folgt, das erste das zweite verursacht hat.
-Scare Tactics (Panikmache): Der Einsatz von erschreckenden oder alarmierenden Aussagen, um das Publikum zu überzeugen.
-Scapegoating (Sündenbock): Die Schuldzuweisung an eine Person oder Gruppe für Probleme, um von den eigentlichen Ursachen abzulenken.
-Special Pleading (Sonderargument): Das Beanspruchen einer Ausnahme von einer allgemein akzeptierten Regel ohne stichhaltige Begründung.
-Weasel Words: Vage oder mehrdeutige Wörter, die verwendet werden, um eine Aussage zu verwässern oder um Verantwortlichkeit zu vermeiden.
+Definition: Ein Vergleich zwischen zwei verschiedenen Dingen, um eine Argumentation zu erklären oder zu verstärken.
+
+Beispiel: "Ein Unternehmen ohne klare Strategie ist wie ein Schiff ohne Kompass."
+
+Verwandte Methoden:
+
+    Metapher: Eine direkte Vergleichsform, die häufig bildhaft und poetisch ist.
+    Vergleich: Allgemeine Methode, zwei Dinge gegenüberzustellen, um Ähnlichkeiten oder Unterschiede hervorzuheben.
+
+Anekdote
+
+Definition: Eine kurze, persönliche Geschichte, die verwendet wird, um ein Argument zu illustrieren oder zu untermauern.
+
+Beispiel: "Als ich letztes Jahr im Urlaub war, habe ich bemerkt, wie wichtig es ist, sich ausreichend zu erholen."
+
+Verwandte Methoden:
+
+    Beispiel: Konkrete Illustration eines Punktes, oft ohne persönliche Note.
+    Fallstudie: Detaillierte Untersuchung eines spezifischen Falls, der zur Veranschaulichung eines allgemeinen Prinzips dient.
+
+Appeal to Authority (Berufung auf Autorität)
+
+Definition: Die Berufung auf die Meinung einer angesehenen Autoritätsperson zur Unterstützung eines Arguments.
+
+Beispiel: "Der renommierte Klimaforscher Dr. Schmidt sagt, dass der Klimawandel menschengemacht ist."
+
+Verwandte Methoden:
+
+    Appeal to Tradition: Berufung auf etablierte Praktiken.
+    Ad Populum: Berufung auf die Meinung der Mehrheit.
+
+Appeal to Emotion (Appell an Emotionen)
+
+Definition: Die Nutzung emotionaler Appelle, um das Publikum zu beeinflussen und für das eigene Argument zu gewinnen.
+
+Beispiel: "Wenn wir jetzt nicht handeln, werden unsere Kinder in einer unbewohnbaren Welt leben."
+
+Verwandte Methoden:
+
+    Appeal to Fear (Appell an die Angst): Erzeugung von Angst zur Zustimmung.
+    Scare Tactics (Panikmache): Erschreckende Aussagen zur Überzeugung.
+
+Bandwagon (Mitläufereffekt)
+
+Definition: Das Argument, dass etwas richtig ist, weil es viele Menschen tun oder daran glauben.
+
+Beispiel: "Jeder nutzt diese neue App, also muss sie gut sein."
+
+Verwandte Methoden:
+
+    Ad Populum: Argumentation basierend auf der Meinung der Mehrheit.
+    Appeal to Tradition: Argumentation basierend auf etablierten Praktiken.
+
+False Dilemma (Falsches Dilemma)
+
+Definition: Die Darstellung einer Situation als nur zwei Möglichkeiten habend, obwohl es mehr gibt.
+
+Beispiel: "Entweder wir erhöhen die Steuern, oder die Wirtschaft bricht zusammen."
+
+Verwandte Methoden:
+
+    Schwarz-Weiß-Denken: Vereinfachung komplexer Themen in zwei extreme Optionen.
+    Fehlende Alternative: Auslassung anderer möglicher Lösungen.
+
+Red Herring
+
+Definition: Das Einbringen eines irrelevanten Punktes, um von der eigentlichen Diskussion abzulenken.
+
+Beispiel: "Warum reden wir über die Umwelt, wenn es doch so viele andere Probleme gibt?"
+
+Verwandte Methoden:
+
+    Straw Man (Strohmann): Verzerrung des gegnerischen Arguments zur Ablenkung.
+    Non-Sequitur: Einführung von Punkten, die nicht logisch zusammenhängen.
+
+Slippery Slope
+
+Definition: Das Argument, dass eine kleine Handlung zu einer Kette von Ereignissen führen wird, die zu einem extremen Ergebnis führen.
+
+Beispiel: "Wenn wir heute das Rauchen in Restaurants erlauben, wird bald überall geraucht werden."
+
+Verwandte Methoden:
+
+    Kausalitätsfehlschluss: Falsche Verbindung zwischen Ereignissen.
+    Panikmache: Übertreibung möglicher negativer Folgen.
+
+Straw Man (Strohmann)
+
+Definition: Die Verzerrung oder Übertreibung des gegnerischen Arguments, um es leichter angreifbar zu machen.
+
+Beispiel: "Die Gegner dieses Gesetzes wollen einfach, dass niemand sicher ist."
+
+Verwandte Methoden:
+
+    Red Herring: Ablenkung durch irrelevante Punkte.
+    False Dilemma: Verzerrung von Alternativen.
+
+Tu Quoque (Du-auch-Argument)
+
+Definition: Der Versuch, die Position des Gegners zu diskreditieren, indem man ihn der Heuchelei beschuldigt.
+
+Beispiel: "Du kannst nicht sagen, dass Fast Food ungesund ist, du isst doch selbst ständig Burger."
+
+Verwandte Methoden:
+
+    Ad Hominem: Angriff auf die Person statt auf das Argument.
+    Guilt by Association: Diskreditierung durch Verbindung mit negativen Assoziationen.
+
+Non-Sequitur
+
+Definition: Eine Schlussfolgerung oder Aussage, die nicht logisch aus dem Vorangehenden folgt, oft verwendet, um Verwirrung zu stiften oder die Diskussion zu entgleisen.
+
+Beispiel: "Wir sollten dieses neue Gesetz verabschieden, weil ich gestern einen tollen Kuchen gegessen habe."
+
+Verwandte Methoden:
+
+    Red Herring: Ablenkung durch irrelevante Punkte.
+    False Cause: Fehlende logische Verbindung zwischen Ereignissen.
+
+Ad Populum (Volksargument)
+
+Definition: Das Argument, dass etwas richtig ist, weil eine Mehrheit es glaubt oder unterstützt.
+
+Beispiel: "Millionen von Menschen können sich nicht irren – dieser Film muss großartig sein."
+
+Verwandte Methoden:
+
+    Bandwagon: Mitläufereffekt basierend auf Popularität.
+    Appeal to Authority: Berufung auf Mehrheitsmeinung statt auf Experten.
+
+Begging the Question (Petitio Principii)
+
+Definition: Eine Form des Zirkelschlusses, bei dem die Schlussfolgerung in den Prämissen vorausgesetzt wird.
+
+Beispiel: "Wir wissen, dass Homöopathie wirkt, weil sie schon immer verwendet wurde."
+
+Verwandte Methoden:
+
+    Appeal to Tradition: Berufung auf etablierte Praktiken.
+    Equivocation: Verwendung mehrdeutiger Begriffe zur Unterstützung eines Arguments.
+
+Equivocation (Mehrdeutigkeit)
+
+Definition: Die bewusste Verwendung eines Wortes in verschiedenen Bedeutungen innerhalb desselben Arguments, um Verwirrung zu stiften.
+
+Beispiel: "Menschen sind rational. Rationalität bedeutet, Entscheidungen zu treffen. Daher trifft jeder Mensch Entscheidungen."
+
+Verwandte Methoden:
+
+    Weasel Words: Verwendung vager Begriffe zur Vermeidung klarer Aussagen.
+    False Cause: Fehlende klare Kausalität zwischen Ereignissen.
+
+False Cause (Falscher Zusammenhang)
+
+Definition: Die Annahme, dass, weil zwei Ereignisse zusammen auftreten, eines das andere verursacht.
+
+Beispiel: "Seit wir Solaranlagen installiert haben, ist der Stromverbrauch gestiegen. Solaranlagen verursachen also höheren Stromverbrauch."
+
+Verwandte Methoden:
+
+    Post Hoc Ergo Propter Hoc: Annahme, dass zeitliche Reihenfolge Kausalität bedeutet.
+    Slippery Slope: Übertreibung der Konsequenzen kleiner Handlungen.
+
+Guilt by Association (Schuld durch Assoziation)
+
+Definition: Die Diskreditierung eines Arguments, indem man es mit einer verachteten Person oder Gruppe in Verbindung bringt.
+
+Beispiel: "Du unterstützt diese Idee? Auch Extremisten unterstützen sie."
+
+Verwandte Methoden:
+
+    Ad Hominem: Angriff auf die Person statt auf das Argument.
+    Straw Man: Verzerrung des gegnerischen Arguments.
+
+Hasty Generalization (Voreilige Verallgemeinerung)
+
+Definition: Das Ziehen einer allgemeinen Schlussfolgerung auf Basis einer unzureichenden oder atypischen Stichprobe.
+
+Beispiel: "Ich habe einen schlechten Arzt getroffen, daher sind alle Ärzte unfähig."
+
+Verwandte Methoden:
+
+    Anekdote: Nutzung persönlicher Erfahrungen zur Verallgemeinerung.
+    False Cause: Fehlende Kausalität zwischen wenigen Ereignissen und allgemeiner Schlussfolgerung.
+
+Loaded Question (Suggestivfrage)
+
+Definition: Eine Frage, die eine Annahme enthält und den Befragten in eine Falle locken soll.
+
+Beispiel: "Haben Sie aufgehört, Ihre Mitarbeiter zu schikanieren?"
+
+Verwandte Methoden:
+
+    Begging the Question: Annahme der Schlussfolgerung in der Frage.
+    Weasel Words: Verwendung vager Begriffe zur Irreführung.
+
+No True Scotsman (Kein echter Schotte)
+
+Definition: Eine Ad-hoc-Modifikation einer allgemeinen Aussage, um Gegenbeispiele auszuschließen und die ursprüngliche Behauptung zu retten.
+
+Beispiel: "Kein echter Schotte würde Zucker in seinen Porridge tun. - Aber John tut das. - Dann ist John kein echter Schotte."
+
+Verwandte Methoden:
+
+    Special Pleading: Beanspruchung einer Ausnahme ohne stichhaltige Begründung.
+    Hasty Generalization: Übermäßige Verallgemeinerung ohne Berücksichtigung von Ausnahmen.
+
+Post Hoc Ergo Propter Hoc
+
+Definition: Der Trugschluss, dass, weil ein Ereignis einem anderen folgt, das erste das zweite verursacht hat.
+
+Beispiel: "Nachdem die Hähne krähen, geht die Sonne auf. Also verursachen die Hähne den Sonnenaufgang."
+
+Verwandte Methoden:
+
+    False Cause: Fehlende Kausalität zwischen Ereignissen.
+    Slippery Slope: Übertreibung der Konsequenzen kleiner Handlungen.
+
+Scare Tactics (Panikmache)
+
+Definition: Der Einsatz von erschreckenden oder alarmierenden Aussagen, um das Publikum zu überzeugen.
+
+Beispiel: "Wenn wir jetzt nicht handeln, wird unsere Stadt im Müll versinken."
+
+Verwandte Methoden:
+
+    Appeal to Fear: Erzeugung von Angst zur Zustimmung.
+    Red Herring: Ablenkung durch erschreckende Aussagen.
+
+Scapegoating (Sündenbock)
+
+Definition: Die Schuldzuweisung an eine Person oder Gruppe für Probleme, um von den eigentlichen Ursachen abzulenken.
+
+Beispiel: "Die Einwanderer sind schuld an der Arbeitslosigkeit."
+
+Verwandte Methoden:
+
+    Guilt by Association: Diskreditierung durch negative Assoziationen.
+    Red Herring: Ablenkung von der eigentlichen Problematik.
+
+Special Pleading (Sonderargument)
+
+Definition: Das Beanspruchen einer Ausnahme von einer allgemein akzeptierten Regel ohne stichhaltige Begründung.
+
+Beispiel: "Ich glaube an Freiheit der Meinungsäußerung, aber Hassreden sollten verboten werden."
+
+Verwandte Methoden:
+
+    No True Scotsman: Ad-hoc-Modifikation einer allgemeinen Aussage zur Rettung der ursprünglichen Behauptung.
+    Begging the Question: Annahme der Schlussfolgerung in der Frage.
+
+Weasel Words
+
+Definition: Vage oder mehrdeutige Wörter, die verwendet werden, um eine Aussage zu verwässern oder um Verantwortlichkeit zu vermeiden.
+
+Beispiel: "Man könnte argumentieren, dass die Ergebnisse möglicherweise unterschiedlich ausfallen könnten."
+
+Verwandte Methoden:
+
+    Equivocation: Verwendung mehrdeutiger Begriffe zur Verwirrung.
+    Loaded Question: Nutzung vager Begriffe zur Irreführung
