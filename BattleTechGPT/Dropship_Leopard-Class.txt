@@ -1,3 +1,4 @@
+Leopard-Class Dropship:
 | name = ''Leopard''
 class  = ''Dropship''
 | manufacturer =

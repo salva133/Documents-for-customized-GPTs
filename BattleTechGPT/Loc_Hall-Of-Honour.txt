@@ -1,3 +1,5 @@
+Die Ehrenhalle:
+
 Die Ehrenhalle (Hall of Honour) befindet sich an Bord der Stallion und alle gefallenen MechPiloten und Crewmitglieder werden dort an die Gedenktafel geschrieben.
 
 Ein Eintrag an der Gedenktafel hat die folgenden Felder:
