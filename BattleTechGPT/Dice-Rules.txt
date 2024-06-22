@@ -1,0 +1,42 @@
+Würfellogik:
+
+    Schwierigkeit, Ressourcen zu finden (d6):
+        Würfel einen d6, um zu bestimmen, wie schwierig es ist, die benötigten Ressourcen oder Teile zu finden:
+            1: Sehr einfach - Ressourcen sind sofort verfügbar.
+            2: Einfach - Ressourcen sind mit wenig Aufwand zu beschaffen.
+            3: Mäßig - Ressourcen erfordern etwas Suche und Verhandlungen.
+            4: Schwierig - Ressourcen sind selten und teuer.
+            5: Sehr schwierig - Ressourcen sind fast unmöglich zu finden.
+            6: Extrem schwierig - Ressourcen sind nur durch besondere Umstände oder Glück zu bekommen.
+
+    Ausmaß der Schäden oder Probleme (d20):
+        Würfel einen d20, um den Schaden oder das Problem zu bestimmen. Multipliziere das Ergebnis mit einem festgelegten Faktor, um den Prozentsatz oder das Ausmaß zu berechnen:
+            Beispiel: Ein Wurf von 10 bedeutet 25% Schaden (10 * 2,5).
+
+    Systemdiagnose oder Zustandsermittlung (d20):
+        Würfel für jedes wichtige System oder Element, um den Zustand zu bestimmen:
+            System 1: 1-5 (Schwer beschädigt), 6-10 (Beschädigt), 11-15 (Leichte Schäden), 16-20 (Intakt).
+            System 2: 1-5 (Schwer beschädigt), 6-10 (Beschädigt), 11-15 (Leichte Schäden), 16-20 (Intakt).
+            System 3: 1-5 (Schwer beschädigt), 6-10 (Beschädigt), 11-15 (Leichte Schäden), 16-20 (Intakt).
+
+    Erfolg bei Aktionen oder Reparaturen (d20):
+        Bestimme die Schwierigkeit der Aktion (leicht, mittel, schwer) und setze einen Zielwert:
+            Leicht: Zielwert 10 - Würfel einen d20, um zu sehen, ob die Aktion erfolgreich ist.
+            Mittel: Zielwert 15 - Würfel einen d20, um zu sehen, ob die Aktion erfolgreich ist.
+            Schwer: Zielwert 20 - Würfel einen d20, um zu sehen, ob die Aktion erfolgreich ist.
+            Beispiel: Bei einer mittelschweren Aktion ist ein Wurf von 15 oder höher erforderlich.
+
+    Interaktionen und Verhandlungen (d6):
+        Würfel einen d6, um den Ausgang von Verhandlungen oder Interaktionen zu bestimmen:
+            1: Sehr negativ - Verhandlungen scheitern, keine Unterstützung.
+            2: Negativ - Geringe Unterstützung, hohe Kosten.
+            3: Neutral - Keine besonderen Vorkommnisse.
+            4: Positiv - Unterstützung, moderate Kosten.
+            5: Sehr positiv - Gute Unterstützung, geringe Kosten.
+            6: Extrem positiv - Maximale Unterstützung, kostenlose Ressourcen.
+
+    Kampf- und Gefechtssituationen (d20):
+        Würfel einen d20 für jeden Angriff, um zu bestimmen, ob er trifft und wie viel Schaden er verursacht:
+            Treffer: Zielwert basierend auf der Schwierigkeit des Ziels (z.B. 12).
+            Schaden: Je nach Waffe einen zusätzlichen Würfelwurf (z.B. 2d6 für eine bestimmte Waffe).
+            Beispiel: Ein Laser hat einen Zielwert von 12 und verursacht 1d10 Schaden. Ein Wurf von 15 trifft, und ein zusätzlicher Wurf von 8 bedeutet 8 Schaden.
