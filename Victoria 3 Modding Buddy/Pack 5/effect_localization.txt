@@ -1,0 +1,1975 @@
+﻿﻿set_subsidized = {
+	global = SET_SUBSIDIZED
+	global_neg = SET_SUBSIDIZED_NEGATIVE
+}
+
+﻿kill_character = {
+	global = KILL_CHARACTER_GLOBAL
+	global_neg = KILL_CHARACTER_GLOBAL_NEG
+	first = KILL_CHARACTER_FIRST
+	first_neg = KILL_CHARACTER_FIRST_NEG
+	third = KILL_CHARACTER
+	third_neg = KILL_CHARACTER_NEG
+}
+
+add_commander_rank = {
+	third = ADD_COMMANDER_RANK
+	global = ADD_COMMANDER_RANK_GLOBAL
+}
+
+set_commander_rank = {
+	third = SET_COMMANDER_RANK
+	global = SET_COMMANDER_RANK_GLOBAL
+}
+
+add_character_role = {
+	global = ADD_CHARACTER_ROLE_GLOBAL
+	third = ADD_CHARACTER_ROLE
+}
+
+remove_character_role = {
+	global = REMOVE_CHARACTER_ROLE_GLOBAL
+	third = REMOVE_CHARACTER_ROLE
+}
+
+add_experience = {
+	third = ADD_EXPERIENCE
+}
+
+add_trait = {
+	global = ADD_TRAIT_GLOBAL
+	first = ADD_TRAIT_FIRST
+	third = ADD_TRAIT
+}
+
+remove_trait = {
+	global = REMOVE_TRAIT_GLOBAL
+	first = REMOVE_TRAIT_FIRST
+	third = REMOVE_TRAIT
+}
+
+transfer_character = {
+	third = TRANSFER_CHARACTER
+	global = TRANSFER_CHARACTER_GLOBAL
+}
+
+set_character_busy_and_immortal = {
+	global = SET_CHARACTER_BUSY_GLOBAL
+	global_neg = SET_CHARACTER_BUSY_GLOBAL_NEG
+	third = SET_CHARACTER_BUSY
+	third_neg = SET_CHARACTER_BUSY_NEG
+}
+
+set_character_immortal = {
+	global = SET_CHARACTER_IMMORTAL_GLOBAL
+	global_neg = SET_CHARACTER_IMMORTAL_GLOBAL_NEG
+	third = SET_CHARACTER_IMMORTAL
+	third_neg = SET_CHARACTER_IMMORTAL_NEG
+}
+
+set_next_election_date = {
+	third = SET_NEXT_ELECTION_DATE
+}
+
+place_character_in_void = {
+	third = PLACE_CHARACTER_IN_VOID
+}
+
+free_character_from_void = {
+	third = FREE_CHARACTER_FROM_VOID
+	third_neg = FREE_CHARACTER_FROM_VOID_NEG	
+}
+
+change_character_religion = {
+	third = CHANGE_CHARACTER_RELIGION
+}
+
+change_character_culture = {
+	third = CHANGE_CHARACTER_CULTURE
+}
+
+exile_character = {
+	third = EXILE_CHARACTER_THIRD
+	third_neg = EXILE_CHARACTER_THIRD_NEG
+	global = EXILE_CHARACTER_GLOBAL
+	global_neg = EXILE_CHARACTER_GLOBAL_NEG
+}
+
+set_home_country = {
+	third = SET_HOME_COUNTRY_THIRD
+	global = SET_HOME_COUNTRY_GLOBAL
+}
+
+set_home_country_definition = {
+	third = SET_HOME_COUNTRY_DEFINITION_THIRD
+	global = SET_HOME_COUNTRY_DEFINITION_GLOBAL
+}
+
+demobilize = {
+	third = DEMOBILIZE_THIRD
+	global = DEMOBILIZE_GLOBAL
+}
+
+disinherit_character = {
+	global = DISINHERIT_CHARACTER
+	global_neg = DISINHERIT_CHARACTER_NEG
+	third = DISINHERIT_CHARACTER_THIRD
+	third_neg = DISINHERIT_CHARACTER_THIRD_NEG
+}
+
+set_character_as_ruler = {
+	global = SET_CHARACTER_AS_RULER
+	global_neg = SET_CHARACTER_AS_RULER_NEG
+	third = SET_CHARACTER_AS_RULER_THIRD
+	third_neg = SET_CHARACTER_AS_RULER_THIRD_NEG
+}
+
+
+﻿add_treasury = {
+	global = ADD_TREASURY_EFFECT_POSITIVE
+	global_neg = ADD_TREASURY_EFFECT_NEGATIVE
+	first = ADD_TREASURY_EFFECT_FIRST_POSITIVE
+	first_neg = ADD_TREASURY_EFFECT_FIRST_NEGATIVE
+	third = ADD_TREASURY_EFFECT_THIRD_POSITIVE
+	third_neg = ADD_TREASURY_EFFECT_THIRD_NEGATIVE
+}
+
+set_country_army_sp_target = {
+	global = SET_COUNTRY_ARMY_SP_TARGET
+}
+
+set_relations = {
+	global = SET_RELATIONS
+}
+
+set_tension = {
+	global = SET_TENSION
+}
+
+set_diplomats_expelled = {
+	global = SET_DIPLOMATS_EXPELLED
+	global_neg = SET_DIPLOMATS_EXPELLED_NEGATIVE
+	first = SET_DIPLOMATS_EXPELLED_FIRST
+	first_neg = SET_DIPLOMATS_EXPELLED_FIRST_NEGATIVE
+	third = SET_DIPLOMATS_EXPELLED_THIRD
+	third_neg = SET_DIPLOMATS_EXPELLED_THIRD_NEGATIVE	
+}
+
+set_secret_goal = {
+	global = SET_SECRET_GOAL
+}
+
+set_mutual_secret_goal = {
+	global = SET_MUTUAL_SECRET_GOAL
+}
+
+
+set_strategy = {
+	global = SET_STRATEGY
+}
+
+set_tax_level = {
+	global = SET_TAX_LEVEL
+	first = SET_TAX_LEVEL_FIRST
+	third = SET_TAX_LEVEL_THIRD
+}
+
+add_change_relations_progress = {
+	global = ADD_CHANGE_RELATIONS_PROGRESS
+}
+
+add_technology_progress = {
+	global = ADD_TECHNOLOGY_PROGRESS
+	global_neg = ADD_TECHNOLOGY_PROGRESS_NEG
+	first = ADD_TECHNOLOGY_PROGRESS_FIRST
+	first_neg = ADD_TECHNOLOGY_PROGRESS_FIRST_NEG
+}
+
+activate_law = {
+	global = ACTIVATE_LAW
+}
+
+deactivate_law = {
+	global = DEACTIVATE_LAW
+}
+
+cancel_enactment = {
+	global = CANCEL_ENACTMENT
+	first = CANCEL_ENACTMENT_FIRST
+	third = CANCEL_ENACTMENT_THIRD
+}
+
+change_relations = {
+	global = CHANGE_RELATIONS
+	global_neg = CHANGE_RELATIONS_NEG
+	first = CHANGE_RELATIONS_FIRST
+	first_neg = CHANGE_RELATIONS_FIRST_NEG
+	third = CHANGE_RELATIONS_THIRD
+	third_neg = CHANGE_RELATIONS_THIRD_NEG
+}
+
+change_tension = {
+	global = CHANGE_TENSION
+	global_neg = CHANGE_TENSION_NEG
+}
+
+set_owes_obligation_to = {
+	global = SET_OWES_OBLIGATION_TO
+	global_neg = SET_OWES_OBLIGATION_TO_NEG
+	first = SET_OWES_OBLIGATION_TO_FIRST
+	first_neg = SET_OWES_OBLIGATION_TO_FIRST_NEG
+	third = SET_OWES_OBLIGATION_TO_THIRD
+	third_neg = SET_OWES_OBLIGATION_TO_THIRD_NEG
+}
+
+validate_subsidies = {
+	global = VALIDATE_SUBSIDIES
+	global_neg = VALIDATE_SUBSIDIES_NEG
+}
+
+recalculate_pop_ig_support = {
+	global = RECALCULATE_POP_IG_SUPPORT
+	first = RECALCULATE_POP_IG_SUPPORT_FIRST
+	third = RECALCULATE_POP_IG_SUPPORT_THIRD
+}
+
+set_country_type = {
+	global = SET_COUNTRY_TYPE
+	first = SET_COUNTRY_TYPE_FIRST
+	third = SET_COUNTRY_TYPE_THIRD
+}
+
+set_capital = {
+	global = SET_CAPITAL
+	first = SET_CAPITAL_FIRST
+	third = SET_CAPITAL_THIRD
+}
+
+set_state_religion = {
+	global = SET_STATE_RELIGION
+	first = SET_STATE_RELIGION_FIRST
+	third = SET_STATE_RELIGION_THIRD
+}
+
+set_market_capital = {
+	global = SET_MARKET_CAPITAL
+	first = SET_MARKET_CAPITAL_FIRST
+	third = SET_MARKET_CAPITAL_THIRD
+}
+
+seize_investment_pool = {
+	global = SEIZE_INVESTMENT_POOL
+	first = SEIZE_INVESTMENT_POOL_FIRST
+	third = SEIZE_INVESTMENT_POOL_THIRD	
+}
+
+clear_debt = {
+	global = CLEAR_DEBT
+	global_neg = CLEAR_DEBT_NEG
+}
+
+clear_scaled_debt = {
+	global = CLEAR_SCALED_DEBT
+}
+
+take_on_scaled_debt = {
+	global = TAKE_ON_SCALED_DEBT
+	first = TAKE_ON_SCALED_DEBT_FIRST
+	third = TAKE_ON_SCALED_DEBT_THIRD
+}
+
+create_trade_route = {
+	global = CREATE_TRADE_ROUTE
+}
+
+try_form_government_with = {
+	global = TRY_FORM_GOVERNMENT_WITH
+	first = TRY_FORM_GOVERNMENT_WITH_FIRST
+	third = TRY_FORM_GOVERNMENT_WITH_FIRST
+}
+
+set_country_navy_sp_target = {
+	global = SET_COUNTRY_NAVY_SP_TARGET
+}
+
+create_character = {
+	global = CREATE_CHARACTER
+	first = CREATE_CHARACTER_FIRST
+	third = CREATE_CHARACTER_THIRD
+}
+
+add_investment_pool = {
+	global = ADD_INVESTMENT_POOL
+	first = ADD_INVESTMENT_POOL_FIRST
+	third = ADD_INVESTMENT_POOL_THIRD
+}
+
+add_technology_researched = {
+	global = ADD_TECHNOLOGY_RESEARCHED
+	first = ADD_TECHNOLOGY_RESEARCHED_FIRST
+	third = ADD_TECHNOLOGY_RESEARCHED_THIRD
+}
+
+add_era_researched = {
+	global = ADD_ERA_RESEARCHED
+	first = ADD_ERA_RESEARCHED_FIRST
+	third = ADD_ERA_RESEARCHED_THIRD
+}
+
+create_diplomatic_pact = {
+	global = CREATE_DIPLOMATIC_PACT
+	first = CREATE_DIPLOMATIC_PACT_FIRST
+	third = CREATE_DIPLOMATIC_PACT_THIRD
+}
+
+change_infamy = {
+	global = CHANGE_INFAMY
+	global_neg = CHANGE_INFAMY_NEG
+	first = CHANGE_INFAMY_FIRST
+	first_neg = CHANGE_INFAMY_FIRST_NEG
+	third = CHANGE_INFAMY_THIRD
+	third_neg = CHANGE_INFAMY_THIRD_NEG
+}
+
+create_incident = {
+	global = CREATE_INCIDENT
+	first = CREATE_INCIDENT_FIRST
+	third = CREATE_INCIDENT_THIRD
+}
+
+add_war_goal = {
+	global = ADD_WAR_GOAL
+	first = ADD_WAR_GOAL_FIRST
+	third = ADD_WAR_GOAL_THIRD
+}
+
+remove_war_goal = {
+	global = REMOVE_WAR_GOAL
+	first = REMOVE_WAR_GOAL_FIRST
+	third = REMOVE_WAR_GOAL_THIRD
+}
+
+do_revolution_cleanup = {
+	global = DO_REVOLUTION_CLEANUP
+}
+
+annex = {
+	global = ANNEX_EFFECT
+	first = ANNEX_EFFECT_FIRST
+	third = ANNEX_EFFECT_THIRD
+}
+
+annex_with_incorporation = {
+	global = ANNEX_EFFECT
+	first = ANNEX_EFFECT_FIRST
+	third = ANNEX_EFFECT_THIRD
+}
+
+annex_as_civil_war = {
+	global = ANNEX_EFFECT
+	first = ANNEX_EFFECT_FIRST
+	third = ANNEX_EFFECT_THIRD
+}
+
+create_country = {
+	global = CREATE_COUNTRY
+	first = CREATE_COUNTRY_FIRST
+	third = CREATE_COUNTRY_THIRD
+}
+
+create_dynamic_country = {
+	global = CREATE_COUNTRY
+	first = CREATE_COUNTRY_FIRST
+	third = CREATE_COUNTRY_THIRD
+}
+
+set_government_wage_level = {
+	global = SET_GOVERNMENT_WAGE_LEVEL
+}
+
+set_military_wage_level = {
+	global = SET_MILITARY_WAGE_LEVEL
+}
+
+add_primary_culture = {
+	global = ADD_PRIMARY_CULTURE
+	first = ADD_PRIMARY_CULTURE_FIRST
+	third = ADD_PRIMARY_CULTURE_THIRD
+}
+
+remove_primary_culture = {
+	global = REMOVE_PRIMARY_CULTURE
+	first = REMOVE_PRIMARY_CULTURE_FIRST
+	third = REMOVE_PRIMARY_CULTURE_THIRD
+}
+
+play_as = {
+	global = PLAY_AS
+	first = PLAY_AS_FIRST
+	third = PLAY_AS_THIRD
+}
+
+add_banned_goods = {
+	global = ADD_BANNED_GOODS
+	first = ADD_BANNED_GOODS_FIRST
+	third = ADD_BANNED_GOODS_THIRD
+}
+
+remove_banned_goods = {
+	global = REMOVE_BANNED_GOODS
+	first = REMOVE_BANNED_GOODS_FIRST
+	third = REMOVE_BANNED_GOODS_THIRD
+}
+
+add_taxed_goods = {
+	global = ADD_TAXED_GOODS
+	first = ADD_TAXED_GOODS_FIRST
+	third = ADD_TAXED_GOODS_THIRD
+}
+
+remove_taxed_goods = {
+	global = REMOVE_TAXED_GOODS
+	first = REMOVE_TAXED_GOODS_FIRST
+	third = REMOVE_TAXED_GOODS_THIRD
+}
+
+add_company = {
+	global = ADD_COMPANY
+	first = ADD_COMPANY_FIRST
+	third = ADD_COMPANY_THIRD
+}
+
+remove_company = {
+	global = REMOVE_COMPANY
+	first = REMOVE_COMPANY_FIRST
+	third = REMOVE_COMPANY_THIRD
+}
+
+set_company_establishment_date = {
+	global = SET_COMPANY_ESTABLISHMENT_DATE_GLOBAL
+	third = SET_COMPANY_ESTABLISHMENT_DATE_THIRD
+}
+
+set_tariffs_no_priority = {
+	global = SET_TARIFFS_NO_PRIORITY
+	first = SET_TARIFFS_NO_PRIORITY_FIRST
+	third = SET_TARIFFS_NO_PRIORITY_THIRD
+}
+
+set_tariffs_import_priority = {
+	global = SET_TARIFFS_IMPORT_PRIORITY
+	first = SET_TARIFFS_IMPORT_PRIORITY_FIRST
+	third = SET_TARIFFS_IMPORT_PRIORITY_THIRD
+}
+
+set_tariffs_export_priority = {
+	global = SET_TARIFFS_EXPORT_PRIORITY
+	first = SET_TARIFFS_EXPORT_PRIORITY_FIRST
+	third = SET_TARIFFS_EXPORT_PRIORITY_THIRD
+}
+
+make_independent = {
+	global = MAKE_INDEPENDENT
+	global_neg = MAKE_INDEPENDENT_NEG
+}
+
+change_tag = {
+	global = CHANGE_TAG
+	first = CHANGE_TAG_FIRST
+	third = CHANGE_TAG_THIRD
+}
+
+add_culture_standard_of_living_modifier = {
+	global = ADD_CULTURE_STANDARD_OF_LIVING_MODIFIER
+}
+
+add_declared_interest = {
+	global = ADD_DECLARED_INTEREST
+}
+
+change_subject_type = {
+	global = CHANGE_SUBJECT_TYPE
+}
+
+add_religion_standard_of_living_modifier = {
+	global = ADD_RELIGION_STANDARD_OF_LIVING_MODIFIER
+}
+
+set_immune_to_revolutions = {
+	global = SET_IMMUNE_TO_REVOLUTIONS
+	global_neg = SET_IMMUNE_TO_REVOLUTIONS_NEG
+	first = SET_IMMUNE_TO_REVOLUTIONS_FIRST
+	first_neg = SET_IMMUNE_TO_REVOLUTIONS_FIRST_NEG
+	third = SET_IMMUNE_TO_REVOLUTIONS_THIRD
+	third_neg = SET_IMMUNE_TO_REVOLUTIONS_THIRD_NEG
+}
+
+copy_laws = {
+	global = COPY_LAWS
+	first = COPY_LAWS_FIRST
+	third = COPY_LAWS_THIRD
+}
+
+regime_change = {
+	global = REGIME_CHANGE
+	first = REGIME_CHANGE_FIRST
+	third = REGIME_CHANGE_THIRD
+}
+
+create_diplomatic_catalyst = {
+	global = CREATE_DIPLOMATIC_CATALYST_GLOBAL
+	first = CREATE_DIPLOMATIC_CATALYST_FIRST
+	third = CREATE_DIPLOMATIC_CATALYST_THIRD	
+}
+
+﻿add_cultural_obsession = {
+	global = ADD_CULTURAL_OBSESSION
+	third = ADD_CULTURAL_OBSESSION
+}
+
+remove_cultural_obsession = {
+	global = REMOVE_CULTURAL_OBSESSION
+	third = REMOVE_CULTURAL_OBSESSION
+}
+
+add_cultural_community = {
+	global = ADD_CULTURAL_COMMUNITY
+	third = ADD_CULTURAL_COMMUNITY
+}
+
+add_cultural_community_in_state = {
+	global = ADD_CULTURAL_COMMUNITY
+	third = ADD_CULTURAL_COMMUNITY
+}
+
+﻿remove_initiator_backers = {
+	global = REMOVE_INITIATOR_BACKERS
+}
+
+remove_target_backers = {
+	global = REMOVE_TARGET_BACKERS
+}
+
+add_initiator_backers = {
+    global = ADD_INITIATOR_BACKERS
+}
+
+add_target_backers = {
+    global = ADD_TARGET_BACKERS
+}
+
+add_escalation = {
+    global = ADD_ESCALATION
+    global_neg = ADD_ESCALATION_NEG
+}
+
+end_play = {
+    global = END_PLAY
+    global_neg = END_PLAY_NEG
+}
+
+set_key = {
+    global = SET_KEY
+}
+
+add_diplomatic_play_war_support = {
+    global = ADD_DIPLOMATIC_PLAY_WAR_SUPPORT
+    global_neg = ADD_DIPLOMATIC_PLAY_WAR_SUPPORT_NEG
+}
+
+add_war_war_support = {
+    global = ADD_WAR_WAR_SUPPORT
+    global_neg = ADD_WAR_WAR_SUPPORT_NEG
+}
+
+add_war_exhaustion = {
+    global = ADD_WAR_EXHAUSTION
+    global_neg = ADD_WAR_EXHAUSTION_NEG
+}
+
+create_diplomatic_play = {
+    global = CREATE_DIPLOMATIC_PLAY
+}
+
+set_war = {
+    global = SET_WAR
+    global_neg = SET_WAR_NEG
+}
+
+create_bidirectional_truce = {
+    global = CREATE_BIDIRECTIONAL_TRUCE
+    first = CREATE_BIDIRECTIONAL_TRUCE_FIRST
+    third = CREATE_BIDIRECTIONAL_TRUCE_THIRD	
+}
+
+create_unidirectional_truce = {
+    global = CREATE_UNIDIRECTIONAL_TRUCE
+    first = CREATE_UNIDIRECTIONAL_TRUCE_FIRST
+    third = CREATE_UNIDIRECTIONAL_TRUCE_THIRD	
+}
+
+end_truce = {
+    global = END_TRUCE
+	first = END_TRUCE_FIRST
+	third = END_TRUCE_THIRD
+}
+
+violate_sovereignty_join = {
+    global = VIOLATE_SOVEREIGNTY_JOIN
+    first = VIOLATE_SOVEREIGNTY_JOIN_FIRST
+    third = VIOLATE_SOVEREIGNTY_JOIN_THIRD
+}
+
+remove_diplomatic_pact = {
+	global = REMOVE_DIPLOMATIC_PACT
+	first = REMOVE_DIPLOMATIC_PACT_FIRST
+    third = REMOVE_DIPLOMATIC_PACT_THIRD
+}
+
+join_war = {
+	global = JOIN_WAR_GLOBAL
+	first = JOIN_WAR_FIRST
+    third = JOIN_WAR_THIRD
+}
+
+add_liberty_desire = {
+	global = ADD_LIBERTY_DESIRE_EFFECT
+	global_neg = ADD_LIBERTY_DESIRE_EFFECT_NEG
+	first = ADD_LIBERTY_DESIRE_EFFECT_FIRST
+	first_neg = ADD_LIBERTY_DESIRE_EFFECT_FIRST_NEG
+	third = ADD_LIBERTY_DESIRE_EFFECT_THIRD
+	third_neg = ADD_LIBERTY_DESIRE_EFFECT_THIRD_NEG
+}
+
+resolve_play_for = {
+    global = RESOLVE_PLAY_FOR
+}
+
+﻿add_journal_entry = {
+	global = ADD_JOURNAL_ENTRY
+	first = ADD_JOURNAL_ENTRY_FIRST
+	third = ADD_JOURNAL_ENTRY_THIRD
+}
+
+complete_objective_subgoal = {
+	global = OBJECTIVE_SUBGOAL_EFFECT
+}
+
+remove_active_objective_subgoal = {
+	global = OBJECTIVE_SUBGOAL_EFFECT
+}
+﻿set_trade_center = {
+	global = SET_TRADE_CENTER
+}
+
+lock_trade_route = {
+	global = LOCK_TRADE_ROUTE
+}
+
+﻿create_assignment = {
+	third = EFFECT_CREATE_ASSIGNMENT
+}
+
+project_power = {
+	third = EFFECT_PROJECT_POWER
+}
+
+add_organization = {
+    global = EFFECT_ADD_ORGANIZATION
+	third = EFFECT_ADD_ORGANIZATION_THIRD
+}
+
+add_morale = {
+    global = EFFECT_ADD_MORALE
+	third = EFFECT_ADD_MORALE_THIRD
+}
+
+transfer_to_formation = {
+	third = TRANSFER_TO_FORMATION_THIRD
+	global = TRANSFER_TO_FORMATION_GLOBAL
+}
+
+deploy_to_front = {
+	third = DEPLOY_TO_FRONT_THIRD
+	global = DEPLOY_TO_FRONT_GLOBAL
+}
+
+teleport_to_front = {
+	third = TELEPORT_TO_FRONT_THIRD
+	global = TELEPORT_TO_FRONT_GLOBAL
+}
+
+mobilize_army = {
+	third = MOBILIZE_ARMY_THIRD
+	global = MOBILIZE_ARMY_GLOBAL
+}
+
+fully_mobilize_army = {
+	third = FULLY_MOBILIZE_ARMY_THIRD
+	global = FULLY_MOBILIZE_ARMY_GLOBAL
+}
+
+﻿trigger_event = {
+	global = TRIGGER_EVENT
+}
+
+add_modifier = {
+	global = ADD_MODIFIER
+	first = ADD_MODIFIER_FIRST
+	third = ADD_MODIFIER_THIRD
+}
+
+add_enactment_modifier = {
+	global = ADD_ENACTMENT_MODIFIER
+	global_neg = ADD_ENACTMENT_MODIFIER_NEG
+	first = ADD_ENACTMENT_MODIFIER_FIRST
+	first_neg = ADD_ENACTMENT_MODIFIER_FIRST_NEG
+	third = ADD_ENACTMENT_MODIFIER_THIRD
+	third_neg = ADD_ENACTMENT_MODIFIER_THIRD_NEG
+}
+
+remove_modifier = {
+	global = REMOVE_MODIFIER
+ 	first = REMOVE_MODIFIER_FIRST
+	third = REMOVE_MODIFIER_THIRD
+}
+
+remove_enactment_modifier = {
+	global = REMOVE_ENACTMENT_MODIFIER
+}
+﻿update_party_support = {
+	global = UPDATE_PARTY_SUPPORT_EFFECT
+	global_neg = UPDATE_PARTY_SUPPORT_EFFECT_NEG
+	first = UPDATE_PARTY_SUPPORT_EFFECT_FIRST
+	first_neg = UPDATE_PARTY_SUPPORT_EFFECT_FIRST_NEG
+	third = UPDATE_PARTY_SUPPORT_EFFECT_THIRD
+	third_neg = UPDATE_PARTY_SUPPORT_EFFECT_THIRD_NEG
+}
+
+add_ig_to_party = {
+	global = ADD_IG_TO_PARTY_EFFECT_GLOBAL
+	third = ADD_IG_TO_PARTY_EFFECT_THIRD
+}
+
+remove_ig_from_party = {
+	global = REMOVE_IG_FROM_PARTY_EFFECT_GLOBAL
+	third = REMOVE_IG_FROM_PARTY_EFFECT_THIRD
+}
+
+disband_party = {
+	global = DISBAND_PARTY_EFFECT_GLOBAL
+	global_neg = DISBAND_PARTY_EFFECT_GLOBAL_NEG
+	third = DISBAND_PARTY_EFFECT_THIRD
+	third_neg = DISBAND_PARTY_EFFECT_THIRD_NEG
+}
+
+﻿add_ruling_interest_group = {
+	global = ADD_RULING_INTEREST_GROUP
+}
+
+remove_ruling_interest_group = {
+	global = REMOVE_RULING_INTEREST_GROUP
+}
+
+set_ruling_party = {
+	global = SET_RULING_PARTY
+}
+
+set_ruling_interest_groups = {
+	global = SET_RULING_INTEREST_GROUPS
+}
+
+set_ig_trait = {
+	third = SET_IG_TRAIT_THIRD
+}
+
+add_ideology = {
+	global = ADD_IDEOLOGY
+}
+
+remove_ideology = {
+	global = REMOVE_IDEOLOGY
+}
+
+set_ideology = {
+	global = SET_IDEOLOGY
+	first = SET_IDEOLOGY_FIRST
+	third = SET_IDEOLOGY_THIRD
+}
+
+set_interest_group_name = {
+	global = SET_INTEREST_GROUP_NAME
+}	
+
+set_institution_investment_level = {
+	global = SET_INSTITUTION_INVESTMENT_LEVEL
+}
+
+change_institution_investment_level = {
+	global = CHANGE_INSTITUTION_INVESTMENT_LEVEL
+}
+
+activate_law_with_investment_level = {
+	global = ACTIVATE_LAW_WITH_INVESTMENT_LEVEL
+}
+
+set_as_interest_group_leader = {
+	global = SET_AS_INTEREST_GROUP_LEADER
+}
+
+remove_as_interest_group_leader = {
+	global = REMOVE_AS_INTEREST_GROUP_LEADER
+}
+
+cancel_imposition = {
+	global = CANCEL_IMPOSITION
+	global_neg = CANCEL_IMPOSITION_NEG
+	third = CANCEL_IMPOSITION_THIRD
+	third_neg = CANCEL_IMPOSITION_THIRD_NEG
+}
+
+join_revolution = {
+	global = JOIN_REVOLUTION
+}
+
+abandon_revolution = {
+	global = ABANDON_REVOLUTION
+}
+
+set_ig_bolstering = {
+	global = START_BOLSTER_IG
+	global_neg = STOP_BOLSTER_IG
+}
+
+set_ig_suppression = {
+	global = START_SUPPRESS_IG
+	global_neg = STOP_SUPPRESS_IG
+}
+
+add_civil_war_progress = {
+	global = ADD_CIVIL_WAR_PROGRESS
+}
+
+add_law_progress = {
+	global = ADD_LAW_PROGRESS
+}
+
+start_enactment = {
+	global = START_ENACTMENT
+	first = START_ENACTMENT_FIRST
+	third = START_ENACTMENT_THIRD
+}
+
+call_election = {
+	global = CALL_ELECTION
+}
+
+add_momentum = {
+	global = ADD_MOMENTUM
+	first = ADD_MOMENTUM_FIRST
+	third = ADD_MOMENTUM_THIRD
+}
+
+add_enactment_phase = {
+	global = ADD_ENACTMENT_PHASE_GLOBAL
+	first = ADD_ENACTMENT_PHASE_FIRST
+	third = ADD_ENACTMENT_PHASE_THIRD
+}
+
+add_enactment_setback = {
+	global = ADD_ENACTMENT_SETBACK_GLOBAL
+	first = ADD_ENACTMENT_SETBACK_FIRST
+	third = ADD_ENACTMENT_SETBACK_THIRD
+}
+
+clear_enactment_modifier = {
+	global = CLEAR_ENACTMENT_MODIFIER_GLOBAL
+	first = CLEAR_ENACTMENT_MODIFIER_FIRST
+	third = CLEAR_ENACTMENT_MODIFIER_THIRD
+	global_neg = CLEAR_ENACTMENT_MODIFIER_GLOBAL_NEG
+	first_neg = CLEAR_ENACTMENT_MODIFIER_FIRST_NEG
+	third_neg = CLEAR_ENACTMENT_MODIFIER_THIRD_NEG
+}
+
+change_appeasement = {
+	global = CHANGE_APPEASEMENT_GLOBAL
+	third = CHANGE_APPEASEMENT_THIRD	
+}
+
+create_political_lobby = {
+	global = CREATE_POLITICAL_LOBBY_GLOBAL
+	first = CREATE_POLITICAL_LOBBY_FIRST
+	third = CREATE_POLITICAL_LOBBY_THIRD	
+}
+
+add_lobby_member = {
+	global = ADD_LOBBY_MEMBER_GLOBAL
+	third = ADD_LOBBY_MEMBER_THIRD	
+}
+
+remove_lobby_member = {
+	global = REMOVE_LOBBY_MEMBER_GLOBAL
+	third = REMOVE_LOBBY_MEMBER_THIRD	
+}
+
+disband_political_lobby = {
+	global = DISBAND_POLITICAL_LOBBY_GLOBAL
+	third = DISBAND_POLITICAL_LOBBY_THIRD
+	global_neg = DISBAND_POLITICAL_LOBBY_GLOBAL_NEG
+	third_neg = DISBAND_POLITICAL_LOBBY_THIRD_NEG
+}
+
+﻿add_pop_wealth = {
+	global = ADD_POP_WEALTH
+	global_neg = ADD_POP_WEALTH_NEG
+}
+
+set_pop_wealth = {
+	global = SET_POP_WEALTH
+}
+
+set_pop_happiness = {
+	global = SET_POP_HAPPINESS
+}
+
+set_pop_literacy = {
+	global = SET_POP_LITERACY
+}
+
+set_pop_qualifications = {
+	global = SET_POP_QUALIFICATIONS
+}
+
+change_poptype = {
+	global = CHANGE_POPTYPE
+}
+
+change_pop_religion = {
+	global = CHANGE_POP_RELIGION
+}
+
+convert_population = {
+	global = CONVERT_POPULATION
+}
+
+change_pop_culture = {
+	global = CHANGE_POP_CULTURE
+}
+
+move_pop = {
+	global = MOVE_POP
+	third = MOVE_POP
+}
+
+add_radicals  = {
+	global = ADD_RADICALS
+	first = ADD_RADICALS_FIRST
+	third = ADD_RADICALS_THIRD
+}
+
+add_loyalists  = {
+	global = ADD_LOYALISTS
+	first = ADD_LOYALISTS_FIRST
+	third = ADD_LOYALISTS_THIRD
+}
+
+add_radicals_in_state  = {
+	global = ADD_RADICALS
+	third = ADD_RADICALS_IN_STATE_THIRD
+}
+
+add_loyalists_in_state  = {
+	global = ADD_LOYALISTS
+	third = ADD_LOYALISTS_IN_STATE_THIRD
+}
+
+kill_population_percent = {
+	global = KILL_POPULATION_PERCENT
+	first = KILL_POPULATION_PERCENT
+	third = KILL_POPULATION_PERCENT_THIRD
+}
+
+kill_population_percent_in_state = {
+	global = KILL_POPULATION_PERCENT
+	third = KILL_POPULATION_PERCENT_IN_STATE_THIRD
+}
+
+kill_population = {
+	global = KILL_POPULATION
+	first = KILL_POPULATION
+	third = KILL_POPULATION_THIRD
+}
+
+kill_population_in_state = {
+	global = KILL_POPULATION
+	third = KILL_POPULATION_IN_STATE_THIRD
+}
+﻿create_power_bloc = {
+	global = CREATE_POWER_BLOC
+	first = CREATE_POWER_BLOC_FIRST
+	third  = CREATE_POWER_BLOC_THIRD
+}
+
+join_power_bloc = {
+	global = JOIN_POWER_BLOC
+	first = JOIN_POWER_BLOC_FIRST
+	third  = JOIN_POWER_BLOC
+}
+
+add_principle = {
+	global = ADD_PRINCIPLE_POWER_BLOC
+	third = ADD_PRINCIPLE_POWER_BLOC_THIRD
+}
+
+remove_principle = {
+	global = REMOVE_PRINCIPLE_POWER_BLOC
+	third = REMOVE_PRINCIPLE_POWER_BLOC_THIRD
+}
+
+add_cohesion_percent = {
+	global = ADD_COHESION_PERCENT
+	global_neg = ADD_COHESION_PERCENT_NEG
+	first = ADD_COHESION_PERCENT_FIRST
+	first_neg = ADD_COHESION_PERCENT_FIRST_NEG
+	third = ADD_COHESION_PERCENT_THIRD
+	third_neg = ADD_COHESION_PERCENT_THIRD_NEG
+}
+
+add_cohesion_number = {
+	global = ADD_COHESION_NUMBER
+	global_neg = ADD_COHESION_NUMBER_NEG
+	first = ADD_COHESION_NUMBER_FIRST
+	first_neg = ADD_COHESION_NUMBER_FIRST_NEG
+	third = ADD_COHESION_NUMBER_THIRD
+	third_neg = ADD_COHESION_NUMBER_THIRD_NEG
+}
+
+add_leverage  = {
+	global = ADD_LEVERAGE
+	global_neg = ADD_LEVERAGE_NEG
+	first = ADD_LEVERAGE_FIRST
+	first_neg = ADD_LEVERAGE_FIRST_NEG
+	third = ADD_LEVERAGE_THIRD
+	third_neg = ADD_LEVERAGE_THIRD_NEG
+}
+﻿create_state = {
+	global = CREATE_STATE
+}
+
+set_owner_of_provinces = {
+	global = SET_OWNER_OF_PROVINCES
+}
+
+set_state_type = {
+	global = SET_STATE_TYPE
+}
+
+set_state_owner = {
+	global = SET_STATE_OWNER
+	first = SET_STATE_OWNER_FIRST
+	third = SET_STATE_OWNER_THIRD
+}
+
+create_building = {
+	global = CREATE_BUILDING
+}
+
+add_building_level = {
+	global = ADD_BUILDING_LEVEL
+}
+
+start_building_construction = {
+	global = START_BUILDING_CONSTRUCTION
+}
+
+start_privately_funded_building_construction = {
+	global = START_PRIVATELY_FUNDED_BUILDING_CONSTRUCTION
+}
+
+create_pop = {
+	global = CREATE_POP
+}
+
+add_homeland = {
+	global = ADD_HOMELAND
+	third = ADD_HOMELAND_THIRD
+}
+
+remove_homeland = {
+	global = REMOVE_HOMELAND
+	third = REMOVE_HOMELAND_THIRD
+}
+
+add_claim = {
+	global = ADD_CLAIM
+	third = ADD_CLAIM_THIRD
+}
+
+remove_claim = {
+	global = REMOVE_CLAIM
+}
+
+activate_building = {
+	global = ACTIVATE_BUILDING
+}
+
+deactivate_building = {
+	global = DEACTIVATE_BUILDING
+}
+
+remove_building = {
+	global = REMOVE_BUILDING
+}
+
+activate_production_method = {
+	global = ACTIVATE_PRODUCTION_METHOD
+}
+
+add_arable_land = {
+	global = ADD_ARABLE_LAND_POSITIVE_EFFECT
+	global_neg = ADD_ARABLE_LAND_NEGATIVE_EFFECT
+}
+
+add_devastation = {
+	global = ADD_DEVASTATION_POSITIVE_EFFECT
+	global_neg = ADD_DEVASTATION_NEGATIVE_EFFECT
+	first = ADD_DEVASTATION_POSITIVE_EFFECT_FIRST
+	first_neg = ADD_DEVASTATION_NEGATIVE_EFFECT_FIRST
+	third = ADD_DEVASTATION_POSITIVE_EFFECT_THIRD
+	third_neg = ADD_DEVASTATION_NEGATIVE_EFFECT_THIRD
+}
+
+set_devastation = {
+	global = SET_DEVASTATION_POSITIVE_EFFECT
+	global_neg = SET_DEVASTATION_NEGATIVE_EFFECT
+}
+
+add_culture_sol_modifier = {
+	global = ADD_CULTURE_SOL_MODIFIER
+	first = ADD_CULTURE_SOL_MODIFIER_FIRST
+	third = ADD_CULTURE_SOL_MODIFIER_THIRD
+}
+
+add_religion_sol_modifier = {
+	global = ADD_RELIGION_SOL_MODIFIER
+	first = ADD_RELIGION_SOL_MODIFIER_FIRST
+	third = ADD_RELIGION_SOL_MODIFIER_THIRD
+}
+
+force_resource_discovery = {
+	global = FORCE_RESOURCE_DISCOVERY
+}
+
+force_resource_depletion = {
+	global = FORCE_RESOURCE_DEPLETION
+}
+
+add_pollution = {
+	global = ADD_POLLUTION_EFFECT
+	global_neg = REMOVE_POLLUTION_EFFECT
+}
+
+create_mass_migration = {
+	global = CREATE_MASS_MIGRATION
+	third = CREATE_MASS_MIGRATION_THIRD
+}
+
+add_state_trait= {
+	global = ADD_STATE_TRAIT_GLOBAL
+	third = ADD_STATE_TRAIT
+}
+
+remove_state_trait = {
+	global = REMOVE_STATE_TRAIT_GLOBAL
+	third = REMOVE_STATE_TRAIT
+}
+
+﻿
+﻿increase_autonomy = {
+	global = INCREASE_AUTONOMY
+	global_neg = INCREASE_AUTONOMY_NEG
+	first = INCREASE_AUTONOMY_FIRST
+	first_neg = INCREASE_AUTONOMY_FIRST_NEG
+	third = INCREASE_AUTONOMY_THIRD
+	third_neg = INCREASE_AUTONOMY_THIRD_NEG
+}
+
+decrease_autonomy = {
+	global = DECREASE_AUTONOMY
+	global_neg = DECREASE_AUTONOMY_NEG
+	first = DECREASE_AUTONOMY_FIRST
+	first_neg = DECREASE_AUTONOMY_FIRST_NEG
+	third = DECREASE_AUTONOMY_THIRD
+	third_neg = DECREASE_AUTONOMY_THIRD_NEG
+}
+
+﻿start_tutorial_lesson = {
+	global = START_TUTORIAL_LESSON
+}
+
+﻿﻿set_subsidized = {
+	global = SET_SUBSIDIZED
+	global_neg = SET_SUBSIDIZED_NEGATIVE
+}
+
+﻿kill_character = {
+	global = KILL_CHARACTER_GLOBAL
+	global_neg = KILL_CHARACTER_GLOBAL_NEG
+	first = KILL_CHARACTER_FIRST
+	first_neg = KILL_CHARACTER_FIRST_NEG
+	third = KILL_CHARACTER
+	third_neg = KILL_CHARACTER_NEG
+}
+
+add_commander_rank = {
+	third = ADD_COMMANDER_RANK
+	global = ADD_COMMANDER_RANK_GLOBAL
+}
+
+set_commander_rank = {
+	third = SET_COMMANDER_RANK
+	global = SET_COMMANDER_RANK_GLOBAL
+}
+
+add_character_role = {
+	global = ADD_CHARACTER_ROLE_GLOBAL
+	third = ADD_CHARACTER_ROLE
+}
+
+remove_character_role = {
+	global = REMOVE_CHARACTER_ROLE_GLOBAL
+	third = REMOVE_CHARACTER_ROLE
+}
+
+add_experience = {
+	third = ADD_EXPERIENCE
+}
+
+add_trait = {
+	global = ADD_TRAIT_GLOBAL
+	first = ADD_TRAIT_FIRST
+	third = ADD_TRAIT
+}
+
+remove_trait = {
+	global = REMOVE_TRAIT_GLOBAL
+	first = REMOVE_TRAIT_FIRST
+	third = REMOVE_TRAIT
+}
+
+transfer_character = {
+	third = TRANSFER_CHARACTER
+	global = TRANSFER_CHARACTER_GLOBAL
+}
+
+set_character_busy_and_immortal = {
+	global = SET_CHARACTER_BUSY_GLOBAL
+	global_neg = SET_CHARACTER_BUSY_GLOBAL_NEG
+	third = SET_CHARACTER_BUSY
+	third_neg = SET_CHARACTER_BUSY_NEG
+}
+
+set_character_immortal = {
+	global = SET_CHARACTER_IMMORTAL_GLOBAL
+	global_neg = SET_CHARACTER_IMMORTAL_GLOBAL_NEG
+	third = SET_CHARACTER_IMMORTAL
+	third_neg = SET_CHARACTER_IMMORTAL_NEG
+}
+
+set_next_election_date = {
+	third = SET_NEXT_ELECTION_DATE
+}
+
+place_character_in_void = {
+	third = PLACE_CHARACTER_IN_VOID
+}
+
+free_character_from_void = {
+	third = FREE_CHARACTER_FROM_VOID
+	third_neg = FREE_CHARACTER_FROM_VOID_NEG	
+}
+
+change_character_religion = {
+	third = CHANGE_CHARACTER_RELIGION
+}
+
+change_character_culture = {
+	third = CHANGE_CHARACTER_CULTURE
+}
+
+exile_character = {
+	third = EXILE_CHARACTER_THIRD
+	third_neg = EXILE_CHARACTER_THIRD_NEG
+	global = EXILE_CHARACTER_GLOBAL
+	global_neg = EXILE_CHARACTER_GLOBAL_NEG
+}
+
+set_home_country = {
+	third = SET_HOME_COUNTRY_THIRD
+	global = SET_HOME_COUNTRY_GLOBAL
+}
+
+set_home_country_definition = {
+	third = SET_HOME_COUNTRY_DEFINITION_THIRD
+	global = SET_HOME_COUNTRY_DEFINITION_GLOBAL
+}
+
+demobilize = {
+	third = DEMOBILIZE_THIRD
+	global = DEMOBILIZE_GLOBAL
+}
+
+disinherit_character = {
+	global = DISINHERIT_CHARACTER
+	global_neg = DISINHERIT_CHARACTER_NEG
+	third = DISINHERIT_CHARACTER_THIRD
+	third_neg = DISINHERIT_CHARACTER_THIRD_NEG
+}
+
+set_character_as_ruler = {
+	global = SET_CHARACTER_AS_RULER
+	global_neg = SET_CHARACTER_AS_RULER_NEG
+	third = SET_CHARACTER_AS_RULER_THIRD
+	third_neg = SET_CHARACTER_AS_RULER_THIRD_NEG
+}
+
+
+﻿add_treasury = {
+	global = ADD_TREASURY_EFFECT_POSITIVE
+	global_neg = ADD_TREASURY_EFFECT_NEGATIVE
+	first = ADD_TREASURY_EFFECT_FIRST_POSITIVE
+	first_neg = ADD_TREASURY_EFFECT_FIRST_NEGATIVE
+	third = ADD_TREASURY_EFFECT_THIRD_POSITIVE
+	third_neg = ADD_TREASURY_EFFECT_THIRD_NEGATIVE
+}
+
+set_country_army_sp_target = {
+	global = SET_COUNTRY_ARMY_SP_TARGET
+}
+
+set_relations = {
+	global = SET_RELATIONS
+}
+
+set_tension = {
+	global = SET_TENSION
+}
+
+set_diplomats_expelled = {
+	global = SET_DIPLOMATS_EXPELLED
+	global_neg = SET_DIPLOMATS_EXPELLED_NEGATIVE
+	first = SET_DIPLOMATS_EXPELLED_FIRST
+	first_neg = SET_DIPLOMATS_EXPELLED_FIRST_NEGATIVE
+	third = SET_DIPLOMATS_EXPELLED_THIRD
+	third_neg = SET_DIPLOMATS_EXPELLED_THIRD_NEGATIVE	
+}
+
+set_secret_goal = {
+	global = SET_SECRET_GOAL
+}
+
+set_mutual_secret_goal = {
+	global = SET_MUTUAL_SECRET_GOAL
+}
+
+
+set_strategy = {
+	global = SET_STRATEGY
+}
+
+set_tax_level = {
+	global = SET_TAX_LEVEL
+	first = SET_TAX_LEVEL_FIRST
+	third = SET_TAX_LEVEL_THIRD
+}
+
+add_change_relations_progress = {
+	global = ADD_CHANGE_RELATIONS_PROGRESS
+}
+
+add_technology_progress = {
+	global = ADD_TECHNOLOGY_PROGRESS
+	global_neg = ADD_TECHNOLOGY_PROGRESS_NEG
+	first = ADD_TECHNOLOGY_PROGRESS_FIRST
+	first_neg = ADD_TECHNOLOGY_PROGRESS_FIRST_NEG
+}
+
+activate_law = {
+	global = ACTIVATE_LAW
+}
+
+deactivate_law = {
+	global = DEACTIVATE_LAW
+}
+
+cancel_enactment = {
+	global = CANCEL_ENACTMENT
+	first = CANCEL_ENACTMENT_FIRST
+	third = CANCEL_ENACTMENT_THIRD
+}
+
+change_relations = {
+	global = CHANGE_RELATIONS
+	global_neg = CHANGE_RELATIONS_NEG
+	first = CHANGE_RELATIONS_FIRST
+	first_neg = CHANGE_RELATIONS_FIRST_NEG
+	third = CHANGE_RELATIONS_THIRD
+	third_neg = CHANGE_RELATIONS_THIRD_NEG
+}
+
+change_tension = {
+	global = CHANGE_TENSION
+	global_neg = CHANGE_TENSION_NEG
+}
+
+set_owes_obligation_to = {
+	global = SET_OWES_OBLIGATION_TO
+	global_neg = SET_OWES_OBLIGATION_TO_NEG
+	first = SET_OWES_OBLIGATION_TO_FIRST
+	first_neg = SET_OWES_OBLIGATION_TO_FIRST_NEG
+	third = SET_OWES_OBLIGATION_TO_THIRD
+	third_neg = SET_OWES_OBLIGATION_TO_THIRD_NEG
+}
+
+validate_subsidies = {
+	global = VALIDATE_SUBSIDIES
+	global_neg = VALIDATE_SUBSIDIES_NEG
+}
+
+recalculate_pop_ig_support = {
+	global = RECALCULATE_POP_IG_SUPPORT
+	first = RECALCULATE_POP_IG_SUPPORT_FIRST
+	third = RECALCULATE_POP_IG_SUPPORT_THIRD
+}
+
+set_country_type = {
+	global = SET_COUNTRY_TYPE
+	first = SET_COUNTRY_TYPE_FIRST
+	third = SET_COUNTRY_TYPE_THIRD
+}
+
+set_capital = {
+	global = SET_CAPITAL
+	first = SET_CAPITAL_FIRST
+	third = SET_CAPITAL_THIRD
+}
+
+set_state_religion = {
+	global = SET_STATE_RELIGION
+	first = SET_STATE_RELIGION_FIRST
+	third = SET_STATE_RELIGION_THIRD
+}
+
+set_market_capital = {
+	global = SET_MARKET_CAPITAL
+	first = SET_MARKET_CAPITAL_FIRST
+	third = SET_MARKET_CAPITAL_THIRD
+}
+
+seize_investment_pool = {
+	global = SEIZE_INVESTMENT_POOL
+	first = SEIZE_INVESTMENT_POOL_FIRST
+	third = SEIZE_INVESTMENT_POOL_THIRD	
+}
+
+clear_debt = {
+	global = CLEAR_DEBT
+	global_neg = CLEAR_DEBT_NEG
+}
+
+clear_scaled_debt = {
+	global = CLEAR_SCALED_DEBT
+}
+
+take_on_scaled_debt = {
+	global = TAKE_ON_SCALED_DEBT
+	first = TAKE_ON_SCALED_DEBT_FIRST
+	third = TAKE_ON_SCALED_DEBT_THIRD
+}
+
+create_trade_route = {
+	global = CREATE_TRADE_ROUTE
+}
+
+try_form_government_with = {
+	global = TRY_FORM_GOVERNMENT_WITH
+	first = TRY_FORM_GOVERNMENT_WITH_FIRST
+	third = TRY_FORM_GOVERNMENT_WITH_FIRST
+}
+
+set_country_navy_sp_target = {
+	global = SET_COUNTRY_NAVY_SP_TARGET
+}
+
+create_character = {
+	global = CREATE_CHARACTER
+	first = CREATE_CHARACTER_FIRST
+	third = CREATE_CHARACTER_THIRD
+}
+
+add_investment_pool = {
+	global = ADD_INVESTMENT_POOL
+	first = ADD_INVESTMENT_POOL_FIRST
+	third = ADD_INVESTMENT_POOL_THIRD
+}
+
+add_technology_researched = {
+	global = ADD_TECHNOLOGY_RESEARCHED
+	first = ADD_TECHNOLOGY_RESEARCHED_FIRST
+	third = ADD_TECHNOLOGY_RESEARCHED_THIRD
+}
+
+add_era_researched = {
+	global = ADD_ERA_RESEARCHED
+	first = ADD_ERA_RESEARCHED_FIRST
+	third = ADD_ERA_RESEARCHED_THIRD
+}
+
+create_diplomatic_pact = {
+	global = CREATE_DIPLOMATIC_PACT
+	first = CREATE_DIPLOMATIC_PACT_FIRST
+	third = CREATE_DIPLOMATIC_PACT_THIRD
+}
+
+change_infamy = {
+	global = CHANGE_INFAMY
+	global_neg = CHANGE_INFAMY_NEG
+	first = CHANGE_INFAMY_FIRST
+	first_neg = CHANGE_INFAMY_FIRST_NEG
+	third = CHANGE_INFAMY_THIRD
+	third_neg = CHANGE_INFAMY_THIRD_NEG
+}
+
+create_incident = {
+	global = CREATE_INCIDENT
+	first = CREATE_INCIDENT_FIRST
+	third = CREATE_INCIDENT_THIRD
+}
+
+add_war_goal = {
+	global = ADD_WAR_GOAL
+	first = ADD_WAR_GOAL_FIRST
+	third = ADD_WAR_GOAL_THIRD
+}
+
+remove_war_goal = {
+	global = REMOVE_WAR_GOAL
+	first = REMOVE_WAR_GOAL_FIRST
+	third = REMOVE_WAR_GOAL_THIRD
+}
+
+do_revolution_cleanup = {
+	global = DO_REVOLUTION_CLEANUP
+}
+
+annex = {
+	global = ANNEX_EFFECT
+	first = ANNEX_EFFECT_FIRST
+	third = ANNEX_EFFECT_THIRD
+}
+
+annex_with_incorporation = {
+	global = ANNEX_EFFECT
+	first = ANNEX_EFFECT_FIRST
+	third = ANNEX_EFFECT_THIRD
+}
+
+annex_as_civil_war = {
+	global = ANNEX_EFFECT
+	first = ANNEX_EFFECT_FIRST
+	third = ANNEX_EFFECT_THIRD
+}
+
+create_country = {
+	global = CREATE_COUNTRY
+	first = CREATE_COUNTRY_FIRST
+	third = CREATE_COUNTRY_THIRD
+}
+
+create_dynamic_country = {
+	global = CREATE_COUNTRY
+	first = CREATE_COUNTRY_FIRST
+	third = CREATE_COUNTRY_THIRD
+}
+
+set_government_wage_level = {
+	global = SET_GOVERNMENT_WAGE_LEVEL
+}
+
+set_military_wage_level = {
+	global = SET_MILITARY_WAGE_LEVEL
+}
+
+add_primary_culture = {
+	global = ADD_PRIMARY_CULTURE
+	first = ADD_PRIMARY_CULTURE_FIRST
+	third = ADD_PRIMARY_CULTURE_THIRD
+}
+
+remove_primary_culture = {
+	global = REMOVE_PRIMARY_CULTURE
+	first = REMOVE_PRIMARY_CULTURE_FIRST
+	third = REMOVE_PRIMARY_CULTURE_THIRD
+}
+
+play_as = {
+	global = PLAY_AS
+	first = PLAY_AS_FIRST
+	third = PLAY_AS_THIRD
+}
+
+add_banned_goods = {
+	global = ADD_BANNED_GOODS
+	first = ADD_BANNED_GOODS_FIRST
+	third = ADD_BANNED_GOODS_THIRD
+}
+
+remove_banned_goods = {
+	global = REMOVE_BANNED_GOODS
+	first = REMOVE_BANNED_GOODS_FIRST
+	third = REMOVE_BANNED_GOODS_THIRD
+}
+
+add_taxed_goods = {
+	global = ADD_TAXED_GOODS
+	first = ADD_TAXED_GOODS_FIRST
+	third = ADD_TAXED_GOODS_THIRD
+}
+
+remove_taxed_goods = {
+	global = REMOVE_TAXED_GOODS
+	first = REMOVE_TAXED_GOODS_FIRST
+	third = REMOVE_TAXED_GOODS_THIRD
+}
+
+add_company = {
+	global = ADD_COMPANY
+	first = ADD_COMPANY_FIRST
+	third = ADD_COMPANY_THIRD
+}
+
+remove_company = {
+	global = REMOVE_COMPANY
+	first = REMOVE_COMPANY_FIRST
+	third = REMOVE_COMPANY_THIRD
+}
+
+set_company_establishment_date = {
+	global = SET_COMPANY_ESTABLISHMENT_DATE_GLOBAL
+	third = SET_COMPANY_ESTABLISHMENT_DATE_THIRD
+}
+
+set_tariffs_no_priority = {
+	global = SET_TARIFFS_NO_PRIORITY
+	first = SET_TARIFFS_NO_PRIORITY_FIRST
+	third = SET_TARIFFS_NO_PRIORITY_THIRD
+}
+
+set_tariffs_import_priority = {
+	global = SET_TARIFFS_IMPORT_PRIORITY
+	first = SET_TARIFFS_IMPORT_PRIORITY_FIRST
+	third = SET_TARIFFS_IMPORT_PRIORITY_THIRD
+}
+
+set_tariffs_export_priority = {
+	global = SET_TARIFFS_EXPORT_PRIORITY
+	first = SET_TARIFFS_EXPORT_PRIORITY_FIRST
+	third = SET_TARIFFS_EXPORT_PRIORITY_THIRD
+}
+
+make_independent = {
+	global = MAKE_INDEPENDENT
+	global_neg = MAKE_INDEPENDENT_NEG
+}
+
+change_tag = {
+	global = CHANGE_TAG
+	first = CHANGE_TAG_FIRST
+	third = CHANGE_TAG_THIRD
+}
+
+add_culture_standard_of_living_modifier = {
+	global = ADD_CULTURE_STANDARD_OF_LIVING_MODIFIER
+}
+
+add_declared_interest = {
+	global = ADD_DECLARED_INTEREST
+}
+
+change_subject_type = {
+	global = CHANGE_SUBJECT_TYPE
+}
+
+add_religion_standard_of_living_modifier = {
+	global = ADD_RELIGION_STANDARD_OF_LIVING_MODIFIER
+}
+
+set_immune_to_revolutions = {
+	global = SET_IMMUNE_TO_REVOLUTIONS
+	global_neg = SET_IMMUNE_TO_REVOLUTIONS_NEG
+	first = SET_IMMUNE_TO_REVOLUTIONS_FIRST
+	first_neg = SET_IMMUNE_TO_REVOLUTIONS_FIRST_NEG
+	third = SET_IMMUNE_TO_REVOLUTIONS_THIRD
+	third_neg = SET_IMMUNE_TO_REVOLUTIONS_THIRD_NEG
+}
+
+copy_laws = {
+	global = COPY_LAWS
+	first = COPY_LAWS_FIRST
+	third = COPY_LAWS_THIRD
+}
+
+regime_change = {
+	global = REGIME_CHANGE
+	first = REGIME_CHANGE_FIRST
+	third = REGIME_CHANGE_THIRD
+}
+
+create_diplomatic_catalyst = {
+	global = CREATE_DIPLOMATIC_CATALYST_GLOBAL
+	first = CREATE_DIPLOMATIC_CATALYST_FIRST
+	third = CREATE_DIPLOMATIC_CATALYST_THIRD	
+}
+
+﻿add_cultural_obsession = {
+	global = ADD_CULTURAL_OBSESSION
+	third = ADD_CULTURAL_OBSESSION
+}
+
+remove_cultural_obsession = {
+	global = REMOVE_CULTURAL_OBSESSION
+	third = REMOVE_CULTURAL_OBSESSION
+}
+
+add_cultural_community = {
+	global = ADD_CULTURAL_COMMUNITY
+	third = ADD_CULTURAL_COMMUNITY
+}
+
+add_cultural_community_in_state = {
+	global = ADD_CULTURAL_COMMUNITY
+	third = ADD_CULTURAL_COMMUNITY
+}
+
+﻿remove_initiator_backers = {
+	global = REMOVE_INITIATOR_BACKERS
+}
+
+remove_target_backers = {
+	global = REMOVE_TARGET_BACKERS
+}
+
+add_initiator_backers = {
+    global = ADD_INITIATOR_BACKERS
+}
+
+add_target_backers = {
+    global = ADD_TARGET_BACKERS
+}
+
+add_escalation = {
+    global = ADD_ESCALATION
+    global_neg = ADD_ESCALATION_NEG
+}
+
+end_play = {
+    global = END_PLAY
+    global_neg = END_PLAY_NEG
+}
+
+set_key = {
+    global = SET_KEY
+}
+
+add_diplomatic_play_war_support = {
+    global = ADD_DIPLOMATIC_PLAY_WAR_SUPPORT
+    global_neg = ADD_DIPLOMATIC_PLAY_WAR_SUPPORT_NEG
+}
+
+add_war_war_support = {
+    global = ADD_WAR_WAR_SUPPORT
+    global_neg = ADD_WAR_WAR_SUPPORT_NEG
+}
+
+add_war_exhaustion = {
+    global = ADD_WAR_EXHAUSTION
+    global_neg = ADD_WAR_EXHAUSTION_NEG
+}
+
+create_diplomatic_play = {
+    global = CREATE_DIPLOMATIC_PLAY
+}
+
+set_war = {
+    global = SET_WAR
+    global_neg = SET_WAR_NEG
+}
+
+create_bidirectional_truce = {
+    global = CREATE_BIDIRECTIONAL_TRUCE
+    first = CREATE_BIDIRECTIONAL_TRUCE_FIRST
+    third = CREATE_BIDIRECTIONAL_TRUCE_THIRD	
+}
+
+create_unidirectional_truce = {
+    global = CREATE_UNIDIRECTIONAL_TRUCE
+    first = CREATE_UNIDIRECTIONAL_TRUCE_FIRST
+    third = CREATE_UNIDIRECTIONAL_TRUCE_THIRD	
+}
+
+end_truce = {
+    global = END_TRUCE
+	first = END_TRUCE_FIRST
+	third = END_TRUCE_THIRD
+}
+
+violate_sovereignty_join = {
+    global = VIOLATE_SOVEREIGNTY_JOIN
+    first = VIOLATE_SOVEREIGNTY_JOIN_FIRST
+    third = VIOLATE_SOVEREIGNTY_JOIN_THIRD
+}
+
+remove_diplomatic_pact = {
+	global = REMOVE_DIPLOMATIC_PACT
+	first = REMOVE_DIPLOMATIC_PACT_FIRST
+    third = REMOVE_DIPLOMATIC_PACT_THIRD
+}
+
+join_war = {
+	global = JOIN_WAR_GLOBAL
+	first = JOIN_WAR_FIRST
+    third = JOIN_WAR_THIRD
+}
+
+add_liberty_desire = {
+	global = ADD_LIBERTY_DESIRE_EFFECT
+	global_neg = ADD_LIBERTY_DESIRE_EFFECT_NEG
+	first = ADD_LIBERTY_DESIRE_EFFECT_FIRST
+	first_neg = ADD_LIBERTY_DESIRE_EFFECT_FIRST_NEG
+	third = ADD_LIBERTY_DESIRE_EFFECT_THIRD
+	third_neg = ADD_LIBERTY_DESIRE_EFFECT_THIRD_NEG
+}
+
+resolve_play_for = {
+    global = RESOLVE_PLAY_FOR
+}
+
+﻿add_journal_entry = {
+	global = ADD_JOURNAL_ENTRY
+	first = ADD_JOURNAL_ENTRY_FIRST
+	third = ADD_JOURNAL_ENTRY_THIRD
+}
+
+complete_objective_subgoal = {
+	global = OBJECTIVE_SUBGOAL_EFFECT
+}
+
+remove_active_objective_subgoal = {
+	global = OBJECTIVE_SUBGOAL_EFFECT
+}
+﻿set_trade_center = {
+	global = SET_TRADE_CENTER
+}
+
+lock_trade_route = {
+	global = LOCK_TRADE_ROUTE
+}
+
+﻿create_assignment = {
+	third = EFFECT_CREATE_ASSIGNMENT
+}
+
+project_power = {
+	third = EFFECT_PROJECT_POWER
+}
+
+add_organization = {
+    global = EFFECT_ADD_ORGANIZATION
+	third = EFFECT_ADD_ORGANIZATION_THIRD
+}
+
+add_morale = {
+    global = EFFECT_ADD_MORALE
+	third = EFFECT_ADD_MORALE_THIRD
+}
+
+transfer_to_formation = {
+	third = TRANSFER_TO_FORMATION_THIRD
+	global = TRANSFER_TO_FORMATION_GLOBAL
+}
+
+deploy_to_front = {
+	third = DEPLOY_TO_FRONT_THIRD
+	global = DEPLOY_TO_FRONT_GLOBAL
+}
+
+teleport_to_front = {
+	third = TELEPORT_TO_FRONT_THIRD
+	global = TELEPORT_TO_FRONT_GLOBAL
+}
+
+mobilize_army = {
+	third = MOBILIZE_ARMY_THIRD
+	global = MOBILIZE_ARMY_GLOBAL
+}
+
+fully_mobilize_army = {
+	third = FULLY_MOBILIZE_ARMY_THIRD
+	global = FULLY_MOBILIZE_ARMY_GLOBAL
+}
+
+﻿trigger_event = {
+	global = TRIGGER_EVENT
+}
+
+add_modifier = {
+	global = ADD_MODIFIER
+	first = ADD_MODIFIER_FIRST
+	third = ADD_MODIFIER_THIRD
+}
+
+add_enactment_modifier = {
+	global = ADD_ENACTMENT_MODIFIER
+	global_neg = ADD_ENACTMENT_MODIFIER_NEG
+	first = ADD_ENACTMENT_MODIFIER_FIRST
+	first_neg = ADD_ENACTMENT_MODIFIER_FIRST_NEG
+	third = ADD_ENACTMENT_MODIFIER_THIRD
+	third_neg = ADD_ENACTMENT_MODIFIER_THIRD_NEG
+}
+
+remove_modifier = {
+	global = REMOVE_MODIFIER
+ 	first = REMOVE_MODIFIER_FIRST
+	third = REMOVE_MODIFIER_THIRD
+}
+
+remove_enactment_modifier = {
+	global = REMOVE_ENACTMENT_MODIFIER
+}
+﻿update_party_support = {
+	global = UPDATE_PARTY_SUPPORT_EFFECT
+	global_neg = UPDATE_PARTY_SUPPORT_EFFECT_NEG
+	first = UPDATE_PARTY_SUPPORT_EFFECT_FIRST
+	first_neg = UPDATE_PARTY_SUPPORT_EFFECT_FIRST_NEG
+	third = UPDATE_PARTY_SUPPORT_EFFECT_THIRD
+	third_neg = UPDATE_PARTY_SUPPORT_EFFECT_THIRD_NEG
+}
+
+add_ig_to_party = {
+	global = ADD_IG_TO_PARTY_EFFECT_GLOBAL
+	third = ADD_IG_TO_PARTY_EFFECT_THIRD
+}
+
+remove_ig_from_party = {
+	global = REMOVE_IG_FROM_PARTY_EFFECT_GLOBAL
+	third = REMOVE_IG_FROM_PARTY_EFFECT_THIRD
+}
+
+disband_party = {
+	global = DISBAND_PARTY_EFFECT_GLOBAL
+	global_neg = DISBAND_PARTY_EFFECT_GLOBAL_NEG
+	third = DISBAND_PARTY_EFFECT_THIRD
+	third_neg = DISBAND_PARTY_EFFECT_THIRD_NEG
+}
+
+

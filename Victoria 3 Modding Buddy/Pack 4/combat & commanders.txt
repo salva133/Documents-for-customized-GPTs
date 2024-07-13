@@ -1,0 +1,2409 @@
+﻿﻿no_veterancy = {
+	level = 0
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/no_veterancy.dds"
+}
+
+veterancy1 = {
+	level = 1
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/veterancy1.dds"
+	needed_experience = 100
+	unit_modifier = {
+        unit_offense_mult = 0.05
+        unit_defense_mult = 0.05
+	}
+}
+
+veterancy2 = {
+	level = 2
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/veterancy2.dds"
+	needed_experience = 100
+	unit_modifier = {
+        unit_offense_mult = 0.1
+        unit_defense_mult = 0.1
+	}
+}
+
+veterancy3 = {
+	level = 3
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/veterancy3.dds"
+	needed_experience = 200
+	unit_modifier = {
+        unit_offense_mult = 0.15
+        unit_defense_mult = 0.15
+	}
+}
+
+veterancy4 = {
+	level = 4
+	icon = "gfx/interface/icons/military_icons/unit_veterancy/veterancy4.dds"
+	needed_experience = 400
+	unit_modifier = {
+        unit_offense_mult = 0.25
+        unit_defense_mult = 0.25
+		unit_morale_damage_mult = 0.5
+	}
+}
+
+﻿#
+# NOTE: When adding new Groups, add correspondig entry to texticons.gui
+#
+
+combat_unit_group_infantry = {
+    type = army
+    manpower_max = 1000
+    default_group = yes
+    color = { 230  69  80 }
+    icon = "gfx/interface/icons/generic_icons/battalions.dds"
+}
+
+combat_unit_group_artillery = {
+    type = army
+    manpower_max = 1000
+    color = { 230  182  69 }
+    icon = "gfx/interface/icons/generic_icons/battalions.dds"
+}
+
+combat_unit_group_cavalry = {
+    type = army
+    manpower_max = 1000
+    color = { 172 235 121 }
+    icon = "gfx/interface/icons/generic_icons/battalions.dds"
+}
+
+combat_unit_group_light_ship = {
+    type = navy
+    manpower_max = 1000
+    default_group = yes
+    color = { 121  175  235 }
+    icon = "gfx/interface/icons/generic_icons/flotillas.dds"
+}
+
+combat_unit_group_capital_ship = {
+    type = navy
+    manpower_max = 1000
+    color = { 143 63 205 }
+    icon = "gfx/interface/icons/generic_icons/flotillas.dds"
+}
+
+combat_unit_group_support_ship = {
+    type = navy
+    manpower_max = 1000
+    color = { 20 210 180 }
+    icon = "gfx/interface/icons/generic_icons/flotillas.dds"
+}
+
+
+﻿###
+### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
+### by the last defined unit type that it can build
+###
+
+### ARMY
+
+### Infantry
+
+combat_unit_type_irregular_infantry = {
+    group = combat_unit_group_infantry
+
+    battle_modifier = {
+        unit_offense_add = 10
+        unit_defense_add = 10
+        unit_morale_loss_add = 15
+    }
+	
+    upkeep_modifier = {
+    }
+
+    # scope = country
+    # both this and "can_build" needs to be true to build conscripts
+    can_build_conscript = {
+        always = yes
+    }
+    
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = decentralised_americas
+        }
+        texture = "gfx/unit_illustrations/infantry_decentralised_americas_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_irregular.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_irregular.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_irregular.dds"
+    }
+
+	upgrades = {
+		combat_unit_type_line_infantry
+		combat_unit_type_skirmish_infantry
+        combat_unit_type_trench_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+	}
+}
+
+combat_unit_type_line_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 20
+        unit_defense_add = 25
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = { line_infantry }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_line.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_line.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_line.dds"
+    }
+
+	upgrades = {	
+		combat_unit_type_skirmish_infantry
+        combat_unit_type_trench_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+	}
+}
+
+combat_unit_type_skirmish_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 2
+        goods_input_ammunition_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 35
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = { general_staff }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_skirmish.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_skirmish.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_skirmish.dds"
+    }
+
+	upgrades = {
+		combat_unit_type_trench_infantry
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+	}
+}
+
+combat_unit_type_trench_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 3
+        goods_input_ammunition_add = 2
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 40
+        unit_morale_loss_add = 8
+    }
+
+	unlocking_technologies = { trench_works }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_trench.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_trench.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_trench.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_squad_infantry
+        combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_squad_infantry = {
+    group = combat_unit_group_infantry
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_radios_add = 1
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 40
+        unit_defense_add = 50
+        unit_morale_loss_add = 6
+    }
+
+	unlocking_technologies = { nco_training }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_squad.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_squad.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/infantry_eu_squad.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mechanized_infantry
+    }
+}
+
+combat_unit_type_mechanized_infantry = {
+    group = combat_unit_group_infantry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+
+    upkeep_modifier = {
+        goods_input_small_arms_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_oil_add = 1
+        goods_input_radios_add = 1
+        goods_input_tanks_add = 1
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 60
+        unit_morale_loss_add = 4
+        unit_devastation_mult = 0.1
+    }
+
+	unlocking_technologies = { mobile_armor }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_east_asian_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/infantry_south_asian_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/infantry_african_mechanized.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/infantry_arabic_mechanized.dds"
+    }
+
+    combat_unit_image = {
+		# fallback
+        texture = "gfx/unit_illustrations/infantry_eu_mechanized.dds"
+    }
+}
+
+### Artillery
+
+combat_unit_type_cannon_artillery = {
+    group = combat_unit_group_artillery
+	
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }	
+
+    upkeep_modifier = {
+        goods_input_artillery_add = 1
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 15
+        unit_morale_loss_add = 10
+        unit_kill_rate_add = 0.1
+        unit_devastation_mult = 0.1
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { artillery }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_east_asian_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_south_asian_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/artillery_african_cannon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/artillery_arabic_cannon.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_cannon.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_mobile_artillery
+        combat_unit_type_shrapnel_artillery
+        combat_unit_type_siege_artillery
+    }
+}
+
+combat_unit_type_mobile_artillery = {
+    group = combat_unit_group_artillery
+	
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }	
+
+    upkeep_modifier = {
+        goods_input_artillery_add = 2
+    }
+    
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 15
+        unit_morale_loss_add = 8
+        unit_kill_rate_add = 0.2
+        unit_devastation_mult = 0.15
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { napoleonic_warfare }
+	
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_east_asian_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_south_asian_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/artillery_african_mobile.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/artillery_arabic_mobile.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_mobile.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_shrapnel_artillery
+        combat_unit_type_siege_artillery
+    }
+}
+
+combat_unit_type_shrapnel_artillery = {
+    group = combat_unit_group_artillery
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_artillery_add = 3
+        goods_input_ammunition_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 45
+        unit_defense_add = 25
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.3
+        unit_devastation_mult = 0.15
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { breech_loading_artillery }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_east_asian_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_south_asian_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/artillery_african_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/artillery_arabic_shrapnel.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_shrapnel.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_siege_artillery
+    }
+}
+
+combat_unit_type_siege_artillery = {
+    group = combat_unit_group_artillery
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_artillery_add = 4
+        goods_input_ammunition_add = 4
+		goods_input_radios_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 55
+        unit_defense_add = 30
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.25
+        unit_devastation_mult = 0.2
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { defense_in_depth }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_east_asian_siege.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/artillery_south_asian_siege.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/artillery_african_siege.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/artillery_arabic_siege.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_siege.dds"
+    }
+}
+
+combat_unit_type_heavy_tank = {
+    group = combat_unit_group_artillery
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_tanks_add = 3
+        goods_input_artillery_add = 4
+		goods_input_ammunition_add = 4
+        goods_input_radios_add = 1
+        goods_input_oil_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 70
+        unit_defense_add = 35
+        unit_morale_loss_add = 4
+        unit_kill_rate_add = 0.25
+        unit_morale_damage_mult = 0.15
+        unit_devastation_mult = 0.2
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { mobile_armor }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/artillery_heavy_tank.dds"
+    }
+}
+
+### Cavalry
+
+combat_unit_type_hussars = {
+    group = combat_unit_group_cavalry
+	
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }	
+    
+    upkeep_modifier = {
+        goods_input_grain_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 15
+        unit_defense_add = 10
+        unit_morale_loss_add = 10
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = 0.25
+        military_formation_movement_speed_mult = 0.25
+    }
+
+	unlocking_technologies = { standing_army }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_east_asian_hussar.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_south_asian_hussar.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/cavalry_african_hussar.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/cavalry_arabic_hussar.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/cavalry_eu_hussar.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_dragoons
+        combat_unit_type_cuirassiers
+        combat_unit_type_lancers
+    }
+}
+
+combat_unit_type_dragoons = {
+    group = combat_unit_group_cavalry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_grain_add = 1
+        goods_input_small_arms_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 20
+        unit_defense_add = 25
+        unit_morale_loss_add = 8
+        unit_occupation_mult = 0.3
+        #should get modifiers to mobile/surprise battle conditions appearing
+    }
+
+	unlocking_technologies = { line_infantry }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_east_asian_dragoon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_south_asian_dragoon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/cavalry_african_dragoon.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/cavalry_arabic_dragoon.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/cavalry_eu_dragoon.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_cuirassiers
+        combat_unit_type_lancers
+    }
+}
+
+combat_unit_type_cuirassiers = {
+    group = combat_unit_group_cavalry
+	
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_grain_add = 1
+        goods_input_small_arms_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 20
+        unit_morale_loss_add = 8
+        unit_occupation_mult = 0.3
+    }
+
+	unlocking_technologies = { line_infantry }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_east_asian_cuirassier.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_south_asian_cuirassier.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/cavalry_african_cuirassier.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/cavalry_arabic_cuirassier.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/cavalry_eu_cuirassier.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_dragoons
+        combat_unit_type_lancers
+    }
+}
+
+combat_unit_type_lancers = {
+    group = combat_unit_group_cavalry
+	
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_grain_add = 2
+        goods_input_small_arms_add = 2
+		goods_input_iron_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 20
+        unit_morale_loss_add = 6
+        unit_kill_rate_add = 0.05
+        unit_morale_loss_mult = 0.05
+        unit_occupation_mult = 0.3
+    }
+
+	unlocking_technologies = { napoleonic_warfare }
+    
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = east_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_east_asian_lancer.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = south_asian
+        }
+        texture = "gfx/unit_illustrations/cavalry_south_asian_lancer.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = african
+        }
+        texture = "gfx/unit_illustrations/cavalry_african_lancer.dds"
+    }
+
+    combat_unit_image = {
+        trigger = { 
+            has_culture_graphics = arabic
+        }
+        texture = "gfx/unit_illustrations/cavalry_arabic_lancer.dds"
+    }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/cavalry_eu_lancer.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_dragoons
+        combat_unit_type_cuirassiers
+    }
+}
+
+combat_unit_type_light_tanks = {
+    group = combat_unit_group_cavalry
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_tanks_add = 2
+        goods_input_artillery_add = 2
+        goods_input_oil_add = 2
+        goods_input_ammunition_add = 2
+        goods_input_radios_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 45
+        unit_defense_add = 45
+        unit_morale_loss_add = 4
+        unit_devastation_mult = 0.1
+        unit_occupation_mult = 0.3
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = 0.2
+    }
+
+	unlocking_technologies = { mobile_armor }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/cavalry_light_tank.dds"
+    }
+}
+
+### NAVY
+
+### Light ship group
+
+combat_unit_type_frigate = {
+    group = combat_unit_group_light_ship
+
+    upkeep_modifier = {
+        goods_input_manowars_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 10
+        unit_defense_add = 15
+        unit_morale_loss_add = 10
+    }
+
+	unlocking_technologies = { navigation }
+	
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/light_ships_frigate.dds"
+    }
+	
+	upgrades = {
+		combat_unit_type_monitor
+        combat_unit_type_destroyer
+		combat_unit_type_torpedo_boat
+	}
+}
+
+combat_unit_type_monitor = {
+    group = combat_unit_group_light_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 1
+        goods_input_artillery_add = 1
+        goods_input_ammunition_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 20
+        unit_defense_add = 30
+        unit_morale_loss_add = 8
+	    unit_convoy_defense_mult = 0.20
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = 0.2
+    }
+
+    unlocking_technologies = { monitor_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_monitor.dds"
+    }
+}
+
+combat_unit_type_destroyer = {
+    group = combat_unit_group_light_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 2
+        goods_input_artillery_add = 2
+        goods_input_ammunition_add = 2
+    }
+
+    battle_modifier = {
+        unit_offense_add = 30
+        unit_defense_add = 40
+        unit_morale_loss_add = 6
+        unit_convoy_defense_mult = 0.35
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = 0.2
+    }
+
+	unlocking_technologies = { destroyer }
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/light_ships_destroyer.dds"
+    }
+	
+	upgrades = {
+		combat_unit_type_torpedo_boat
+	}
+}
+
+combat_unit_type_torpedo_boat = {
+    group = combat_unit_group_light_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 2
+        goods_input_explosives_add = 4
+    }
+
+    battle_modifier = {
+        unit_offense_add = 40
+        unit_defense_add = 30
+        unit_morale_loss_add = 8
+        unit_convoy_raiding_mult = 0.25
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = 0.2
+    }
+
+	unlocking_technologies = { self_propelled_torpedoes }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/light_ships_torpedo_boat.dds"
+    }
+	
+	upgrades = {
+		combat_unit_type_destroyer
+	}
+}
+
+combat_unit_type_scout_cruiser = {
+    group = combat_unit_group_light_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 3
+        goods_input_ammunition_add = 3
+        goods_input_artillery_add = 3
+        goods_input_radios_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 50
+        unit_morale_loss_add = 6
+		unit_convoy_defense_mult = 0.5
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = 0.2
+    }
+
+	unlocking_technologies = { sea_lane_strategies }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/light_ships_scout_cruiser.dds"
+    }
+}
+
+### Flagship group
+
+combat_unit_type_man_o_war = {
+    group = combat_unit_group_capital_ship
+
+    upkeep_modifier = {
+        goods_input_manowars_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 25
+        unit_defense_add = 25
+        unit_morale_loss_add = 10
+        unit_convoy_raiding_mult = -0.5
+    }
+
+	unlocking_technologies = { drydocks }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_manowar.dds"
+    }
+	
+	upgrades = {
+		combat_unit_type_ironclad
+	}
+}
+
+combat_unit_type_ironclad = {
+    group = combat_unit_group_capital_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 3
+        goods_input_artillery_add = 3
+        goods_input_ammunition_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 50
+        unit_defense_add = 50
+        unit_morale_loss_add = 8
+		unit_convoy_raiding_mult = -0.5
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { ironclad_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_ironclad.dds"
+    }
+}
+
+combat_unit_type_dreadnought = {
+    group = combat_unit_group_capital_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 6
+		goods_input_artillery_add = 6
+        goods_input_ammunition_add = 6
+        goods_input_radios_add = 2    
+    }
+
+    battle_modifier = {
+        unit_offense_add = 80
+        unit_defense_add = 80
+        unit_morale_loss_add = 6
+		unit_convoy_raiding_mult = -0.5
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { dreadnought }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_dreadnought.dds"
+    }
+}
+
+combat_unit_type_battleship = {
+    group = combat_unit_group_capital_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 8
+		goods_input_artillery_add = 8
+        goods_input_ammunition_add = 8
+        goods_input_radios_add = 3
+    }
+
+    battle_modifier = {
+        unit_offense_add = 100
+        unit_defense_add = 100
+        unit_morale_loss_add = 4
+		unit_convoy_raiding_mult = -0.5
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { battleship_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/capital_ships_battleship.dds"
+    }
+}
+
+### Support Ship group
+
+combat_unit_type_submarine = {
+    group = combat_unit_group_support_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 2
+        goods_input_artillery_add = 2
+        goods_input_ammunition_add = 2
+		goods_input_radios_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 60
+        unit_defense_add = 20
+        unit_morale_loss_add = 8
+        unit_convoy_raiding_mult = 1.0
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = 0.2
+    }
+
+	unlocking_technologies = { submarine }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/support_ships_submarine.dds"
+    }
+}
+
+combat_unit_type_carrier = {
+    group = combat_unit_group_support_ship
+
+    upkeep_modifier = {
+        goods_input_ironclads_add = 8
+        goods_input_ammunition_add = 8
+        goods_input_radios_add = 4
+        goods_input_aeroplanes_add = 8
+    }
+
+    battle_modifier = {
+        unit_offense_add = 120
+        unit_defense_add = 60
+        unit_morale_loss_add = 6
+		unit_convoy_defense_mult = 0.25
+    }
+
+    formation_modifier = {
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { carrier_tech }
+
+    combat_unit_image = {
+        texture = "gfx/unit_illustrations/support_ships_carrier.dds"
+    }
+}
+
+﻿advance = {
+    texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+	
+	military_type = army
+	ai_usage = advance
+    is_basic_order_type = yes
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+    }
+
+    modifier = {
+        character_advancement_speed_add = 5
+        unit_offense_mult = 0.1
+    }
+
+	entity_animation = "advance"
+	clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+	experience = 0.1 # This much extra experience per week while executing Order
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+advance_reckless = {
+    texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+    
+    military_type = army
+	ai_usage = advance
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+		has_trait = reckless
+    }
+
+    modifier = {
+        character_advancement_speed_add = 7
+        unit_offense_mult = 0.15
+        unit_morale_loss_mult = 0.1
+        unit_recovery_rate_add = -0.1
+        character_battle_condition_aggressive_maneuver_mult = 1
+        character_battle_condition_blunder_mult = 1.5
+    }
+
+	entity_animation = "advance"
+    clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+    experience = 0.1 # This much extra experience per week while executing Order
+	
+    ai_weight = {
+		value = 2
+	}
+}
+
+advance_pillager = {
+    texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+    
+    military_type = army
+	ai_usage = advance
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+		OR = {
+			has_trait = cruel
+			has_trait = wrathful
+            has_trait = pillager
+		}
+    }
+
+    modifier = {
+        character_advancement_speed_add = 4
+        unit_kill_rate_add = 0.20
+        unit_devastation_mult = 1
+        unit_kill_rate_add = 0.1
+        unit_morale_damage_mult = 0.2
+        unit_occupation_mult = -0.2
+    }
+
+	entity_animation = "advance"
+    clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+    experience = 0.1 # This much extra experience per week while executing Order
+	
+    ai_weight = {
+		value = 2
+	}
+
+}
+
+advance_cautious = {
+    texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+    
+    military_type = army
+	ai_usage = advance
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+		has_trait = cautious
+    }
+
+    modifier = {
+        character_advancement_speed_add = 3
+        unit_morale_loss_mult = -0.05
+        unit_recovery_rate_add = 0.1
+        character_battle_condition_careful_maneuver_mult = 0.5
+    }
+
+	entity_animation = "advance"
+    clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+    experience = 0.1 # This much extra experience per week while executing Order
+
+    ai_weight = {
+        value = 2
+    }
+}
+
+advance_heavy_barrage = {
+    texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+    
+    military_type = army
+    ai_usage = advance
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+        OR = {
+           has_trait = basic_artillery_commander
+           has_trait = experienced_artillery_commander
+           has_trait = expert_artillery_commander
+        }
+    }
+
+    modifier = {
+        character_advancement_speed_add = 2
+        unit_occupation_mult = -0.1
+        unit_devastation_mult = 0.75
+        unit_kill_rate_add = 0.25
+        unit_morale_damage_mult = 0.15
+    }
+
+    entity_animation = "advance"
+    clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+    experience = 0.1 # This much extra experience per week while executing Order
+
+    ai_weight = {
+        value = 2
+    }
+}
+
+advance_cavalry_assualt = {
+    texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+
+    military_type = army
+    ai_usage = advance
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+        trigger_if = {
+            limit = {
+                has_role = general
+            }
+            OR = {
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_cuirassiers
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_hussars
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_dragoons
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_lancers
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                   formation_army_unit_type_fraction = {
+                      target = unit_type:combat_unit_type_light_tanks
+                      value >= 0.3
+                   }
+                }
+            }
+        }
+    }
+
+    modifier = {
+        character_advancement_speed_add = 7
+        unit_morale_damage_mult = 0.1
+        unit_offense_mult = 0.1
+        battle_casualties_mult = 0.15
+        unit_occupation_mult = 0.1
+    }
+
+    entity_animation = "advance"
+    clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+    experience = 0.1 # This much extra experience per week while executing Order
+	
+    ai_weight = {
+		value = 2
+	}
+}
+
+advance_tank_assualt = {
+    texture = "gfx/interface/icons/commander_order_icons/advance.dds"
+
+    military_type = army
+    ai_usage = advance
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+        has_trait = innovative
+        trigger_if = {
+            limit = {
+                has_role = general
+            }
+            commander_military_formation ?= {
+                formation_army_unit_type_fraction = {
+                    target = unit_type:combat_unit_type_heavy_tank
+                    value >= 0.3
+                }
+            }
+        }
+    }
+
+    modifier = {
+        character_advancement_speed_add = 2
+        unit_occupation_mult = -0.1
+        unit_morale_loss_mult = -0.05
+        unit_offense_mult = 0.15
+    }
+
+    entity_animation = "advance"
+    clicksound = "event:/SFX/UI/Military/order_general_front_advance"
+    experience = 0.1 # This much extra experience per week while executing Order
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+
+﻿defend = {
+    texture = "gfx/interface/icons/commander_order_icons/defend.dds"
+	
+	military_type = army
+	ai_usage = defend
+    is_basic_order_type = yes
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+    }
+
+    modifier = {
+		unit_defense_mult = 0.1
+    }
+
+	entity_animation = "defend"
+	clicksound = "event:/SFX/UI/Military/order_general_front_defend"
+	experience = 0.1 # This much extra experience per week while executing Order
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+
+defend_dig_in = {
+    texture = "gfx/interface/icons/commander_order_icons/defend.dds"
+    
+    military_type = army
+    ai_usage = defend
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+    	OR = {
+    		has_trait = basic_defensive_strategist
+            has_trait = experienced_defensive_strategist
+            has_trait = expert_defensive_strategist
+    	}
+    }
+
+    modifier = {
+        unit_defense_mult = 0.15
+        unit_supply_consumption_mult = 0.2
+        character_battle_condition_dug_in_mult = 1
+    }
+
+    entity_animation = "defend"
+    clicksound = "event:/SFX/UI/Military/order_general_front_defend"
+    experience = 0.1 # This much extra experience per week while executing Order
+
+
+    ai_weight = {
+        value = 2
+    }
+}
+
+defend_desperate_charge = {
+    texture = "gfx/interface/icons/commander_order_icons/defend.dds"
+    
+    military_type = army
+    ai_usage = defend
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+        has_trait = brave
+        trigger_if = {
+            limit = {
+                has_role = general
+            }
+            OR = {
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_hussars
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_dragoons
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_cuirassiers
+                        value >= 0.5
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_lancers
+                        value >= 0.5
+                    }
+                }
+            }
+        }
+    }
+
+    modifier = {
+        unit_kill_rate_add = 0.25
+        unit_morale_damage_mult = 0.15
+        battle_casualties_mult = 0.2
+        character_battle_condition_surprise_maneuver_mult = 0.5
+        character_battle_condition_aggressive_maneuver_mult = 0.5
+    }
+
+    entity_animation = "defend"
+    clicksound = "event:/SFX/UI/Military/order_general_front_defend"
+    experience = 0.1 # This much extra experience per week while executing Order
+
+    ai_weight = {
+        value = 2
+    }
+}
+
+defend_last_stand = {
+    texture = "gfx/interface/icons/commander_order_icons/defend.dds"
+    
+    military_type = army
+    ai_usage = defend
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+        OR = {
+            has_trait = stalwart_defender
+            has_trait = trench_rat
+            has_trait = defense_in_depth_specialist
+        }
+    }
+
+    modifier = {
+        battle_casualties_mult = 0.3
+        unit_defense_mult = 0.2
+    }
+
+    entity_animation = "defend"
+    clicksound = "event:/SFX/UI/Military/order_general_front_defend"
+    experience = 0.1 # This much extra experience per week while executing Order
+
+    ai_weight = {
+        value = 2
+    }
+}
+
+defend_guerilla_warfare = {
+    texture = "gfx/interface/icons/commander_order_icons/defend.dds"
+    
+    military_type = army
+    ai_usage = defend
+
+	visible = {
+		has_role = general
+	}
+
+    possible = {
+		has_role = general
+        OR = {
+            has_trait = pillager
+            has_trait = cruel
+            has_trait = wrathful
+            has_trait = bandit
+        }
+        trigger_if = {
+            limit = {
+                has_role = general
+            }
+            OR = {
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_irregular_infantry
+                        value >= 0.8
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_skirmish_infantry
+                        value >= 0.8
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_squad_infantry
+                        value >= 0.8
+                    }
+                }
+            }
+        }
+    }
+
+    modifier = {
+        unit_defense_mult = 0.1
+        unit_morale_loss_mult = 0.15
+        character_battle_condition_camouflaged_mult = 2
+        character_battle_condition_surprise_maneuver_mult = 1
+        unit_morale_loss_mult = 0.1
+    #    unit_enemy_devastation_mult = 1 ## add enemy devastation mult
+    #   unit_enemy_ocupation_mult = 0.3 ## add a new trigger for reducing the amount of occupied territory gets
+    }
+
+    entity_animation = "defend"
+    clicksound = "event:/SFX/UI/Military/order_general_front_defend"
+    experience = 0.1 # This much extra experience per week while executing Order
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+
+﻿interception_coast = {
+    texture = "gfx/interface/icons/commander_order_icons/patrol_coast.dds"
+
+	military_type = navy
+	ai_usage = intercept
+	is_basic_order_type = yes
+
+	visible = {
+		has_role = admiral
+	}
+
+    possible = {
+		has_role = admiral
+    }
+
+	modifier = {
+		character_interception_add = 2
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_patrol"
+	experience = 0 											# Default experience gain with this Order
+	naval_entity = "naval_order_interception_entity"		# Node indicator entity
+	indicator_position_angle = 150							# Player's or ally's order position on the indicator in degrees
+	indicator_position_angle_for_enemy = 30					# Enemy order position on indicator in degrees
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+interception_coast_agressive = {
+    texture = "gfx/interface/icons/commander_order_icons/patrol_coast.dds"
+	
+	military_type = navy
+	ai_usage = intercept
+
+	visible = {
+		has_role = admiral
+	}
+
+    possible = {
+		has_role = admiral
+		OR = {
+			has_trait = reckless
+			has_trait = brave
+		}
+    }
+
+	modifier = {
+		character_interception_add = 5
+		unit_navy_offense_mult = -0.1
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_patrol"
+	experience = 0 # Default experience gain with this Order
+	naval_entity = "naval_order_interception_entity"
+	indicator_position_angle = 150							# Player's or ally's order position on the indicator in degrees
+	indicator_position_angle_for_enemy = 30					# Enemy order position on indicator in degrees
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+interception_carrier_assualt = {
+	texture = "gfx/interface/icons/commander_order_icons/patrol_coast.dds"
+	
+	military_type = navy
+	ai_usage = intercept
+
+	visible = {
+		has_role = admiral
+	}
+
+	possible = {
+		has_role = admiral
+		has_trait = innovative
+		NOT = { has_trait = traditionalist_commander }
+		trigger_if = {
+			limit = {
+				has_role = admiral
+			}
+			commander_military_formation ?= {
+				formation_navy_unit_type_fraction = {
+					target = unit_type:combat_unit_type_carrier
+					value >= 0.4
+				}
+			}
+		}
+	}
+
+	modifier = {
+		character_interception_add = 4
+		unit_supply_consumption_mult = 0.5
+		unit_navy_offense_mult = 0.15
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_patrol"
+	experience = 0 # Default experience gain with this Order
+	naval_entity = "naval_order_interception_entity"		# Node indicator entity
+	indicator_position_angle = 150							# Order position on indicator in degrees
+
+	ai_weight = {
+		value = 2
+	}
+}
+
+interception_coordinated_attack = {
+    texture = "gfx/interface/icons/commander_order_icons/patrol_coast.dds"
+	
+	military_type = navy
+	ai_usage = intercept
+
+	visible = {
+		has_role = admiral
+	}
+
+    possible = {
+		has_role = admiral
+		OR = {
+			has_trait = reserved
+			has_trait = tactful
+			has_trait = basic_naval_commander
+			has_trait = experienced_naval_commander
+			has_trait = expert_naval_commander
+		}
+    }
+
+	modifier = {
+		character_interception_add = 1
+		battle_casualties_mult = 0.1
+		unit_navy_offense_mult = 0.2
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_patrol"
+	experience = 0 # Default experience gain with this Order
+	naval_entity = "naval_order_interception_entity"		# Node indicator entity
+	indicator_position_angle = 150							# Player's or ally's order position on the indicator in degrees
+	indicator_position_angle_for_enemy = 30					# Enemy order position on indicator in degrees
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+﻿raid_convoys = {
+    texture = "gfx/interface/icons/commander_order_icons/raid_convoys.dds"
+
+	military_type = navy
+	ai_usage = raid_convoys
+	is_basic_order_type = yes
+
+	visible = {
+		has_role = admiral
+	}
+
+    possible = {
+		has_role = admiral
+    }
+
+	modifier = {
+		character_convoy_raiding_mult = 0.3
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_convoy_raiding"
+	experience = 0.1								# This much extra experience per week while executing Order
+	naval_entity = "naval_order_raiding_entity"		# Node indicator entity
+	indicator_position_angle = 245					# Player's or ally's order position on the indicator in degrees
+	indicator_position_angle_for_enemy = 295		# Enemy order position on indicator in degrees
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+raid_unrestricted_sub = {
+    texture = "gfx/interface/icons/commander_order_icons/raid_convoys.dds"
+	
+	military_type = navy
+	ai_usage = raid_convoys
+
+	visible = {
+		has_role = admiral
+	}
+
+    possible = {
+		has_role = admiral
+        NOT = { has_trait = honorable }
+		trigger_if = {
+			limit = {
+				has_role = admiral
+			}
+			commander_military_formation ?= {
+				formation_navy_unit_type_fraction = {
+					target = unit_type:combat_unit_type_submarine
+					value >= 0.3
+				}
+			}
+		}
+    }
+
+	modifier = {
+		character_convoy_raiding_mult = 0.4
+		character_battle_condition_death_from_below_mult = 1.5
+		battle_casualties_mult = 0.15
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_convoy_raiding"
+	experience = 0.1 # This much extra experience per week while executing Order
+	naval_entity = "naval_order_raiding_entity"		# Node indicator entity
+	indicator_position_angle = 245					# Player's or ally's order position on the indicator in degrees
+	indicator_position_angle_for_enemy = 295		# Enemy order position on indicator in degrees
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+
+﻿escort_convoys = {
+    texture = "gfx/interface/icons/commander_order_icons/escort_convoys.dds"
+
+	military_type = navy
+	ai_usage = escort_convoys
+	is_basic_order_type = yes
+
+	visible = {
+		has_role = admiral
+	}
+
+    possible = {
+		has_role = admiral
+    }
+
+	modifier = {
+		character_convoy_protection_mult = 0.2
+		character_interception_add = 0.25
+		unit_offense_mult = -0.1
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_intercept"
+	experience = 0.05 									# This much experience per week while executing Order
+	naval_entity = "naval_order_patrol_entity"			# Node indicator entity
+	indicator_position_angle = 198						# Player's or ally's order position on the indicator in degrees
+	indicator_position_angle_for_enemy = 342			# Enemy order position on indicator in degrees
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+
+escort_convoys_advanced = {
+    texture = "gfx/interface/icons/commander_order_icons/escort_convoys.dds"
+	
+	military_type = navy
+	ai_usage = escort_convoys
+
+	visible = {
+		has_role = admiral
+	}
+
+    possible = {
+		has_role = admiral
+		OR = {
+			has_trait = basic_naval_commander
+			has_trait = experienced_naval_commander
+			has_trait = expert_naval_commander
+		}
+    }
+
+	modifier = {
+		character_convoy_protection_mult = 0.3
+		character_interception_add = 0.5
+		unit_offense_mult = -0.05
+		battle_casualties_mult = 0.1
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_intercept"
+	experience = 0.05 # This much experience per week while executing Order
+	naval_entity = "naval_order_patrol_entity"			# Node indicator entity
+	indicator_position_angle = 198						# Player's or ally's order position on the indicator in degrees
+	indicator_position_angle_for_enemy = 342			# Enemy order position on indicator in degrees
+	
+	ai_weight = {
+		value = 2
+	}
+}
+
+
+﻿# If you're adding more ranks that commanders can be promoted to, make sure to change HIGHEST_PROMOTION_RANK in defines
+
+commander_rank_1 = {
+	rank_value = 1
+	texture = "gfx/interface/icons/commander_rank_icons/commander_rank_1.dds"
+
+	character_modifier = {
+	}
+
+	general_modifier = {
+		character_command_limit_add = 30
+	}
+
+	admiral_modifier = {
+		character_command_limit_add = 20
+	}
+
+	country_modifier = {
+		country_bureaucracy_add = -10
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.02
+	}
+	
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = commander_rank_1_general
+				trigger = {
+					has_role = general
+				}
+			}
+			triggered_desc = {
+				desc = commander_rank_1_admiral
+				trigger = {
+					has_role = admiral
+				}
+			}
+			desc = commander_rank_1_fallback
+		}
+	}
+}
+
+commander_rank_2 = {
+	rank_value = 2
+    texture = "gfx/interface/icons/commander_rank_icons/commander_rank_2.dds"
+	
+	character_modifier = {
+	}
+
+	general_modifier = {
+		character_command_limit_add = 60
+	}
+
+	admiral_modifier = {
+		character_command_limit_add = 40
+	}
+
+	country_modifier = {
+		country_bureaucracy_add = -15
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.05
+	}
+	
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = commander_rank_2_general
+				trigger = {
+					has_role = general
+				}
+			}
+			triggered_desc = {
+				desc = commander_rank_2_admiral
+				trigger = {
+					has_role = admiral
+				}
+			}
+			desc = commander_rank_2_fallback
+		}
+	}
+}
+
+commander_rank_3 = {
+	rank_value = 3
+    texture = "gfx/interface/icons/commander_rank_icons/commander_rank_3.dds"
+	
+	character_modifier = {
+	}
+
+	general_modifier = {
+		character_command_limit_add = 80
+	}
+
+	admiral_modifier = {
+		character_command_limit_add = 60
+	}
+
+	country_modifier = {
+		country_bureaucracy_add = -20
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.1
+	}
+	
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = commander_rank_3_general
+				trigger = {
+					has_role = general
+				}
+			}
+			triggered_desc = {
+				desc = commander_rank_3_admiral
+				trigger = {
+					has_role = admiral
+				}
+			}
+			desc = commander_rank_3_fallback
+		}
+	}
+}
+
+commander_rank_4 = {
+	rank_value = 4
+    texture = "gfx/interface/icons/commander_rank_icons/commander_rank_4.dds"
+	
+	character_modifier = {
+	}
+
+	general_modifier = {
+		character_command_limit_add = 125
+	}
+
+	admiral_modifier = {
+		character_command_limit_add = 80
+	}
+
+	country_modifier = {
+		country_bureaucracy_add = -25
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.15
+	}
+	
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = commander_rank_4_general
+				trigger = {
+					has_role = general
+				}
+			}
+			triggered_desc = {
+				desc = commander_rank_4_admiral
+				trigger = {
+					has_role = admiral
+				}
+			}
+			desc = commander_rank_4_fallback
+		}
+	}
+}
+
+commander_rank_5 = {
+	rank_value = 5
+    texture = "gfx/interface/icons/commander_rank_icons/commander_rank_5.dds"
+	
+	character_modifier = {
+	}
+
+	general_modifier = {
+		character_command_limit_add = 200
+	}
+
+	admiral_modifier = {
+		character_command_limit_add = 100
+	}
+
+	country_modifier = {
+		country_bureaucracy_add = -30
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.2
+	}
+	
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = commander_rank_5_general
+				trigger = {
+					has_role = general
+				}
+			}
+			triggered_desc = {
+				desc = commander_rank_5_admiral
+				trigger = {
+					has_role = admiral
+				}
+			}
+			desc = commander_rank_5_fallback
+		}
+	}
+}
+
+commander_rank_ruler = {
+	rank_value = 6
+    texture = "gfx/interface/icons/character_role_icons/ruler.dds"
+	
+	character_modifier = {
+	}
+
+	general_modifier = {
+		character_command_limit_add = 50
+	}
+
+	admiral_modifier = {
+		character_command_limit_add = 30
+	}
+
+	country_modifier = {
+		country_bureaucracy_add = -10
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.25
+	}
+	
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = commander_rank_ruler
+				trigger = {
+					is_ruler = yes
+					has_role = general
+				}
+			}
+			desc = commander_rank_ruler_fallback
+		}
+	}
+}
+
+

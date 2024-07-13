@@ -1,0 +1,3153 @@
+﻿﻿###############################################################################
+# Anatomy of a Decision
+###############################################################################
+#
+# A decision is made up of 3 fundamental things:
+# 1. a name / key
+# 2. an `is_shown` trigger
+# 3. a `possible` trigger
+# 4. a `when_taken` effect
+#
+# A decision is evaluated in country scope.
+#
+#######################################
+# Key
+#######################################
+#
+# The key follows the same rules as the keys for any other thing, but it's
+# generally accepted that the key for a decision ends with "_decision".
+# So for example a decision to build the tour Eiffel could be called
+# "build_eiffel_tower_decision"
+#
+#######################################
+# `is_shown` trigger
+#######################################
+#
+# This trigger determines if a decision shows up at all (country scope)
+#
+#######################################
+# `possible` trigger
+#######################################
+#
+# This trigger determines if a decision can be taken (country scope)
+#
+#######################################
+# `when_taken` effect
+#######################################
+#
+# There is nothing special about this effect. It determines what happens when
+# a country takes the decision. It follows the same rules as any other effect.
+#
+#######################################
+# `ai_chance` value
+#######################################
+#
+# The scripted weight which determines how likely AI is to take it amongst all possible decisions (country scope).
+# Similar to event options. If it evaluates to 0, AI will not take the decision. Evaluates to 1 if unspecified
+#
+#######################################
+# Localization
+#######################################
+#
+# The localization system will look for 3 localized strings for each decision:
+# 1. name / key
+# 2. description
+# 3. tooltip
+#
+# The key is the same as the decision's key, the description is key + "_desc"
+# and the tooltip is key + "_tooltip".
+#
+# For example, a decision called "build_eiffel_tower_decision" will make the
+# game automatically look for the localized strings for:
+# 1. "build_eiffel_tower_decision"
+# 2. "build_eiffel_tower_decision_desc"
+# 3. "build_eiffel_tower_decision_tooltip"
+#
+# There is nothing much to say about these localization strings, they are
+# what they say on the tin.
+#
+# There is, however, a special localization string: `DECISION_TOOLTIP_FORMAT`.
+# It defines the structure of the visible tooltip of each decision.
+# This localization receives 3 special values from the localization system:
+# 1. `DECISION_TOOLTIP`
+# 2. `TRIGGER_SUMMARY`
+# 3. `EFFECT_SUMMARY`
+#
+# `DECISION_TOOLTIP` is the text defined in the <decision_key>_tooltip loc.
+#
+# `TRIGGER_SUMMARY` provides a description of which of the subtriggers have
+# passed or failed so that the player can see what steps need to be taken to
+# be able to take a disabled decision, or why a specific decision can be taken.
+#
+# `EFFECT_SUMMARY` provides a description of the events that happen when the
+# decision is taken.
+#
+# Therefore, changing `DECISION_TOOLTIP_FORMAT` will change how the tooltip
+# of every single decision is presented.
+#
+#######################################
+# Example
+#######################################
+#
+# Here's a silly example decision. It is visible only to countries that:
+# 1. have not already taken the decision
+# 2. are great powers
+#
+# And is enabled only for countries that:
+# 1. accept the french culture
+#
+# When the decison is taken:
+# 1. the country annexes China
+# 2. a variable is set on the country to keep track of the fact that the
+#    decision was taken
+#
+#########
+#
+# dummy_decision = {
+#	  is_shown = {
+#	  	  NOT = { has_variable = dummy_decision_taken }
+#		   country_rank = rank_value:great_power # only visible to great powers
+#	  }
+#     possible = {
+#         country_has_primary_culture = cu:french # can be taken only by countries where the french culture is primary
+#     }
+#
+#     when_taken = {
+#         annex = c:CHI
+#         set_variable = {
+#             name = dummy_decision_taken
+#             value = yes
+#         }
+#     }
+#
+#     ai_chance = {
+#         base = 20
+#         modifier = {
+#             trigger = { root = c:RUS }
+#             add = 10
+#         }
+#     }
+# }
+#
+###############################################################################
+
+﻿revive_olympic_games_decision = {
+	is_shown = {
+		exists = c:GRE
+		this = c:GRE
+	}
+
+	possible = {
+		this = c:GRE
+		has_technology_researched = organized_sports
+		hidden_trigger = {
+			NOT = { has_variable = revive_olympics_decision_taken }
+		}
+	}
+	
+	when_taken = {
+		set_variable = {
+			name = revive_olympics_decision_taken
+			value = yes
+		}
+		add_modifier = {
+			name = modifier_olympic_games
+		}
+		add_modifier = {
+			name = modifier_olympic_games_bureaucracy
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+
+lowlands_land_reclamation = {
+	is_shown = {
+		owns_entire_state_region = STATE_FRIESLAND
+		owns_entire_state_region = STATE_HOLLAND
+		OR = {
+			NOT = { exists = global_var:land_reclamation_global }
+			AND = {
+				exists = global_var:land_reclamation_global
+				global_var:land_reclamation_global >= 10
+			}
+		}
+		NOT = { has_variable = dutch_land_reclaimer }
+	}
+
+	possible = {
+		has_technology_researched = watertube_boiler
+		bureaucracy > 200
+	}
+	
+	when_taken = {
+		if = {
+			limit = {
+				NOT = { has_global_variable = land_reclamation_global }
+			}
+			set_global_variable = {
+				name = land_reclamation_global
+				value = 0
+			}
+		}
+		add_modifier = {
+			name = modifier_reclaiming_land
+			days = -1 # permanent until removed
+		}
+		add_journal_entry = { type = je_land_reclamation }
+		set_variable = dutch_land_reclaimer
+		if = {
+			limit = {
+				NOT = { has_technology_researched = concrete_dockyards }
+			}
+			custom_tooltip = land_reclamation_no_tech
+		}
+		else = {
+			custom_tooltip = land_reclamation_tech
+		}
+	}
+
+	ai_chance = {
+		base = 5
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+
+abolish_tangena_ordeal = {
+	is_shown = {
+		exists = c:MAD
+		ROOT = c:MAD
+		has_modifier = modifier_tangena_ordeal
+	}
+
+	possible = {
+		exists = c:MAD
+		ROOT = c:MAD
+		has_modifier = modifier_tangena_ordeal
+		custom_tooltip = {
+			text = ranavalona_tt
+			NOT = {
+				ruler = {
+					has_variable = ranavalona
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		remove_modifier = modifier_tangena_ordeal
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+﻿russia_offer_circassia_recognition = {
+	is_shown = {
+		has_variable = circassia_recognition_seeking
+		exists = c:CIR
+		country_rank >= rank_value:major_power
+		is_subject = no
+		c:CIR = {
+			has_journal_entry = je_caucasian_war_circassia
+		}
+		NOT = {
+			any_country = {
+				has_variable = circassia_recognizer
+			}
+		}
+	}
+
+	possible = {
+		exists = c:CIR
+		country_rank >= rank_value:major_power
+		is_subject = no
+		c:CIR = {
+			has_journal_entry = je_caucasian_war_circassia
+		}
+		custom_tooltip = {
+			text = no_country_recognised_circassia_tt
+			NOT = {
+				any_country = {
+					has_variable = circassia_recognizer
+				}
+			}
+		}
+		has_interest_marker_in_region = region_caucasus
+	}
+
+	when_taken = {
+		custom_tooltip = {
+			text = circassia_recognition_tt
+		}
+		c:RUS = {
+			change_relations = {
+				country = root
+				value = -30
+			}
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		set_variable = circassia_recognizer
+		c:CIR = {
+			add_modifier = {
+				name = modifier_european_military_assistance
+				months = very_long_modifier_time
+			}
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = root
+			}
+			root.power_bloc = {
+				add_leverage = { target = c:CIR value = 25 }
+			}
+		}
+
+		every_country = {
+			limit = {
+				has_variable = circassia_recognition_seeking
+			}
+			remove_variable = circassia_recognition_seeking
+		}
+	}  
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				OR = {
+					has_attitude = { who = c:RUS attitude = antagonistic }
+					has_attitude = { who = c:RUS attitude = belligerent }
+					has_attitude = { who = c:RUS attitude = domineering }
+				}
+			}
+			add = 30
+		}
+		modifier = {
+			trigger = {
+				OR = {
+					has_attitude = { who = c:RUS attitude = wary }
+					has_attitude = { who = c:RUS attitude = cautious }
+				}
+			}
+			add = 15
+		}
+	}
+}
+
+﻿antarctica_expedition = {
+	is_shown = {
+		NOT = { has_global_variable = south_pole_reached }		
+		NOT = { has_variable = on_expedition }		
+		OR = {
+			is_ai = no
+			NOT = { has_variable = ai_expedition_cooldown }
+		}
+		has_technology_researched = sea_lane_strategies
+	}
+	possible = {
+		is_at_war = no
+		any_scope_character = {
+			has_role = admiral
+			count >= 3
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = { id = cold.101 popup = yes }
+			set_variable = {
+				name = on_expedition
+				value = yes
+			}
+		}
+		else = {
+			set_variable = AI_EXPEDITION_ANTARCTICA
+			ai_expedition_simulator_start = yes
+		}
+		hidden_effect = {
+			set_variable = {
+				name = ai_expedition_cooldown
+				value = yes
+				days = 1825
+			}		
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { 
+				weekly_net_fixed_income > money_amount_multiplier_medium
+				gold_reserves > 0
+
+			}
+			add = 1
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+﻿british_raj_decision = {
+	is_shown = {
+		exists = c:GBR
+		exists = c:BIC
+		c:GBR = ROOT
+		c:BIC = {
+			is_subject_of = ROOT
+		}
+		NOT = { has_variable = british_raj_var }
+	}
+
+	possible = {
+		is_at_war = no
+		OR = {
+			institution_investment_level = {
+				institution = institution_colonial_affairs
+				value >= 5
+			}
+		}
+	}
+
+	when_taken = {
+		trigger_event = { id = raj.1 days = 0 popup = yes }
+	}
+
+	ai_chance = {
+		base = 100		
+	}
+}
+
+﻿canada_unite_can = {
+	is_shown = {
+		OR = {
+			country_has_primary_culture = cu:anglo_canadian
+			country_has_primary_culture = cu:franco_canadian
+		}
+		is_subject = yes
+		any_neighbouring_state = {
+			owner = {
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+				is_subject = yes
+				NOT = { THIS = ROOT }
+				top_overlord = {
+					THIS = root.top_overlord
+				}
+			}
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		has_technology_researched = nationalism
+		top_overlord = {
+			relations:root >= relations_threshold:amicable
+		}
+		NOT = { has_modifier = canada_test_modifier }
+		custom_tooltip = {
+			text = unite_canada_je_can_tt
+			any_neighbouring_state = {
+				owner = {
+					is_ai = yes
+					relations:root >= relations_threshold:amicable
+					OR = {
+						country_has_primary_culture = cu:anglo_canadian
+						country_has_primary_culture = cu:franco_canadian
+					}
+					is_subject = yes
+					NOT = { THIS = ROOT }
+					top_overlord = {
+						THIS = root.top_overlord
+					}
+					this.gdp < root.gdp
+				}
+			}
+		}
+	}
+	when_taken = {
+		custom_tooltip = unite_canada_tt
+		hidden_effect = {
+			trigger_event = { id = can_aus.1 popup = yes }
+		}
+		add_modifier = {
+			name = canada_test_modifier
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = pan-nationalism
+			add = 100
+		}		
+	}
+}
+
+canada_unite_gbr = {
+	is_shown = {
+		any_subject_or_below = {
+			OR = {
+				country_has_primary_culture = cu:anglo_canadian
+				country_has_primary_culture = cu:franco_canadian
+			}
+			is_ai = yes
+			count >= 2
+		}
+	}
+	possible = {
+		is_at_war = no
+		has_technology_researched = nationalism
+		NOT = { has_modifier = canada_test_modifier }
+		custom_tooltip = {
+			text = gbr_can_relations_tt
+			any_subject_or_below = {
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+				is_ai = yes
+				relations:root >= relations_threshold:amicable
+				count >= 2
+			}
+		}
+	}
+	when_taken = {
+		custom_tooltip = unite_canada_tt
+		hidden_effect = {
+			trigger_event = { id = can_aus.2 popup = yes }
+		}
+		add_modifier = {
+			name = canada_test_modifier
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = pan-nationalism
+			add = 100
+		}		
+	}
+}
+
+australia_unite_aus = {
+	is_shown = {
+		OR = {
+			country_has_primary_culture = cu:australian
+			country_has_primary_culture = cu:maori
+			country_has_primary_culture = cu:aborigine
+		}
+		is_subject = yes
+		any_neighbouring_state = {
+			owner = {
+				OR = {
+					country_has_primary_culture = cu:australian
+					country_has_primary_culture = cu:maori
+					country_has_primary_culture = cu:aborigine
+				}
+				is_ai = yes
+				is_subject = yes
+				NOT = { THIS = ROOT }
+				top_overlord = {
+					THIS = root.top_overlord
+				}
+			}
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		has_technology_researched = nationalism
+		top_overlord = {
+			relations:root >= relations_threshold:amicable
+		}
+		NOT = { has_modifier = australia_test_modifier }
+		custom_tooltip = {
+			text = unite_australia_je_aus_tt
+			any_neighbouring_state = {
+				owner = {
+					relations:root >= relations_threshold:amicable
+					OR = {
+						country_has_primary_culture = cu:australian
+						country_has_primary_culture = cu:maori
+						country_has_primary_culture = cu:aborigine
+					}
+					is_ai = yes
+					is_subject = yes
+					NOT = { THIS = ROOT }
+					top_overlord = {
+						THIS = root.top_overlord
+					}
+					this.gdp < root.gdp
+				}
+			}
+		}
+	}
+	when_taken = {
+		custom_tooltip = unite_australia_tt
+		hidden_effect = {
+			trigger_event = { id = can_aus.3 popup = yes }
+		}
+		add_modifier = {
+			name = australia_test_modifier
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = pan-nationalism
+			add = 100
+		}		
+	}
+}
+
+australia_unite_gbr = {
+	is_shown = {
+		any_subject_or_below = {
+			OR = {
+				country_has_primary_culture = cu:australian
+				country_has_primary_culture = cu:maori
+				country_has_primary_culture = cu:aborigine
+			}
+			is_ai = yes
+			count >= 2
+		}
+	}
+	possible = {
+		is_at_war = no
+		has_technology_researched = nationalism
+		NOT = { has_modifier = australia_test_modifier }
+		custom_tooltip = {
+			text = gbr_aus_relations_tt
+			any_subject_or_below = {
+				OR = {
+					country_has_primary_culture = cu:australian
+					country_has_primary_culture = cu:maori
+					country_has_primary_culture = cu:aborigine
+				}
+				is_ai = yes
+				relations:root >= relations_threshold:amicable
+				count >= 2
+			}
+		}
+	}
+	when_taken = {
+		custom_tooltip = unite_australia_tt
+		hidden_effect = {
+			trigger_event = { id = can_aus.4 popup = yes }
+		}
+		add_modifier = {
+			name = australia_test_modifier
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = pan-nationalism
+			add = 100
+		}		
+	}
+}
+﻿suez_survey_decision = {
+	is_shown = {
+		has_interest_marker_in_region = region_nile_basin
+		NOT = { 
+			has_variable = survey_suez_taken 
+			has_global_variable = suez_canal_complete
+		}
+		OR = {
+			country_rank = rank_value:great_power
+			s:STATE_SINAI = {
+				any_scope_state = {
+					owner = ROOT
+				}
+			}
+		}
+		s:STATE_SINAI = {
+			any_scope_state = {
+				NOT = {
+					any_scope_building = { 
+						is_building_type = building_suez_canal 
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = colonization
+		produced_bureaucracy > 1000
+	}
+	
+	when_taken = {
+		set_variable = {
+			name = survey_suez_taken
+			value = 0
+		}
+		add_modifier = {
+			name = modifier_surveying_suez
+		}
+		add_journal_entry = {
+			type = je_suez_survey
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { produced_bureaucracy > 5000 }
+			add = 5
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+
+stop_suez_survey_decision = {
+	is_shown = {
+		has_modifier = modifier_surveying_suez
+	}
+	possible = {
+		has_modifier = modifier_surveying_suez
+	}
+	when_taken = {
+		remove_variable = survey_suez_taken
+		remove_modifier = modifier_surveying_suez
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+suez_canal_purchase = {
+	is_shown = {
+		has_variable = suez_canal_purchase
+		NOT = { 
+			has_global_variable = suez_canal_purchase_var
+			has_global_variable = suez_canal_complete
+		}
+		s:STATE_SINAI = {
+			any_scope_state = {
+				NOT = {
+					any_scope_building = { 
+						is_building_type = building_suez_canal 
+					}
+				}
+				owner = {
+					owns_treaty_port_in = STATE_SINAI
+					NOT = { 
+						has_variable = suez_survey_complete 
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		gdp > 50000000
+		p:xC01060.state.owner = {
+			relations:root >= relations_threshold:cordial
+			} 
+		NOT = { has_war_with = ROOT }
+	}
+
+	when_taken = {
+		set_global_variable = suez_canal_purchase_var
+		if = {
+			limit = {
+				s:STATE_SINAI = {
+					any_scope_state = {
+						owner = {
+							owns_treaty_port_in = STATE_SINAI
+							is_player = no 
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				s:STATE_SINAI = {
+					random_scope_state = {
+						limit = {
+							owner = {
+								owns_treaty_port_in = STATE_SINAI 
+							}
+						}
+						owner = {
+							add_modifier = {
+								name = suez_sale
+								months = 120
+							}
+						}
+					}
+				}
+			}
+			s:STATE_SINAI = {
+				set_owner_of_provinces = {
+					country = ROOT
+					provinces = { xC01060 }
+				}
+			}
+			add_modifier = {
+				name = suez_purchase
+				months = 120
+			}
+		}
+		else = {
+			trigger_event = {
+				id = canal_events.1
+				days = 0
+				popup = yes
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { gold_reserves > 15000000 }
+			add = 10
+		}
+		modifier = {
+			trigger = { 
+				weekly_net_fixed_income > 100000
+				gold_reserves > 0
+			}
+			add = 10
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+
+panama_survey_decision = {
+	is_shown = {
+		has_interest_marker_in_region = region_central_america
+		NOT = { 
+			has_variable = survey_panama_taken 
+			has_global_variable = panama_canal_complete
+		}
+		OR = {
+			country_rank = rank_value:great_power
+			s:STATE_PANAMA = {
+				any_scope_state = {
+					owner = ROOT
+				}
+			}
+		}
+		s:STATE_PANAMA = {
+			any_scope_state = {
+				NOT = {
+					any_scope_building = { 
+						is_building_type = building_panama_canal 
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = civilizing_mission
+		produced_bureaucracy > 1000
+	}
+	
+	when_taken = {
+		set_variable = {
+			name = survey_panama_taken
+			value = 0
+		}
+		add_modifier = {
+			name = modifier_surveying_panama
+		}
+		add_journal_entry = {
+			type = je_panama_survey
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { produced_bureaucracy > 5000 }
+			add = 5
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+
+stop_panama_survey_decision = {
+	is_shown = {
+		has_modifier = modifier_surveying_panama
+	}
+	possible = {
+		has_modifier = modifier_surveying_panama
+	}
+	when_taken = {
+		remove_variable = survey_panama_taken
+		remove_modifier = modifier_surveying_panama
+	}
+	ai_chance = {
+		base = 0
+	}
+}
+
+panama_canal_purchase = {
+	is_shown = {
+		is_subject = no
+		has_variable = panama_canal_purchase
+		NOT = { 
+			has_global_variable = panama_canal_purchase_var
+			has_global_variable = panama_canal_complete
+		}
+		s:STATE_PANAMA = {
+			any_scope_state = {
+				NOT = {
+					any_scope_building = { 
+						is_building_type = building_panama_canal 
+					}
+				}
+				owner = {
+					owns_treaty_port_in = STATE_PANAMA
+					NOT = { 
+						has_variable = panama_survey_complete 
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		gdp > 50000000
+		p:xD0EF40.state.owner = {
+			relations:root >= relations_threshold:cordial
+		} 
+		NOT = { has_war_with = ROOT }
+	}
+
+	when_taken = {
+		set_global_variable = panama_canal_purchase_var
+		if = {
+			limit = {
+				s:STATE_PANAMA = {
+					any_scope_state = {
+						owner = { 
+							owns_treaty_port_in = STATE_PANAMA
+							is_player = no 
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				s:STATE_PANAMA = {
+					random_scope_state = {
+						limit = {
+							owner = {
+								owns_treaty_port_in = STATE_PANAMA
+							}
+						}
+						owner = {
+							add_modifier = {
+								name = panama_sale
+								months = 120
+							}
+						}
+					}
+				}
+			}
+			s:STATE_PANAMA = {
+				set_owner_of_provinces = {
+					country = ROOT
+					provinces = {xD0EF40}
+				}
+			}
+			add_modifier = {
+				name = panama_purchase
+				months = 120
+			}
+		}
+		else = {
+			trigger_event = {
+				id = canal_events.5
+				days = 0
+				popup = yes
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { gold_reserves > 15000000 }
+			add = 10
+		}
+		modifier = {
+			trigger = { 
+				weekly_net_fixed_income > 100000
+				gold_reserves > 0
+			}
+			add = 10
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+﻿central_africa_expedition = { #Nile expedition
+	is_shown = {
+		NOT = { has_global_variable = central_africa_explored }		
+		NOT = { has_variable = on_expedition }	
+		OR = {
+			is_ai = no
+			NOT = { has_variable = ai_expedition_cooldown }
+		}		
+		has_technology_researched = colonization
+	}
+
+	possible = {
+		is_at_war = no		
+		has_interest_marker_in_region = region_zanj
+		has_technology_researched = quinine
+		any_scope_character = {
+			OR = {
+				has_role = general
+				has_role = admiral
+			}	
+			count >= 3
+		}
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = { id = expedition_events.501 popup = yes }
+			set_variable = {
+				name = on_expedition
+				value = yes
+			}
+		}
+		else = {
+			set_variable = AI_EXPEDITION_NILE
+			ai_expedition_simulator_start = yes
+		}
+		hidden_effect = {
+			set_variable = {
+				name = ai_expedition_cooldown
+				value = yes
+				days = 1825
+			}		
+		}		
+	}
+	
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { 
+				weekly_net_fixed_income > money_amount_multiplier_medium
+				gold_reserves > 0
+			}
+			add = 1
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+﻿congo_river_expedition = {
+	is_shown = {		
+		NOT = { has_variable = on_expedition }		
+		has_technology_researched = colonization
+		NOT = { has_global_variable = congo_river_explored }
+		OR = {
+			is_ai = no
+			NOT = { has_variable = ai_expedition_cooldown }
+		}		
+	}
+	
+	possible = {
+		is_at_war = no		
+		has_interest_marker_in_region = region_congo
+		any_scope_character = {
+			OR = {
+				has_role = general
+				has_role = admiral
+			}	
+			count >= 3
+		}
+		has_technology_researched = quinine
+	}
+	
+	when_taken = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = { id = expedition_events.601 popup = yes }
+			set_variable = {
+				name = on_expedition
+				value = yes
+			}
+		}
+		else = {
+			set_variable = AI_EXPEDITION_CONGO
+			ai_expedition_simulator_start = yes
+		}
+		hidden_effect = {
+			set_variable = {
+				name = ai_expedition_cooldown
+				value = yes
+				days = 1825
+			}		
+		}		
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { 
+				weekly_net_fixed_income > money_amount_multiplier_medium
+				gold_reserves > 0		
+			}
+			add = 1
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}
+	}
+}
+﻿﻿###############################################################################
+# Anatomy of a Decision
+###############################################################################
+#
+# A decision is made up of 3 fundamental things:
+# 1. a name / key
+# 2. an `is_shown` trigger
+# 3. a `possible` trigger
+# 4. a `when_taken` effect
+#
+# A decision is evaluated in country scope.
+#
+#######################################
+# Key
+#######################################
+#
+# The key follows the same rules as the keys for any other thing, but it's
+# generally accepted that the key for a decision ends with "_decision".
+# So for example a decision to build the tour Eiffel could be called
+# "build_eiffel_tower_decision"
+#
+#######################################
+# `is_shown` trigger
+#######################################
+#
+# This trigger determines if a decision shows up at all (country scope)
+#
+#######################################
+# `possible` trigger
+#######################################
+#
+# This trigger determines if a decision can be taken (country scope)
+#
+#######################################
+# `when_taken` effect
+#######################################
+#
+# There is nothing special about this effect. It determines what happens when
+# a country takes the decision. It follows the same rules as any other effect.
+#
+#######################################
+# `ai_chance` value
+#######################################
+#
+# The scripted weight which determines how likely AI is to take it amongst all possible decisions (country scope).
+# Similar to event options. If it evaluates to 0, AI will not take the decision. Evaluates to 1 if unspecified
+#
+#######################################
+# Localization
+#######################################
+#
+# The localization system will look for 3 localized strings for each decision:
+# 1. name / key
+# 2. description
+# 3. tooltip
+#
+# The key is the same as the decision's key, the description is key + "_desc"
+# and the tooltip is key + "_tooltip".
+#
+# For example, a decision called "build_eiffel_tower_decision" will make the
+# game automatically look for the localized strings for:
+# 1. "build_eiffel_tower_decision"
+# 2. "build_eiffel_tower_decision_desc"
+# 3. "build_eiffel_tower_decision_tooltip"
+#
+# There is nothing much to say about these localization strings, they are
+# what they say on the tin.
+#
+# There is, however, a special localization string: `DECISION_TOOLTIP_FORMAT`.
+# It defines the structure of the visible tooltip of each decision.
+# This localization receives 3 special values from the localization system:
+# 1. `DECISION_TOOLTIP`
+# 2. `TRIGGER_SUMMARY`
+# 3. `EFFECT_SUMMARY`
+#
+# `DECISION_TOOLTIP` is the text defined in the <decision_key>_tooltip loc.
+#
+# `TRIGGER_SUMMARY` provides a description of which of the subtriggers have
+# passed or failed so that the player can see what steps need to be taken to
+# be able to take a disabled decision, or why a specific decision can be taken.
+#
+# `EFFECT_SUMMARY` provides a description of the events that happen when the
+# decision is taken.
+#
+# Therefore, changing `DECISION_TOOLTIP_FORMAT` will change how the tooltip
+# of every single decision is presented.
+#
+#######################################
+# Example
+#######################################
+#
+# Here's a silly example decision. It is visible only to countries that:
+# 1. have not already taken the decision
+# 2. are great powers
+#
+# And is enabled only for countries that:
+# 1. accept the french culture
+#
+# When the decison is taken:
+# 1. the country annexes China
+# 2. a variable is set on the country to keep track of the fact that the
+#    decision was taken
+#
+#########
+#
+# dummy_decision = {
+#	  is_shown = {
+#	  	  NOT = { has_variable = dummy_decision_taken }
+#		   country_rank = rank_value:great_power # only visible to great powers
+#	  }
+#     possible = {
+#         country_has_primary_culture = cu:french # can be taken only by countries where the french culture is primary
+#     }
+#
+#     when_taken = {
+#         annex = c:CHI
+#         set_variable = {
+#             name = dummy_decision_taken
+#             value = yes
+#         }
+#     }
+#
+#     ai_chance = {
+#         base = 20
+#         modifier = {
+#             trigger = { root = c:RUS }
+#             add = 10
+#         }
+#     }
+# }
+#
+###############################################################################
+
+﻿revive_olympic_games_decision = {
+	is_shown = {
+		exists = c:GRE
+		this = c:GRE
+	}
+
+	possible = {
+		this = c:GRE
+		has_technology_researched = organized_sports
+		hidden_trigger = {
+			NOT = { has_variable = revive_olympics_decision_taken }
+		}
+	}
+	
+	when_taken = {
+		set_variable = {
+			name = revive_olympics_decision_taken
+			value = yes
+		}
+		add_modifier = {
+			name = modifier_olympic_games
+		}
+		add_modifier = {
+			name = modifier_olympic_games_bureaucracy
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { bureaucracy > 0 }
+			add = 5
+		}
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+
+lowlands_land_reclamation = {
+	is_shown = {
+		owns_entire_state_region = STATE_FRIESLAND
+		owns_entire_state_region = STATE_HOLLAND
+		OR = {
+			NOT = { exists = global_var:land_reclamation_global }
+			AND = {
+				exists = global_var:land_reclamation_global
+				global_var:land_reclamation_global >= 10
+			}
+		}
+		NOT = { has_variable = dutch_land_reclaimer }
+	}
+
+	possible = {
+		has_technology_researched = watertube_boiler
+		bureaucracy > 200
+	}
+	
+	when_taken = {
+		if = {
+			limit = {
+				NOT = { has_global_variable = land_reclamation_global }
+			}
+			set_global_variable = {
+				name = land_reclamation_global
+				value = 0
+			}
+		}
+		add_modifier = {
+			name = modifier_reclaiming_land
+			days = -1 # permanent until removed
+		}
+		add_journal_entry = { type = je_land_reclamation }
+		set_variable = dutch_land_reclaimer
+		if = {
+			limit = {
+				NOT = { has_technology_researched = concrete_dockyards }
+			}
+			custom_tooltip = land_reclamation_no_tech
+		}
+		else = {
+			custom_tooltip = land_reclamation_tech
+		}
+	}
+
+	ai_chance = {
+		base = 5
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+
+abolish_tangena_ordeal = {
+	is_shown = {
+		exists = c:MAD
+		ROOT = c:MAD
+		has_modifier = modifier_tangena_ordeal
+	}
+
+	possible = {
+		exists = c:MAD
+		ROOT = c:MAD
+		has_modifier = modifier_tangena_ordeal
+		custom_tooltip = {
+			text = ranavalona_tt
+			NOT = {
+				ruler = {
+					has_variable = ranavalona
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		remove_modifier = modifier_tangena_ordeal
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+﻿russia_offer_circassia_recognition = {
+	is_shown = {
+		has_variable = circassia_recognition_seeking
+		exists = c:CIR
+		country_rank >= rank_value:major_power
+		is_subject = no
+		c:CIR = {
+			has_journal_entry = je_caucasian_war_circassia
+		}
+		NOT = {
+			any_country = {
+				has_variable = circassia_recognizer
+			}
+		}
+	}
+
+	possible = {
+		exists = c:CIR
+		country_rank >= rank_value:major_power
+		is_subject = no
+		c:CIR = {
+			has_journal_entry = je_caucasian_war_circassia
+		}
+		custom_tooltip = {
+			text = no_country_recognised_circassia_tt
+			NOT = {
+				any_country = {
+					has_variable = circassia_recognizer
+				}
+			}
+		}
+		has_interest_marker_in_region = region_caucasus
+	}
+
+	when_taken = {
+		custom_tooltip = {
+			text = circassia_recognition_tt
+		}
+		c:RUS = {
+			change_relations = {
+				country = root
+				value = -30
+			}
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_negative
+				target = root
+			}
+		}
+		set_variable = circassia_recognizer
+		c:CIR = {
+			add_modifier = {
+				name = modifier_european_military_assistance
+				months = very_long_modifier_time
+			}
+			create_diplomatic_catalyst = {  
+				type = catalyst_event_positive
+				target = root
+			}
+			root.power_bloc = {
+				add_leverage = { target = c:CIR value = 25 }
+			}
+		}
+
+		every_country = {
+			limit = {
+				has_variable = circassia_recognition_seeking
+			}
+			remove_variable = circassia_recognition_seeking
+		}
+	}  
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				OR = {
+					has_attitude = { who = c:RUS attitude = antagonistic }
+					has_attitude = { who = c:RUS attitude = belligerent }
+					has_attitude = { who = c:RUS attitude = domineering }
+				}
+			}
+			add = 30
+		}
+		modifier = {
+			trigger = {
+				OR = {
+					has_attitude = { who = c:RUS attitude = wary }
+					has_attitude = { who = c:RUS attitude = cautious }
+				}
+			}
+			add = 15
+		}
+	}
+}
+
+﻿antarctica_expedition = {
+	is_shown = {
+		NOT = { has_global_variable = south_pole_reached }		
+		NOT = { has_variable = on_expedition }		
+		OR = {
+			is_ai = no
+			NOT = { has_variable = ai_expedition_cooldown }
+		}
+		has_technology_researched = sea_lane_strategies
+	}
+	possible = {
+		is_at_war = no
+		any_scope_character = {
+			has_role = admiral
+			count >= 3
+		}
+	}
+	when_taken = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = { id = cold.101 popup = yes }
+			set_variable = {
+				name = on_expedition
+				value = yes
+			}
+		}
+		else = {
+			set_variable = AI_EXPEDITION_ANTARCTICA
+			ai_expedition_simulator_start = yes
+		}
+		hidden_effect = {
+			set_variable = {
+				name = ai_expedition_cooldown
+				value = yes
+				days = 1825
+			}		
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { 
+				weekly_net_fixed_income > money_amount_multiplier_medium
+				gold_reserves > 0
+
+			}
+			add = 1
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+﻿british_raj_decision = {
+	is_shown = {
+		exists = c:GBR
+		exists = c:BIC
+		c:GBR = ROOT
+		c:BIC = {
+			is_subject_of = ROOT
+		}
+		NOT = { has_variable = british_raj_var }
+	}
+
+	possible = {
+		is_at_war = no
+		OR = {
+			institution_investment_level = {
+				institution = institution_colonial_affairs
+				value >= 5
+			}
+		}
+	}
+
+	when_taken = {
+		trigger_event = { id = raj.1 days = 0 popup = yes }
+	}
+
+	ai_chance = {
+		base = 100		
+	}
+}
+
+﻿canada_unite_can = {
+	is_shown = {
+		OR = {
+			country_has_primary_culture = cu:anglo_canadian
+			country_has_primary_culture = cu:franco_canadian
+		}
+		is_subject = yes
+		any_neighbouring_state = {
+			owner = {
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+				is_subject = yes
+				NOT = { THIS = ROOT }
+				top_overlord = {
+					THIS = root.top_overlord
+				}
+			}
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		has_technology_researched = nationalism
+		top_overlord = {
+			relations:root >= relations_threshold:amicable
+		}
+		NOT = { has_modifier = canada_test_modifier }
+		custom_tooltip = {
+			text = unite_canada_je_can_tt
+			any_neighbouring_state = {
+				owner = {
+					is_ai = yes
+					relations:root >= relations_threshold:amicable
+					OR = {
+						country_has_primary_culture = cu:anglo_canadian
+						country_has_primary_culture = cu:franco_canadian
+					}
+					is_subject = yes
+					NOT = { THIS = ROOT }
+					top_overlord = {
+						THIS = root.top_overlord
+					}
+					this.gdp < root.gdp
+				}
+			}
+		}
+	}
+	when_taken = {
+		custom_tooltip = unite_canada_tt
+		hidden_effect = {
+			trigger_event = { id = can_aus.1 popup = yes }
+		}
+		add_modifier = {
+			name = canada_test_modifier
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = pan-nationalism
+			add = 100
+		}		
+	}
+}
+
+canada_unite_gbr = {
+	is_shown = {
+		any_subject_or_below = {
+			OR = {
+				country_has_primary_culture = cu:anglo_canadian
+				country_has_primary_culture = cu:franco_canadian
+			}
+			is_ai = yes
+			count >= 2
+		}
+	}
+	possible = {
+		is_at_war = no
+		has_technology_researched = nationalism
+		NOT = { has_modifier = canada_test_modifier }
+		custom_tooltip = {
+			text = gbr_can_relations_tt
+			any_subject_or_below = {
+				OR = {
+					country_has_primary_culture = cu:anglo_canadian
+					country_has_primary_culture = cu:franco_canadian
+				}
+				is_ai = yes
+				relations:root >= relations_threshold:amicable
+				count >= 2
+			}
+		}
+	}
+	when_taken = {
+		custom_tooltip = unite_canada_tt
+		hidden_effect = {
+			trigger_event = { id = can_aus.2 popup = yes }
+		}
+		add_modifier = {
+			name = canada_test_modifier
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = pan-nationalism
+			add = 100
+		}		
+	}
+}
+
+australia_unite_aus = {
+	is_shown = {
+		OR = {
+			country_has_primary_culture = cu:australian
+			country_has_primary_culture = cu:maori
+			country_has_primary_culture = cu:aborigine
+		}
+		is_subject = yes
+		any_neighbouring_state = {
+			owner = {
+				OR = {
+					country_has_primary_culture = cu:australian
+					country_has_primary_culture = cu:maori
+					country_has_primary_culture = cu:aborigine
+				}
+				is_ai = yes
+				is_subject = yes
+				NOT = { THIS = ROOT }
+				top_overlord = {
+					THIS = root.top_overlord
+				}
+			}
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		has_technology_researched = nationalism
+		top_overlord = {
+			relations:root >= relations_threshold:amicable
+		}
+		NOT = { has_modifier = australia_test_modifier }
+		custom_tooltip = {
+			text = unite_australia_je_aus_tt
+			any_neighbouring_state = {
+				owner = {
+					relations:root >= relations_threshold:amicable
+					OR = {
+						country_has_primary_culture = cu:australian
+						country_has_primary_culture = cu:maori
+						country_has_primary_culture = cu:aborigine
+					}
+					is_ai = yes
+					is_subject = yes
+					NOT = { THIS = ROOT }
+					top_overlord = {
+						THIS = root.top_overlord
+					}
+					this.gdp < root.gdp
+				}
+			}
+		}
+	}
+	when_taken = {
+		custom_tooltip = unite_australia_tt
+		hidden_effect = {
+			trigger_event = { id = can_aus.3 popup = yes }
+		}
+		add_modifier = {
+			name = australia_test_modifier
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = pan-nationalism
+			add = 100
+		}		
+	}
+}
+
+australia_unite_gbr = {
+	is_shown = {
+		any_subject_or_below = {
+			OR = {
+				country_has_primary_culture = cu:australian
+				country_has_primary_culture = cu:maori
+				country_has_primary_culture = cu:aborigine
+			}
+			is_ai = yes
+			count >= 2
+		}
+	}
+	possible = {
+		is_at_war = no
+		has_technology_researched = nationalism
+		NOT = { has_modifier = australia_test_modifier }
+		custom_tooltip = {
+			text = gbr_aus_relations_tt
+			any_subject_or_below = {
+				OR = {
+					country_has_primary_culture = cu:australian
+					country_has_primary_culture = cu:maori
+					country_has_primary_culture = cu:aborigine
+				}
+				is_ai = yes
+				relations:root >= relations_threshold:amicable
+				count >= 2
+			}
+		}
+	}
+	when_taken = {
+		custom_tooltip = unite_australia_tt
+		hidden_effect = {
+			trigger_event = { id = can_aus.4 popup = yes }
+		}
+		add_modifier = {
+			name = australia_test_modifier
+			months = short_modifier_time
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			has_technology_researched = pan-nationalism
+			add = 100
+		}		
+	}
+}
+
+﻿doctrine_of_lapse = {
+	is_shown = {
+		exists = c:BIC
+		root = c:BIC
+		NOT = { has_variable = doctrine_of_lapse_ended }
+	}
+
+	possible = {
+		is_at_war = no
+		custom_tooltip = {
+			text = doctrine_of_lapse_cooldown_tt
+			NOT = { has_variable = doctrine_of_lapse_cooldown }
+		}
+		any_subject_or_below = {
+			is_player = no
+			OR = {
+				has_government_type = gov_princely_state_hindu
+				hidden_trigger = { has_government_type = gov_princely_state_muslim }
+			}
+		}
+	}
+
+	when_taken = {
+		trigger_event = { id = raj.2 days = 0 popup = yes }
+		set_variable = {
+			name = doctrine_of_lapse_cooldown
+			years = 2
+		}
+	}
+
+	ai_chance = {
+		base = 5
+	}
+}
+﻿france_retour_des_cendres = {
+	is_shown = {
+		has_dlc_feature = voice_of_the_people_content
+		has_journal_entry = je_divided_monarchists
+		exists = c:FRA
+		c:FRA = ROOT
+		NOT = { has_global_variable = fra_return_of_napoleon_ashes }
+	}
+
+	possible = {
+		has_law = law_type:law_monarchy
+		has_journal_entry = je_divided_monarchists
+	}
+
+	when_taken = {
+		set_global_variable = fra_return_of_napoleon_ashes
+		custom_tooltip = retour_des_cendres_tt
+		trigger_event = { id = french_pretenders_pulse.19 popup = yes }
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { 
+				any_interest_group = {
+					leader = {
+						has_ideology = ideology:ideology_bonapartist
+					}
+					ig_approval <= 0
+				}
+			}
+			add = 10
+		}
+		modifier = {
+			trigger = { 
+				any_interest_group = {
+					leader = {
+						has_ideology = ideology:ideology_bonapartist
+					}
+					is_in_government = yes
+				}
+			}
+			add = 5
+		}
+	}
+}
+﻿france_annex_savoy = {
+	is_shown = {
+		has_dlc_feature = voice_of_the_people_content
+		exists = c:FRA
+		c:FRA = ROOT
+		NOT = { has_global_variable = fra_annexed_savoy }
+		is_subject = no
+		NOT = { owns_entire_state_region = STATE_SAVOY }
+		any_country = {
+			NOT = { THIS = ROOT }
+			any_scope_state = {
+				state_region = s:STATE_SAVOY
+				is_split_state = no
+				is_capital = no
+			}
+			is_player = no
+		}
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+		any_country = {
+			custom_tooltip = {
+				text = at_peace_nocontext_tt
+				is_at_war = no
+			}
+			any_scope_state = {
+				state_region = s:STATE_SAVOY
+				is_split_state = no
+				is_capital = no
+			}
+			custom_tooltip = {
+				text = relations_amicable_nocontext_tt
+				relations:root >= relations_threshold:amicable
+			}
+			is_revolutionary = no
+			OR = {
+				is_subject = no
+				is_subject_of = ROOT
+			}
+			trigger_if = {
+				limit = {
+					is_subject = no
+				}
+				owes_obligation_to = ROOT
+			}
+		}
+	}
+
+	when_taken = {
+		set_global_variable = fra_annexed_savoy
+		custom_tooltip = obligation_for_savoy_tt
+		trigger_event = { id = natural_borders.3 popup = yes }
+		show_as_tooltip = {
+			s:STATE_SAVOY = {
+				remove_homeland = cu:north_italian
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 1
+	}
+}
+
+sell_savoy = {
+	is_shown = {
+		exists = c:FRA
+		NOT = { has_global_variable = fra_annexed_savoy }
+		any_scope_state = {
+			state_region = s:STATE_SAVOY
+			is_split_state = no
+			is_capital = no
+		}
+		is_subject = no
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+		c:FRA = {
+			is_at_war = no
+			owns_entire_state_region = STATE_RHONE
+			is_subject = no
+			NOT = { owes_obligation_to = ROOT }
+			relations:root >= relations_threshold:cordial
+		}
+	}
+
+	when_taken = {
+		set_global_variable = fra_annexed_savoy
+		set_global_variable = fra_savoy_sardinia
+		c:FRA = {
+			set_owes_obligation_to = {
+				country = ROOT
+				setting = yes
+			}
+		}
+		show_as_tooltip = {
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_SAVOY
+				}
+				set_state_owner = c:FRA
+			}
+			if = {
+				limit = {
+					any_scope_state = {
+						state_region = s:STATE_PROVENCE
+					}
+				}
+				random_scope_state = {
+					limit = {
+						state_region = s:STATE_PROVENCE
+					}
+					set_state_owner = c:FRA
+				}
+			}
+		}
+		c:FRA = { trigger_event = { id = natural_borders.3 popup = yes } }
+		show_as_tooltip = {
+			s:STATE_SAVOY = {
+				remove_homeland = cu:north_italian
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			c:FRA = {
+				relations:root >= relations_threshold:amicable
+			}
+			OR = {
+				has_diplomatic_pact = {
+					who = c:FRA
+					type = defensive_pact
+				}
+				has_diplomatic_pact = {
+					who = c:FRA
+					type = alliance
+				}
+			}
+			add = 1
+		}
+	}
+}
+
+france_annex_luxembourg = {
+	is_shown = {
+		has_dlc_feature = voice_of_the_people_content
+		exists = c:FRA
+		c:FRA = ROOT
+		NOT = { has_global_variable = fra_annexed_lux }
+		is_subject = no
+		exists = c:LUX
+		c:LUX = {
+			is_player = no
+			is_subject = yes
+			top_overlord = {
+				NOT = { THIS = ROOT }
+				NOT = { is_subject_of = ROOT }
+				is_player = no
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+		owns_entire_state_region = STATE_ALSACE_LORRAINE
+		taking_loans = no
+		c:LUX = {
+			top_overlord = {
+				is_subject = no
+				relations:root >= relations_threshold:amicable
+				is_at_war = no
+				is_revolutionary = no
+				taking_loans = yes
+			}
+		}
+	}
+
+	when_taken = {
+		set_global_variable = fra_annexed_lux
+		trigger_event = { id = natural_borders.5 popup = yes }
+		show_as_tooltip = {
+			annex = c:LUX
+			add_modifier = {
+				name = luxembourg_payment
+				months = 12
+				multiplier = 20000
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 1
+	}
+}
+﻿ban_liquor = {
+	is_shown = {
+		has_variable = prohibition_laws_var
+		exists = market
+		market.owner = root
+		NOT = { is_banning_goods = g:liquor }
+	}
+
+	possible = {
+		NOT = { has_law = law_type:law_free_trade }
+		exists = market
+	}
+
+	when_taken = {
+		add_banned_goods = g:liquor
+		add_modifier = {
+			name = liqour_ban_authority
+		}
+	}
+	
+    ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				OR = {
+					has_strategy = ai_strategy_conservative_agenda
+					has_strategy = ai_strategy_reactionary_agenda
+					has_strategy = ai_strategy_maintain_mandate_of_heaven
+				}
+			}
+			add = 10
+		}
+    }	
+}
+
+remove_liquor_ban = {
+	is_shown = {
+		is_banning_goods = g:liquor
+		exists = market
+		market.owner = root
+	}
+
+	possible = {
+		always = yes
+	}
+
+	when_taken = {
+		remove_banned_goods = g:liquor
+		remove_modifier = liqour_ban_authority
+	}
+	
+   ai_chance = {
+      base = 0
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_progressive_agenda
+			}
+			add = 10
+		}		 
+   }	
+}
+
+remove_opium_ban = {
+	is_shown = {
+		exists = market
+		market.owner = root
+		NOT = { has_journal_entry = je_opium_obsession }
+		is_banning_goods = g:opium
+	}
+
+	possible = {
+		is_banning_goods = g:opium
+	}
+
+	when_taken = {
+		remove_banned_goods = g:opium
+		if = {
+			limit = { has_modifier = opium_ban_authority }
+			remove_modifier = opium_ban_authority
+		}
+		if = {
+			limit = { has_modifier = china_welfare  }
+			remove_modifier = china_welfare 
+		}		
+	}
+	
+   ai_chance = {
+      base = 0		 
+   }	
+}
+
+
+
+﻿grand_exhibition_decision = {
+	is_shown = {
+		NOT = { has_variable = grand_exhibition_decision_taken }
+		NOT = { has_variable = held_grand_exhibition_var }
+	}
+	
+	possible = {
+		is_player = yes
+		is_at_war = no
+		has_technology_researched = international_relations
+		has_technology_researched = railways
+		any_scope_building = {
+			is_building_type = building_arts_academy
+			level >= 10
+		}
+		any_scope_building = {
+			is_building_type = building_university
+			level >= 10
+		}
+		trigger_if = {
+			limit = {
+				owns_entire_state_region = STATE_ILE_DE_FRANCE
+			}
+			any_scope_building = {
+				is_building_type = building_eiffel_tower #they held a huge exhibition there
+			}
+		}
+		trigger_else = {
+			capital = {
+				any_scope_building = {
+					is_building_type = building_urban_center
+					level >= 20
+				}
+			}
+		}
+		custom_tooltip = {
+			text = grand_exhibition_decision_custom_tooltip_2
+			NOT = { has_variable = grand_exhibition_decision_taken }
+		} 
+	}
+
+	when_taken = {
+		set_variable = grand_exhibition_decision_taken
+		add_journal_entry = {
+			type = je_grand_exhibition
+		}
+	}
+
+	ai_chance = {
+		base = 1
+	}
+}
+﻿interest_in_hawaii = { #Decision for to activate JEs for GPs interested in Hawaii.
+	is_shown = {
+		NOT = { has_variable = hawaii_interest_decision_taken }
+		country_rank = rank_value:great_power
+		has_global_variable = gp_hawaii_interest
+	}
+
+	possible = {
+		country_rank = rank_value:great_power
+		has_interest_marker_in_region = region_oceania
+	}
+
+	when_taken = {
+		set_variable = hawaii_interest
+		set_variable = hawaii_interest_decision_taken
+		custom_tooltip = hawaii_interest_tt
+		add_modifier = {
+			name = influence_over_hawaii
+			months = normal_modifier_time
+		}
+		add_journal_entry = {
+			type = je_hawaiian_interest
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		
+		modifier = {
+			trigger = {
+				country_is_in_north_america = yes 
+			}
+			add = 2
+		}
+		
+		modifier = {
+			trigger = {
+				country_is_in_south_america = yes 		
+			}
+			add = 1
+		}		
+		
+		modifier = {
+			trigger = {
+				country_is_in_europe = yes 			
+			}
+			add = 0.1
+		}		
+		
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}
+		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}
+	}
+}
+﻿ionian_islands_decision = {
+	is_shown = {
+		NOT = { has_variable = ionian_islands_var }
+		country_has_primary_culture = cu:greek
+		is_subject = no
+		exists = c:ION
+		c:ION = {
+			is_subject = yes
+			is_player = no
+			NOT = { is_subject_of = ROOT }
+			top_overlord = {
+				is_player = no
+			}
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		has_technology_researched = nationalism
+		custom_tooltip = {
+			text = ionian_islands_possible_tt
+			any_scope_state = {
+				state_region = {
+					is_homeland = cu:greek
+				}
+				count >= 3
+			}
+		}
+		c:ION = {
+			relations:root >= relations_threshold:cordial
+			is_at_war = no
+			top_overlord = {
+				relations:root >= relations_threshold:cordial
+				NOT = { has_war_with = ROOT }
+			}
+		}
+	}
+
+	when_taken = {
+		set_variable = ionian_islands_var
+		custom_tooltip = treaty_of_london_event_tt
+		hidden_effect = {
+			trigger_event = {
+				id = greece.3
+				days = 0
+				popup = yes
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
+﻿shinto_decision = {
+	is_shown = {
+		exists = c:JAP
+		c:JAP = THIS
+		NOT = { country_has_state_religion = rel:shinto }
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = is_meiji_japan
+			has_variable = meiji_restoration_complete
+		}
+		ig:ig_devout = {
+			is_marginal = no
+		}
+		has_law = law_type:law_monarchy
+		NOT = { has_law = law_type:law_state_religion }
+	}
+
+	when_taken = {
+		set_state_religion = rel:shinto
+		ig:ig_devout = {
+			hidden_effect = { set_interest_group_name = ig_shinto_monks }
+			remove_ideology = ideology_buddhist_moralist
+			add_ideology = ideology_shinto_moralist
+			set_ig_trait = ig_trait:ig_trait_haibutsu_kishaku
+			set_ig_trait = ig_trait:ig_trait_secular_shrine_theory
+			set_ig_trait = ig_trait:ig_trait_heavenly_sovereign
+		}
+		random_scope_state = {
+			limit = {
+				owner = ROOT
+				is_capital = yes
+			}
+			convert_population = {
+				target = rel:shinto
+				value = 0.4
+			}
+		}
+		every_scope_state = {
+			limit = {
+				owner = ROOT
+				is_incorporated = yes
+				NOT = { is_capital = yes }
+			}
+			convert_population = {
+				target = rel:shinto
+				value = 0.2
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
+
+
+﻿KOR_declare_korean_empire = {
+	is_shown = {
+		c:KOR ?= THIS
+		has_technology_researched = nationalism
+		NOT = {
+			has_variable = korean_empire_taken
+		}
+	}
+
+	possible = {
+		is_subject = no
+		has_technology_researched = nationalism
+		has_law = law_type:law_monarchy
+	}
+
+	when_taken = {
+		custom_tooltip = KOR_korean_empire_tooltip
+		trigger_event = { id = korea.1 popup = yes }
+		set_variable = korean_empire_taken
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
+﻿manifest_destiny = {
+
+	is_shown = {
+		exists = c:USA
+		root = c:USA
+		NOT = { has_variable = manifested_destiny }
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				owns_entire_state_region = STATE_CALIFORNIA
+				owns_entire_state_region = STATE_NEVADA
+				owns_entire_state_region = STATE_UTAH
+				owns_entire_state_region = STATE_ARIZONA
+				owns_entire_state_region = STATE_NEW_MEXICO
+				owns_entire_state_region = STATE_TEXAS
+			}
+			trigger_event = { id = manifest_destiny.1 }
+		}
+		else = {
+			add_journal_entry = {
+				type = je_manifest_destiny_mexico
+			}
+		}
+		if = {
+			limit = {
+				owns_entire_state_region = STATE_MONTANA
+				owns_entire_state_region = STATE_WYOMING
+				owns_entire_state_region = STATE_COLORADO
+				owns_entire_state_region = STATE_NORTH_DAKOTA
+				owns_entire_state_region = STATE_SOUTH_DAKOTA
+				owns_entire_state_region = STATE_NEBRASKA
+				owns_entire_state_region = STATE_KANSAS
+			}
+			trigger_event = { id = manifest_destiny.2 }
+		}
+		else = {
+			add_journal_entry = {
+				type = je_manifest_destiny_frontier_wars
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = ig_manifest_destiny
+				months = normal_modifier_time
+			}
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = ig_manifest_destiny
+				months = normal_modifier_time
+				multiplier = -1
+			}
+		}
+		if = {
+			limit = {
+				exists = c:MEX
+			}
+			create_incident = {
+				country = c:MEX
+				value = 20
+			}
+		}	
+		# Add Claims
+		s:STATE_CALIFORNIA = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						 NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_NEVADA = {  
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_UTAH = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_ARIZONA = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_NEW_MEXICO = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_OKLAHOMA = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_MONTANA = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_WYOMING = {  
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_COLORADO = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_NORTH_DAKOTA = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_SOUTH_DAKOTA = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_NEBRASKA = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_KANSAS = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		s:STATE_TEXAS = { 
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT 
+			}
+		}
+		set_variable = manifested_destiny
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
+﻿niger_river_expedition = {
+	is_shown = {
+		NOT = {  has_variable = on_expedition }	
+		has_technology_researched = colonization
+		NOT = { has_global_variable = niger_river_explored }
+		OR = {
+			is_ai = no
+			NOT = { has_variable = ai_expedition_cooldown }
+		}		
+	}
+
+	possible = {
+		is_at_war = no
+		has_interest_marker_in_region = region_niger
+		has_technology_researched = quinine
+		any_scope_character = {
+			OR = {
+				has_role = general
+				has_role = admiral
+			}
+			count >= 3
+		}
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = { id = expedition_events.1 popup = yes }
+			set_variable = {
+				name = on_expedition
+				value = yes
+			}
+		}
+		else = {
+			set_variable = AI_EXPEDITION_NIGER
+			ai_expedition_simulator_start = yes
+		}
+		hidden_effect = {
+			set_variable = {
+				name = ai_expedition_cooldown
+				value = yes
+				days = 1825
+			}		
+		}			
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { 
+				weekly_net_fixed_income > money_amount_multiplier_medium
+				gold_reserves > 0
+			}
+			add = 1
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
+﻿rom_annex_trs = {
+	is_shown = {
+		exists = c:ROM
+		exists = c:TRS
+		c:ROM = ROOT
+		c:TRS = {
+			is_player = no
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		is_subject = no
+		c:TRS = {
+			is_subject_of = ROOT
+			is_player = no
+		}
+	}
+
+	when_taken = {
+		annex = c:TRS
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+
+﻿skyscraper_decision = {
+	is_shown = {
+		has_technology_researched = steel_frame_buildings
+		has_technology_researched = reinforced_concrete
+		NOT = {
+			any_scope_building = {
+				is_building_type = building_skyscraper
+			}
+		}
+		NOT = {
+			any_scope_state = {
+				has_modifier = skyscraper_survey
+			}
+		}
+		NOT = {
+			has_variable = skyscraper_var
+		}
+	}
+
+	possible = {	
+		produced_bureaucracy > 500
+		any_scope_state = {
+			is_incorporated = yes
+			is_split_state = no
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 20
+			}
+		}
+	}
+	
+	when_taken = {
+		set_variable = {
+			name = skyscraper_var
+			value = 0
+		}
+		add_modifier = {
+			name = skyscraper_survey
+			months = 24
+		}
+		add_journal_entry = {
+			type = je_skyscraper_site
+		}
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { produced_bureaucracy > 2500 }
+			add = 5
+		}	
+		modifier = {
+			trigger = { 
+				produced_bureaucracy > 5000 
+				any_country = {
+					is_ai = no
+					has_variable = skyscraper_var
+				}
+			}
+			add = 50
+		}			
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}	
+	}
+}
+﻿spanish_flu_response = {
+	is_shown = {
+		any_scope_state = {
+			has_modifier = plague_modifier
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = has_not_taken_plague_decision_for_6_months.tt
+			hidden_trigger = {
+				NOT = { has_variable = plague_response_cooldown }
+			 }
+		}
+	}
+
+	when_taken = {
+		set_variable = {
+			name = plague_response_cooldown
+			days = 182
+		}
+		custom_tooltip = pandemic_response.tt
+		hidden_effect = {
+			trigger_event = {
+				id = plague.5
+				popup = yes
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
+﻿tibet_expedition = {
+	is_shown = {		
+		NOT = { c:TIB ?= this }
+		exists = c:TIB
+		c:TIB ?= { 
+			is_country_type = unrecognized
+			NOT = { country_rank >= rank_value:great_power }
+		}
+		OR = {
+			is_country_type = recognized
+			is_country_type = colonial
+		}
+		NOT = { has_variable = on_expedition }		
+		has_technology_researched = colonization
+		NOT = { has_global_variable = tibet_expedition_completed }
+		NOT = { has_variable = tibet_expedition_var }
+		OR = {
+			is_ai = no
+			NOT = { has_variable = ai_expedition_cooldown }
+		}		
+	}
+	
+	possible = {
+		is_at_war = no	
+		NOT = {
+			c:TIB ?= {
+				OR = {
+					is_subject_of = ROOT
+					top_overlord ?= {
+						OR = {
+							country_rank >= rank_value:great_power
+							NOT = { is_country_type = unrecognized }
+						}
+					}
+				}
+			}
+		}
+		NOT = { has_modifier = tibetan_fiasco }
+		country_rank >= rank_value:great_power
+		has_interest_marker_in_region = region_himalayas
+		any_scope_character = {
+			OR = {
+				has_role = general
+				has_role = admiral
+			}	
+			count >= 3
+		}
+		has_technology_researched = civilizing_mission
+	}
+	
+	when_taken = {
+		trigger_event = { id = tibet_expedition_events.1 popup = yes }
+		set_variable = {
+			name = on_expedition
+			value = yes
+		}
+		hidden_effect = {
+			set_variable = {
+				name = ai_expedition_cooldown
+				value = yes
+				days = 1825
+			}	
+			set_variable = tibet_expedition_var	
+		}		
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { 
+				weekly_net_fixed_income > money_amount_multiplier_medium
+				gold_reserves > 0		
+			}
+			add = 1
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}
+	}
+}
+﻿west_america_expedition = {
+	is_shown = {
+		NAND = { 
+			has_global_variable = buenaventura_river_disproven
+			has_global_variable = oregon_trail_mapped
+			has_global_variable = great_salt_lake_mapped
+	    }	
+		has_technology_researched = colonization
+		NOT = {  has_variable = on_expedition }
+		OR = {
+			is_ai = no
+			NOT = { has_variable = ai_expedition_cooldown }
+		}				
+	}
+
+	possible = {
+		has_interest_marker_in_region = region_pacific_coast	
+		is_at_war = no
+		has_technology_researched = quinine
+		any_scope_character = {
+			OR = {
+				has_role = general
+				has_role = admiral
+			}
+			count >= 3
+		}
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = { id = expedition_events.200 popup = yes }
+			set_variable = {
+				name = on_expedition
+				value = yes
+			}
+		}
+		else = {
+			set_variable = AI_EXPEDITION_WAMERICA
+			ai_expedition_simulator_start = yes
+		}
+		hidden_effect = {
+			set_variable = {
+				name = ai_expedition_cooldown
+				value = yes
+				days = 1825
+			}		
+		}			
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = { 
+				weekly_net_fixed_income > money_amount_multiplier_medium
+				gold_reserves > 0
+			}
+			add = 10
+		}
+		modifier = { #new
+			trigger = { 
+				has_journal_entry = je_oregon
+			}
+			add = 500
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_armed_isolationism
+			}
+			add = -1000
+		}		
+		modifier = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				is_at_war = yes
+			}
+			add = -1000
+		}		
+	}
+}
