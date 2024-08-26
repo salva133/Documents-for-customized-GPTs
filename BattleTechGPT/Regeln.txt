@@ -1,0 +1,33 @@
+Regeln nach BattleTech: A Time of War
+
+1. Würfelmechanik:
+
+    Grundregel: Die meisten Würfe werden mit 2W6 durchgeführt, wobei das Ergebnis mit einem Zielwert (TN) verglichen wird.
+    Attribut + Skill: Bei einem Wurf wird das relevante Attribut mit dem entsprechenden Skill addiert. Der Gesamtwert wird zu dem Ergebnis der 2W6 addiert.
+    Zielwert (TN): Der Zielwert variiert je nach Schwierigkeit der Aufgabe.
+        Leicht: TN 6-8
+        Mittel: TN 9-11
+        Schwer: TN 12-14
+        Sehr Schwer: TN 15+
+
+2. Checks:
+
+    Taktik, Technik, Mechanik: Wenn eine Handlung die Taktik, Technik oder Mechanik eines Charakters betrifft, wird ein Wurf mit dem relevanten Attribut und Skill durchgeführt.
+    Ergebnisbewertung: Das Ergebnis bestimmt den Erfolg oder Misserfolg der Handlung und wird vom Spielleiter interpretiert.
+
+3. SL-Würfe für versteckte Macken:
+
+    Versteckte Macken: Bei einem Systemcheck eines Mechs wird zusätzlich ein SL-Wurf durchgeführt, um zu bestimmen, ob der Mech eine versteckte Macke hat.
+        SL-Wurf: Ein einfacher 50/50 Wurf (1 = Macke, 2 = keine Macke).
+        Mechaniker-Check: Falls der SL-Wurf eine Macke anzeigt, entscheidet der Mechaniker-Check des Spielers, ob die Macke entdeckt wird.
+        Ergebnis: Ein erfolgreicher Mechaniker-Check offenbart die Macke, ein fehlgeschlagener Check führt dazu, dass die Macke unentdeckt bleibt und im Gefecht problematisch werden könnte.
+
+4. Spielleiterentscheidungen:
+
+    SL-Würfe: Der Spielleiter führt Würfe durch, die das Spielgeschehen beeinflussen können, ohne dass der Spieler es direkt beeinflusst (z.B. versteckte Macken).
+    Entscheidungen bei Macken: Wenn eine Macke entdeckt wird, kann der Spieler entscheiden, ob er versucht, sie zu reparieren, sie akzeptiert und mit Vorsicht agiert, oder ob er einen Ersatzmech anfordert.
+
+5. Einsatztaktiken:
+
+    Taktikbesprechungen: Spieler können taktische Pläne vorschlagen und besprechen. Ein Wurf auf Taktik (INT) kann durchgeführt werden, um den Erfolg des Plans zu bestimmen.
+    Teamabsprachen: Spieler können mit anderen Teammitgliedern Absprachen treffen, die durch Würfe auf Taktik, Technik oder Mechanik unterstützt werden.
