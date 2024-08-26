@@ -31,3 +31,7 @@ Regeln nach BattleTech: A Time of War
 
     Taktikbesprechungen: Spieler können taktische Pläne vorschlagen und besprechen. Ein Wurf auf Taktik (INT) kann durchgeführt werden, um den Erfolg des Plans zu bestimmen.
     Teamabsprachen: Spieler können mit anderen Teammitgliedern Absprachen treffen, die durch Würfe auf Taktik, Technik oder Mechanik unterstützt werden.
+
+6. Zielwert (TN):
+
+    Explizite Angabe: Bei jedem Wurf wird der Zielwert (TN) explizit angegeben, bevor der Wurf durchgeführt wird, um die Schwierigkeit der Aufgabe klar darzustellen.
