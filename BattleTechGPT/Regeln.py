@@ -18,7 +18,7 @@ def mech_system_check():
     :return: True, wenn eine Macke gefunden wird, sonst False
     """
     hidden_flaw_roll = random.randint(1, 100)
-    return hidden_flaw_roll <= 10  # 10% Chance auf eine versteckte Macke
+    return hidden_flaw_roll <= 50  # 50% Chance auf eine versteckte Macke
 
 def perform_mech_check():
     """
@@ -132,10 +132,10 @@ def social_phase(soldier):
     ]
     return random.choice(interactions)
 
-# Regel 8: Kurze konversationelle Phase vor jeder Mission
-def pre_mission_conversation(soldier, teammate):
+# Regel 8: Konversationelle Phase während der Mission
+def during_mission_conversation(soldier, teammate):
     """
-    Simuliert eine kurze konversationelle Phase vor einer Mission.
+    Simuliert eine kurze konversationelle Phase während einer Mission.
     :param soldier: Der Soldat
     :param teammate: Der Teampartner
     """
