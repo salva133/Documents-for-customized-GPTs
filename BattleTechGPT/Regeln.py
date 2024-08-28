@@ -146,3 +146,12 @@ def during_mission_conversation(soldier, teammate):
         f"{soldier} tauscht sich mit {teammate} über ihre Pläne nach der Mission aus."
     ]
     return random.choice(conversations)
+
+# Regel 9: Angriffsszenarien auf Port Moresby
+def port_moresby_attack():
+    """
+    Bestimmt, wer Port Moresby angreifen könnte.
+    :return: Name der Fraktion
+    """
+    attack_type = random.choice(["Draconis-Kombinat", "Kombinat verpflichtete Söldner", "Clans"])
+    return attack_type
